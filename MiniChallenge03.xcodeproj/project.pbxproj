@@ -13,11 +13,12 @@
 		596E52C91EE1F7A1009D9F85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C71EE1F7A1009D9F85 /* LaunchScreen.storyboard */; };
 		597FBEB91EE5C1FE00D0C630 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEB81EE5C1FE00D0C630 /* Landing.storyboard */; };
 		597FBEBC1EE5C23A00D0C630 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEBB1EE5C23A00D0C630 /* Test.storyboard */; };
-		597FBEBE1EE5C24A00D0C630 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEBD1EE5C24A00D0C630 /* Map.storyboard */; };
 		597FBEC01EE5C25400D0C630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEBF1EE5C25400D0C630 /* Main.storyboard */; };
-		597FBEC21EE5C29C00D0C630 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEC11EE5C29C00D0C630 /* Profile.storyboard */; };
-		597FBEC61EE5C32C00D0C630 /* Donations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEC51EE5C32C00D0C630 /* Donations.storyboard */; };
-		597FBEC81EE5C34800D0C630 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FBEC71EE5C34800D0C630 /* Info.storyboard */; };
+		597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597FBEC91EE5F06A00D0C630 /* FirebaseProtocol.swift */; };
+		59BEFA8D1EE5FF13008CF825 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BEFA8C1EE5FF13008CF825 /* Profile.storyboard */; };
+		59BEFA8F1EE5FF43008CF825 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BEFA8E1EE5FF43008CF825 /* Map.storyboard */; };
+		59BEFA911EE5FF61008CF825 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BEFA901EE5FF61008CF825 /* Info.storyboard */; };
+		59BEFA931EE5FF7D008CF825 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59BEFA921EE5FF7D008CF825 /* Donation.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +30,12 @@
 		596E52CA1EE1F7A1009D9F85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		597FBEB81EE5C1FE00D0C630 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		597FBEBB1EE5C23A00D0C630 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
-		597FBEBD1EE5C24A00D0C630 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		597FBEBF1EE5C25400D0C630 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		597FBEC11EE5C29C00D0C630 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		597FBEC51EE5C32C00D0C630 /* Donations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donations.storyboard; sourceTree = "<group>"; };
-		597FBEC71EE5C34800D0C630 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		597FBEC91EE5F06A00D0C630 /* FirebaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseProtocol.swift; sourceTree = "<group>"; };
+		59BEFA8C1EE5FF13008CF825 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		59BEFA8E1EE5FF43008CF825 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		59BEFA901EE5FF61008CF825 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		59BEFA921EE5FF7D008CF825 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */,
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
+				597FBEC91EE5F06A00D0C630 /* FirebaseProtocol.swift */,
 				597FBEBA1EE5C20D00D0C630 /* Storyboards */,
 				596E52C51EE1F7A1009D9F85 /* Assets.xcassets */,
 				596E52CA1EE1F7A1009D9F85 /* Info.plist */,
@@ -80,11 +83,11 @@
 			children = (
 				597FBEB81EE5C1FE00D0C630 /* Landing.storyboard */,
 				597FBEBB1EE5C23A00D0C630 /* Test.storyboard */,
-				597FBEC51EE5C32C00D0C630 /* Donations.storyboard */,
-				597FBEC71EE5C34800D0C630 /* Info.storyboard */,
-				597FBEBD1EE5C24A00D0C630 /* Map.storyboard */,
 				597FBEBF1EE5C25400D0C630 /* Main.storyboard */,
-				597FBEC11EE5C29C00D0C630 /* Profile.storyboard */,
+				59BEFA921EE5FF7D008CF825 /* Donation.storyboard */,
+				59BEFA901EE5FF61008CF825 /* Info.storyboard */,
+				59BEFA8E1EE5FF43008CF825 /* Map.storyboard */,
+				59BEFA8C1EE5FF13008CF825 /* Profile.storyboard */,
 				596E52C71EE1F7A1009D9F85 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
@@ -150,15 +153,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				597FBEC81EE5C34800D0C630 /* Info.storyboard in Resources */,
+				59BEFA8D1EE5FF13008CF825 /* Profile.storyboard in Resources */,
+				59BEFA8F1EE5FF43008CF825 /* Map.storyboard in Resources */,
+				59BEFA911EE5FF61008CF825 /* Info.storyboard in Resources */,
 				597FBEC01EE5C25400D0C630 /* Main.storyboard in Resources */,
 				596E52C91EE1F7A1009D9F85 /* LaunchScreen.storyboard in Resources */,
-				597FBEC61EE5C32C00D0C630 /* Donations.storyboard in Resources */,
-				597FBEC21EE5C29C00D0C630 /* Profile.storyboard in Resources */,
 				596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */,
 				597FBEB91EE5C1FE00D0C630 /* Landing.storyboard in Resources */,
 				597FBEBC1EE5C23A00D0C630 /* Test.storyboard in Resources */,
-				597FBEBE1EE5C24A00D0C630 /* Map.storyboard in Resources */,
+				59BEFA931EE5FF7D008CF825 /* Donation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */,
 				596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */,
 				596E52BF1EE1F7A1009D9F85 /* AppDelegate.swift in Sources */,
 			);
@@ -293,6 +297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
