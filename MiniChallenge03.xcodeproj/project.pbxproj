@@ -23,6 +23,9 @@
 		59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */; };
 		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
+		D8D0124F1EE86E0700112374 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0124E1EE86E0700112374 /* MapViewController.swift */; };
+		D8D012511EE86E3100112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D012501EE86E3100112374 /* MapKit.framework */; };
+		D8D012531EE8702800112374 /* HemoPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D012521EE8702800112374 /* HemoPin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,9 @@
 		59BEFA921EE5FF7D008CF825 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewController.swift; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8D0124E1EE86E0700112374 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D8D012501EE86E3100112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8D012521EE8702800112374 /* HemoPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HemoPin.swift; sourceTree = "<group>"; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
 		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D012511EE86E3100112374 /* MapKit.framework in Frameworks */,
 				AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,9 +100,11 @@
 			children = (
 				596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */,
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
+				D8D0124E1EE86E0700112374 /* MapViewController.swift */,
 				59E5E6AB1EE6E0E3004BA870 /* Controllers */,
 				597FBEBA1EE5C20D00D0C630 /* Storyboards */,
 				596E52C51EE1F7A1009D9F85 /* Assets.xcassets */,
+				D8D012521EE8702800112374 /* HemoPin.swift */,
 				596E52CA1EE1F7A1009D9F85 /* Info.plist */,
 			);
 			path = MiniChallenge03;
@@ -129,6 +138,7 @@
 		7B985232E27F01B3726927BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8D012501EE86E3100112374 /* MapKit.framework */,
 				FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */,
 			);
 			name = Frameworks;
@@ -171,6 +181,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 524D3B9S8F;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -266,9 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5976FC721EE71D4800ABF887 /* BankCollectionViewCell.swift in Sources */,
+				D8D0124F1EE86E0700112374 /* MapViewController.swift in Sources */,
 				597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */,
 				596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */,
 				59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */,
+				D8D012531EE8702800112374 /* HemoPin.swift in Sources */,
 				596E52BF1EE1F7A1009D9F85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
