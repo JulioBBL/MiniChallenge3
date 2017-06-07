@@ -12,7 +12,7 @@
         <!--Map-->
         <scene sceneID="LSk-fj-gsc">
             <objects>
-                <viewController id="jo4-36-V3B" sceneMemberID="viewController">
+                <viewController id="jo4-36-V3B" customClass="MapViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zaf-PL-wfd"/>
                         <viewControllerLayoutGuide type="bottom" id="Ynb-A6-7l4"/>
@@ -20,10 +20,24 @@
                     <view key="view" contentMode="scaleToFill" id="pfW-kZ-tjq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dwM-nu-qga">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dwM-nu-qga" firstAttribute="top" secondItem="zaf-PL-wfd" secondAttribute="bottom" id="BDn-kZ-lZh"/>
+                            <constraint firstItem="dwM-nu-qga" firstAttribute="leading" secondItem="pfW-kZ-tjq" secondAttribute="leading" id="JbB-o2-mEs"/>
+                            <constraint firstItem="Ynb-A6-7l4" firstAttribute="top" secondItem="dwM-nu-qga" secondAttribute="bottom" id="MPf-pU-Qjq"/>
+                            <constraint firstAttribute="trailing" secondItem="dwM-nu-qga" secondAttribute="trailing" id="mGZ-M8-AgB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="iWW-Cx-qtQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="map" destination="dwM-nu-qga" id="CWy-AY-tC2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="va1-Rl-dyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

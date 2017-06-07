@@ -23,6 +23,7 @@
 		59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */; };
 		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
+		D8D012691EE88B8200112374 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D012681EE88B8200112374 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		59BEFA921EE5FF7D008CF825 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewController.swift; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D8D012681EE88B8200112374 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
 		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 		596E52BD1EE1F7A1009D9F85 /* MiniChallenge03 */ = {
 			isa = PBXGroup;
 			children = (
+				D8D0126A1EE88D6D00112374 /* Entities */,
 				596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */,
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
 				59E5E6AB1EE6E0E3004BA870 /* Controllers */,
@@ -122,6 +125,7 @@
 				597FBEC91EE5F06A00D0C630 /* FirebaseProtocol.swift */,
 				59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */,
 				5976FC711EE71D4800ABF887 /* BankCollectionViewCell.swift */,
+				D8D012681EE88B8200112374 /* MapViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +136,13 @@
 				FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8D0126A1EE88D6D00112374 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5976FC721EE71D4800ABF887 /* BankCollectionViewCell.swift in Sources */,
+				D8D012691EE88B8200112374 /* MapViewController.swift in Sources */,
 				597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */,
 				596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */,
 				59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */,
