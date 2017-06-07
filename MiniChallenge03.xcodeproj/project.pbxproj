@@ -24,8 +24,9 @@
 		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
 		D8D012691EE88B8200112374 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D012681EE88B8200112374 /* MapViewController.swift */; };
-		D8D0126C1EE88DE600112374 /* Hemocentro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0126B1EE88DE600112374 /* Hemocentro.swift */; };
+		D8D0126C1EE88DE600112374 /* FIRDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0126B1EE88DE600112374 /* FIRDataObject.swift */; };
 		D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0126D1EE88E5500112374 /* MapKit.framework */; };
+		D8D012701EE8930C00112374 /* Hemocentro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D0126F1EE8930C00112374 /* Hemocentro.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +48,9 @@
 		59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewController.swift; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8D012681EE88B8200112374 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		D8D0126B1EE88DE600112374 /* Hemocentro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hemocentro.swift; sourceTree = "<group>"; };
+		D8D0126B1EE88DE600112374 /* FIRDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRDataObject.swift; sourceTree = "<group>"; };
 		D8D0126D1EE88E5500112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8D0126F1EE8930C00112374 /* Hemocentro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hemocentro.swift; sourceTree = "<group>"; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
 		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,7 +149,8 @@
 		D8D0126A1EE88D6D00112374 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				D8D0126B1EE88DE600112374 /* Hemocentro.swift */,
+				D8D0126B1EE88DE600112374 /* FIRDataObject.swift */,
+				D8D0126F1EE8930C00112374 /* Hemocentro.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -288,13 +291,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8D0126C1EE88DE600112374 /* Hemocentro.swift in Sources */,
+				D8D0126C1EE88DE600112374 /* FIRDataObject.swift in Sources */,
 				5976FC721EE71D4800ABF887 /* BankCollectionViewCell.swift in Sources */,
 				D8D012691EE88B8200112374 /* MapViewController.swift in Sources */,
 				597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */,
 				596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */,
 				59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */,
 				596E52BF1EE1F7A1009D9F85 /* AppDelegate.swift in Sources */,
+				D8D012701EE8930C00112374 /* Hemocentro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

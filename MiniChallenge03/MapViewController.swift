@@ -10,14 +10,22 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate, FIRDatabaseReferenceable {
+    
+    var hemocentros: [Hemocentro] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         map.showsUserLocation = true
         locationManager.delegate = self
+        
+        ref.child("hemocetros").observeEventType(.ChildAdded, withBlock: {
+            self.posts.append(Hemocentro(snapshot: $0))
+        })
     }
+    
+    
     
     @IBOutlet var map: MKMapView!
     
@@ -33,5 +41,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         
         map.addAnnotation(ann)
     }
+    
+    
     
 }
