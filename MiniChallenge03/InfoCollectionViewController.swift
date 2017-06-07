@@ -60,18 +60,19 @@ class InfoCollectionViewController: UICollectionViewController, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let largura = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         
         switch indexPath.row {
         case 0:
-            return CGSize(width: UIScreen.main.bounds.width - 16, height: 200)
+            return CGSize(width: largura - 16, height: 200)
         case 1:
-            return CGSize(width: UIScreen.main.bounds.width - 16, height: 50)
+            return CGSize(width: largura - 16, height: 50)
         case 2:
-            return CGSize(width: UIScreen.main.bounds.width - 16, height: 50)
+            return CGSize(width: largura - 16, height: 250)
         case 3:
-            return CGSize(width: UIScreen.main.bounds.width - 16, height: 50)
+            return CGSize(width: largura - 16, height: 108)
         default:
-            return CGSize(width: UIScreen.main.bounds.width - 16, height: 500)
+            return CGSize(width: largura - 16, height: 500)
         }
     }
 }
