@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 import Firebase
 
-class Hemocentro: FIRDataObject {
+class Hemocentro: NSObject {
     
     var titulo: String
     var subTitulo: String
@@ -19,20 +19,14 @@ class Hemocentro: FIRDataObject {
     var numero: Int
     
     init(titulo: String, subTitulo: String, location: CLLocation, rua: String, numero: Int) {
+        
         self.titulo = titulo
         self.subTitulo = subTitulo
         self.location = location
         self.rua = rua
         self.numero = numero
         
-        
     }
-    
-    required init(snapshot: FIRDataSnapshot) {
-        
-       
-    }
-    
     
     
 }

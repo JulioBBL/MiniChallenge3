@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
 
 class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate, FIRDatabaseReferenceable {
     
@@ -20,8 +21,8 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         map.showsUserLocation = true
         locationManager.delegate = self
         
-        ref.child("hemocetros").observeEventType(.ChildAdded, withBlock: {
-            self.posts.append(Hemocentro(snapshot: $0))
+        ref.child("hemocetros").observe(.childAdded, with: {
+            self.hemocentros.append(Hemocentro(snapshot: $0))
         })
     }
     
