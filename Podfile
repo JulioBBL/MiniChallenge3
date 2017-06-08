@@ -8,14 +8,8 @@ target 'MiniChallenge03' do
   # Pods for MiniChallenge03
 
   pod 'Firebase'
-  pod 'Firebase/AdMob'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
-  pod 'Firebase/Crash'
   pod 'Firebase/Database'
-  pod 'Firebase/DynamicLinks'
-  pod 'Firebase/Invites'
-  pod 'Firebase/Messaging'
-  pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
 end

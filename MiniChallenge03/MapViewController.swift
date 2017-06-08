@@ -11,8 +11,8 @@ import MapKit
 import CoreLocation
 import Firebase
 
-class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate, FIRDatabaseReferenceable {
-    
+//class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate, FIRDatabaseReferenceable {
+
 //    var hemocentros: [Hemocentro] = []
 //    
 //    override func viewDidLoad() {
@@ -42,7 +42,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
 //        
 //        map.addAnnotation(ann)
 //    }
-//    
-//    
     
-}
+    
+    
+//}
