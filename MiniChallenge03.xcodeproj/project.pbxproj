@@ -66,9 +66,9 @@
 		596E52BD1EE1F7A1009D9F85 /* MiniChallenge03 */ = {
 			isa = PBXGroup;
 			children = (
+				597FBEBA1EE5C20D00D0C630 /* Storyboards */,
 				596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */,
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
-				597FBEBA1EE5C20D00D0C630 /* Storyboards */,
 				596E52C51EE1F7A1009D9F85 /* Assets.xcassets */,
 				596E52CA1EE1F7A1009D9F85 /* Info.plist */,
 			);
