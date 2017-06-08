@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PhotosTableViewController: UITableViewController {
 
@@ -37,6 +38,23 @@ class PhotosTableViewController: UITableViewController {
         return 0
     }
 
+    @IBAction func didPressCamera(_ sender: Any) {
+        if AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo) ==  AVAuthorizationStatus.authorized
+        {
+            self.performSegue(withIdentifier: "toCamera", sender: self)
+        }
+        else
+        {
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (granted :Bool) -> Void in
+                if granted == true
+                {
+                    self.performSegue(withIdentifier: "toCamera", sender: self)
+                }
+            });
+        }
+        
+    }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		59075B871EE872A700127635 /* ProcessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59075B861EE872A700127635 /* ProcessCollectionViewCell.swift */; };
+		593B53351EE9DC690027855C /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593B53341EE9DC690027855C /* Photos.storyboard */; };
+		593B53371EE9DFA60027855C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B53361EE9DFA60027855C /* CameraViewController.swift */; };
+		593B53391EE9EB0B0027855C /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B53381EE9EB0B0027855C /* PhotosTableViewController.swift */; };
 		596E52BF1EE1F7A1009D9F85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */; };
 		596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E52C01EE1F7A1009D9F85 /* ViewController.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		59075B861EE872A700127635 /* ProcessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCollectionViewCell.swift; sourceTree = "<group>"; };
+		593B53341EE9DC690027855C /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		593B53361EE9DFA60027855C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		593B53381EE9EB0B0027855C /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		596E52BB1EE1F7A1009D9F85 /* MiniChallenge03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596E52C01EE1F7A1009D9F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				597FBEB81EE5C1FE00D0C630 /* Landing.storyboard */,
 				597FBEBB1EE5C23A00D0C630 /* Test.storyboard */,
 				597FBEBF1EE5C25400D0C630 /* Main.storyboard */,
+				593B53341EE9DC690027855C /* Photos.storyboard */,
 				59BEFA921EE5FF7D008CF825 /* Donation.storyboard */,
 				59BEFA901EE5FF61008CF825 /* Info.storyboard */,
 				59BEFA8E1EE5FF43008CF825 /* Map.storyboard */,
@@ -135,7 +142,9 @@
 				59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */,
 				5976FC711EE71D4800ABF887 /* BankCollectionViewCell.swift */,
 				59075B861EE872A700127635 /* ProcessCollectionViewCell.swift */,
+				593B53361EE9DFA60027855C /* CameraViewController.swift */,
 				D8D012711EE9B71700112374 /* MapViewController.swift */,
+				593B53381EE9EB0B0027855C /* PhotosTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -193,7 +202,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = W84WSQX9M7;
+						DevelopmentTeam = 524D3B9S8F;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -228,6 +237,7 @@
 			files = (
 				59BEFA8D1EE5FF13008CF825 /* Profile.storyboard in Resources */,
 				59BEFA8F1EE5FF43008CF825 /* Map.storyboard in Resources */,
+				593B53351EE9DC690027855C /* Photos.storyboard in Resources */,
 				59BEFA911EE5FF61008CF825 /* Info.storyboard in Resources */,
 				597FBEC01EE5C25400D0C630 /* Main.storyboard in Resources */,
 				596E52C91EE1F7A1009D9F85 /* LaunchScreen.storyboard in Resources */,
@@ -295,8 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D0126C1EE88DE600112374 /* FIRDataObject.swift in Sources */,
+				593B53371EE9DFA60027855C /* CameraViewController.swift in Sources */,
 				5976FC721EE71D4800ABF887 /* BankCollectionViewCell.swift in Sources */,
 				D8D012721EE9B71700112374 /* MapViewController.swift in Sources */,
+				593B53391EE9EB0B0027855C /* PhotosTableViewController.swift in Sources */,
 				597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */,
 				596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */,
 				59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */,
@@ -420,7 +432,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W84WSQX9M7;
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -435,7 +447,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W84WSQX9M7;
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
