@@ -12,6 +12,9 @@ public protocol FirebaseProtocol {
     
     var instance: FirebaseProtocol { get }
     
+//    func getDonations() -> [Donation]
+//    func getAmountDonations() -> Int
+//    func getHemocentros() -> [Hemocentro]
     
     
 }
