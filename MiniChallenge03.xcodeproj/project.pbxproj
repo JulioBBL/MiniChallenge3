@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1959C19D1EEB0B0700455576 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1959C19C1EEB0B0700455576 /* User.swift */; };
 		59075B871EE872A700127635 /* ProcessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59075B861EE872A700127635 /* ProcessCollectionViewCell.swift */; };
 		593B53351EE9DC690027855C /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593B53341EE9DC690027855C /* Photos.storyboard */; };
 		593B53371EE9DFA60027855C /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B53361EE9DFA60027855C /* CameraViewController.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1959C19C1EEB0B0700455576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		59075B861EE872A700127635 /* ProcessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCollectionViewCell.swift; sourceTree = "<group>"; };
 		593B53341EE9DC690027855C /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		593B53361EE9DFA60027855C /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1959C19B1EEB0AAE00455576 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1959C19C1EEB0B0700455576 /* User.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		581F31A0554A278CD98DA651 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		596E52BD1EE1F7A1009D9F85 /* MiniChallenge03 */ = {
 			isa = PBXGroup;
 			children = (
+				1959C19B1EEB0AAE00455576 /* Entities */,
 				597FBEBA1EE5C20D00D0C630 /* Storyboards */,
 				596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */,
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
@@ -133,20 +144,6 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
-		59E5E6AB1EE6E0E3004BA870 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				597FBEC91EE5F06A00D0C630 /* FirebaseProtocol.swift */,
-				59E5E6A61EE6DC6A004BA870 /* InfoCollectionViewController.swift */,
-				5976FC711EE71D4800ABF887 /* BankCollectionViewCell.swift */,
-				59075B861EE872A700127635 /* ProcessCollectionViewCell.swift */,
-				593B53361EE9DFA60027855C /* CameraViewController.swift */,
-				D8D012711EE9B71700112374 /* MapViewController.swift */,
-				593B53381EE9EB0B0027855C /* PhotosTableViewController.swift */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
 		7B985232E27F01B3726927BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,15 +151,6 @@
 				FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D8D0126A1EE88D6D00112374 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				D8D0126B1EE88DE600112374 /* FIRDataObject.swift */,
-				D8D0126F1EE8930C00112374 /* Hemocentro.swift */,
-			);
-			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +298,7 @@
 				597FBECA1EE5F06A00D0C630 /* FirebaseProtocol.swift in Sources */,
 				596E52C11EE1F7A1009D9F85 /* ViewController.swift in Sources */,
 				59E5E6A71EE6DC6A004BA870 /* InfoCollectionViewController.swift in Sources */,
+				1959C19D1EEB0B0700455576 /* User.swift in Sources */,
 				59075B871EE872A700127635 /* ProcessCollectionViewCell.swift in Sources */,
 				596E52BF1EE1F7A1009D9F85 /* AppDelegate.swift in Sources */,
 				D8D012701EE8930C00112374 /* Hemocentro.swift in Sources */,
