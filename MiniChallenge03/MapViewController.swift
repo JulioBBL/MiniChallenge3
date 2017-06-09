@@ -15,7 +15,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
 
     var hemocentros: [Hemocentro] = []
     
-    var ref = FIRDatabase.database().reference(withPath: "hemocentros")
+//    var ref = FIRDatabase.database().reference(withPath: "hemocentros")
     
     
     
@@ -30,10 +30,10 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         map.showsUserLocation = true
         locationManager.delegate = self
         
-        ref.child("hemocetros").observe(.childAdded, with: {snapshot in
-            self.hemocentros.append(Hemocentro(snapshot: snapshot))
-        })
-        
+//        ref.child("hemocetros").observe(.childAdded, with: {snapshot in
+//            self.hemocentros.append(Hemocentro(snapshot: snapshot))
+//        })
+    
         
     }
 
