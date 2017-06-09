@@ -12,20 +12,70 @@ import Firebase
 
 class Hemocentro: NSObject {
     
-    var titulo: String
-    var subTitulo: String
-    var location: CLLocation
-    var rua: String
-    var numero: Int
+    let key: String?
+    var nome: String
+    var estado: String
+    var cidade: String
+    var bairro: String
+    var endereco: String
+    var cep: String
+    var latitude: String
+    var longitude: String
+    var telefone: String
+    let ref: FIRDatabaseReference?
     
-    init(titulo: String, subTitulo: String, location: CLLocation, rua: String, numero: Int) {
+    init(nome: String,
+         estado: String,
+         cidade: String,
+         bairro: String,
+         endereco: String,
+         cep: String,
+         latitude: String,
+         longitude: String,
+         telefone: String) {
         
-        self.titulo = titulo
-        self.subTitulo = subTitulo
-        self.location = location
-        self.rua = rua
-        self.numero = numero
+        self.key = nil
+        self.nome = nome
+        self.estado = estado
+        self.cidade = cidade
+        self.bairro = bairro
+        self.endereco = endereco
+        self.cep = cep
+        self.latitude = latitude
+        self.longitude = longitude
+        self.telefone = telefone
+        self.ref = nil
         
+    }
+    
+    init(snapshot: FIRDataSnapshot) {
+        key = snapshot.key
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        nome = snapshotValue["nome"] as! String
+        estado = snapshotValue["estado"] as! String
+        cidade = snapshotValue["cidade"] as! String
+        bairro = snapshotValue["bairro"] as! String
+        endereco = snapshotValue["endereco"] as! String
+        cep = snapshotValue["cep"] as! String
+        latitude = snapshotValue["latitude"] as! String
+        longitude = snapshotValue["longitude"] as! String
+        telefone = snapshotValue["telefone"] as! String
+        ref = snapshot.ref
+    }
+    
+    func toAnyObject() -> Any {
+        return [
+            "key": key,
+            "nome": nome,
+            "estado": estado,
+            "cidade": cidade,
+            "bairro": bairro,
+            "endereco": endereco,
+            "cep": cep,
+            "latitude": latitude,
+            "longitude": longitude,
+            "telefone": telefone
+        ]
     }
     
     
