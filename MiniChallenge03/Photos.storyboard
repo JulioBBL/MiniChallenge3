@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UYL-e9-rZq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="Pne-Dg-2pD">
+            <objects>
+                <tableViewController id="muc-Sj-9dF" customClass="PhotosTableViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" id="3AN-k5-9ai">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="115" id="2bY-dN-Chg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2bY-dN-Chg" id="WlP-kY-Abf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="muc-Sj-9dF" id="xhN-Re-LSI"/>
+                            <outlet property="delegate" destination="muc-Sj-9dF" id="gw3-Kk-84p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="TkO-pp-Hzt">
+                        <barButtonItem key="rightBarButtonItem" title="Camera" id="V4O-Vl-Fup">
+                            <connections>
+                                <action selector="didPressCamera:" destination="muc-Sj-9dF" id="X4v-5W-esa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="PdM-Gf-VND" kind="show" identifier="toCamera" id="IKD-b0-dnO"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ol-gB-Eq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2664.8000000000002" y="105.69715142428787"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="2Xk-R3-N0g">
+            <objects>
+                <viewController id="PdM-Gf-VND" customClass="CameraViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ga4-lg-IB7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lf0-uC-Lpr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EpL-Qb-gXO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLW-Pk-gs6">
+                                <rect key="frame" x="172" y="617" width="31" height="30"/>
+                                <state key="normal" title="Foto">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTakePhoto:" destination="PdM-Gf-VND" eventType="touchUpInside" id="fBm-eJ-JQh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ob2-8C-vi0">
+                                <rect key="frame" x="24" y="28" width="326" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ob2-8C-vi0" secondAttribute="height" multiplier="1:1" id="hPZ-TS-WNS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkY-mj-MOf">
+                                <rect key="frame" x="297" y="617" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="inverter">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ob2-8C-vi0" firstAttribute="leading" secondItem="EpL-Qb-gXO" secondAttribute="leadingMargin" constant="8" id="7TS-kg-U5T"/>
+                            <constraint firstItem="dLW-Pk-gs6" firstAttribute="centerX" secondItem="EpL-Qb-gXO" secondAttribute="centerX" id="fgF-OX-ONC"/>
+                            <constraint firstItem="ob2-8C-vi0" firstAttribute="centerX" secondItem="EpL-Qb-gXO" secondAttribute="centerX" id="i8s-gd-vah"/>
+                            <constraint firstItem="Lf0-uC-Lpr" firstAttribute="top" secondItem="dLW-Pk-gs6" secondAttribute="bottom" constant="20" id="keV-pm-hbN"/>
+                            <constraint firstItem="ob2-8C-vi0" firstAttribute="top" secondItem="Ga4-lg-IB7" secondAttribute="bottom" constant="8" id="sSg-GZ-G1P"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gr-Lw-MhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3621.5999999999999" y="105.69715142428787"/>
+        </scene>
+        <!--Fotos-->
+        <scene sceneID="rqh-LB-oFQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UYL-e9-rZq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fotos" id="Wh3-RX-j8B"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MB2-0c-Yjk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="muc-Sj-9dF" kind="relationship" relationship="rootViewController" id="xep-tn-uas"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KlF-5z-qgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725.5999999999999" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
