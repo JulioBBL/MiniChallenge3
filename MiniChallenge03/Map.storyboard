@@ -36,7 +36,7 @@
                     <tabBarItem key="tabBarItem" title="Map" id="iWW-Cx-qtQ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="map" destination="dwM-nu-qga" id="CWy-AY-tC2"/>
+                        <outlet property="map" destination="dwM-nu-qga" id="67C-u9-bwq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="va1-Rl-dyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
