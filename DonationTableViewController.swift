@@ -9,10 +9,15 @@
 import UIKit
 
 class DonationTableViewController: UITableViewController {
+    
+    let donations: [Int] = [0,0,0] //[Donation]
+    var isDonationsEmpty = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //TODO get donations
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +34,29 @@ class DonationTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return donations.count + 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "doacao", for: indexPath)
 
-        // Configure the cell...
+        if indexPath.row == 0 {
+            if self.isDonationsEmpty {
+                cell = tableView.dequeueReusableCell(withIdentifier: "emptyList", for: indexPath)
+            } else {
+                cell = tableView.dequeueReusableCell(withIdentifier: "nextDonation", for: indexPath)
+            }
+        } else {
+            //cell
+        }
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
