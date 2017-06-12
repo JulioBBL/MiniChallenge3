@@ -40,8 +40,8 @@ public class Donation: NSObject {
         return [
         
             "key": key,
-            "date": date
-            
+            "date": date,
+            "location": location
             
         ]
         
