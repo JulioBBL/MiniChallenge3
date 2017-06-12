@@ -148,8 +148,6 @@
                         <outlet property="bloodTypeOutlet" destination="djL-1i-r72" id="tzK-mf-n2x"/>
                         <outlet property="genderOutlet" destination="wg4-Hb-Dx8" id="v0i-ct-tYM"/>
                         <outlet property="lastDonationOutlet" destination="9v6-z6-s3V" id="Ay8-MC-SVV"/>
-                        <outlet property="tipoSangúineoOutlet" destination="OKu-bH-yLB" id="9Yd-50-idQ"/>
-                        <outlet property="weightOutlet" destination="4tn-Oc-kCG" id="gIb-fI-BBJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1U6-lC-Zmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
