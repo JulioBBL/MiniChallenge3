@@ -33,6 +33,7 @@
 		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
 		D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0126D1EE88E5500112374 /* MapKit.framework */; };
+		D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8D0126D1EE88E5500112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConnection.swift; sourceTree = "<group>"; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
 		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +131,7 @@
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
 				5982883F1EEB373000221079 /* Info.plist */,
 				596E52C51EE1F7A1009D9F85 /* Assets.xcassets */,
+				D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */,
 			);
 			path = MiniChallenge03;
 			sourceTree = "<group>";
@@ -197,7 +200,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 524D3B9S8F;
+						DevelopmentTeam = W84WSQX9M7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -311,6 +314,7 @@
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
 				598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */,
 				598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */,
+				D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */,
 				598288551EEB3A8B00221079 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,7 +422,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 524D3B9S8F;
+				DEVELOPMENT_TEAM = W84WSQX9M7;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -433,7 +437,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 524D3B9S8F;
+				DEVELOPMENT_TEAM = W84WSQX9M7;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
