@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VvC-n8-hGi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VvC-n8-hGi">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="VYP-pW-alO">
             <objects>
-                <viewController id="VvC-n8-hGi" sceneMemberID="viewController">
+                <viewController id="VvC-n8-hGi" customClass="testViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hTw-kM-apt"/>
                         <viewControllerLayoutGuide type="bottom" id="lwy-ap-Laq"/>
@@ -20,12 +23,75 @@
                     <view key="view" contentMode="scaleToFill" id="zj4-Yi-tf9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IFs-7i-PHW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0U-hT-pw7">
+                                <rect key="frame" x="43" y="575" width="117" height="39"/>
+                                <color key="backgroundColor" red="0.66644871230000002" green="0.040745683009999999" blue="0.1799685657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Jd8-1p-RCw"/>
+                                    <constraint firstAttribute="width" constant="117" id="qTt-o4-dcC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="117" id="rVD-3j-nYz"/>
+                                </constraints>
+                                <state key="normal" title="Sim">
+                                    <color key="titleColor" red="0.99204939599999997" green="0.99221879239999999" blue="0.9920386672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelTest:" destination="VvC-n8-hGi" eventType="touchUpInside" id="nsT-Gc-vpw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já teve anemia, doença de Chagas, malária, câncer, ou algum tipo de DST ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-Dc-vIy">
+                                <rect key="frame" x="25" y="45" width="303" height="239"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbj-VR-TtL">
+                                <rect key="frame" x="222" y="575" width="120" height="39"/>
+                                <color key="backgroundColor" red="0.2656775415" green="0.61129218340000002" blue="0.68725025650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="42y-Y6-vtW"/>
+                                    <constraint firstAttribute="height" constant="39" id="nBn-JF-Bgy"/>
+                                </constraints>
+                                <state key="normal" title="Não">
+                                    <color key="titleColor" red="0.99204939599999997" green="0.99221879239999999" blue="0.9920386672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLabel:" destination="VvC-n8-hGi" eventType="touchUpInside" id="h3I-l0-oEn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oQ8-Dc-vIy" firstAttribute="leading" secondItem="zj4-Yi-tf9" secondAttribute="leadingMargin" constant="9" id="1fa-Mn-uyL"/>
+                            <constraint firstItem="IFs-7i-PHW" firstAttribute="leading" secondItem="zj4-Yi-tf9" secondAttribute="leading" id="3Zj-po-0Z7"/>
+                            <constraint firstItem="lwy-ap-Laq" firstAttribute="top" secondItem="wbj-VR-TtL" secondAttribute="bottom" constant="53" id="6fi-af-1de"/>
+                            <constraint firstAttribute="trailing" secondItem="IFs-7i-PHW" secondAttribute="trailing" id="9nY-v4-SfS"/>
+                            <constraint firstItem="wbj-VR-TtL" firstAttribute="top" secondItem="oQ8-Dc-vIy" secondAttribute="bottom" constant="291" id="AgI-tc-MRy"/>
+                            <constraint firstItem="lwy-ap-Laq" firstAttribute="top" secondItem="IFs-7i-PHW" secondAttribute="bottom" id="HbT-0N-Wrw"/>
+                            <constraint firstItem="oQ8-Dc-vIy" firstAttribute="top" secondItem="hTw-kM-apt" secondAttribute="bottom" constant="25" id="PDH-sL-nxy"/>
+                            <constraint firstItem="n0U-hT-pw7" firstAttribute="top" secondItem="wbj-VR-TtL" secondAttribute="top" id="SvV-0v-cJJ"/>
+                            <constraint firstItem="IFs-7i-PHW" firstAttribute="top" secondItem="zj4-Yi-tf9" secondAttribute="top" id="UJW-y3-F86"/>
+                            <constraint firstItem="n0U-hT-pw7" firstAttribute="baseline" secondItem="wbj-VR-TtL" secondAttribute="firstBaseline" id="XYd-hx-X6P"/>
+                            <constraint firstItem="wbj-VR-TtL" firstAttribute="leading" secondItem="n0U-hT-pw7" secondAttribute="trailing" constant="62" id="a3I-uX-VCZ"/>
+                            <constraint firstItem="n0U-hT-pw7" firstAttribute="leading" secondItem="zj4-Yi-tf9" secondAttribute="leadingMargin" constant="27" id="baJ-Gp-o4i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wbj-VR-TtL" secondAttribute="trailing" constant="17" id="dyI-zv-L9Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oQ8-Dc-vIy" secondAttribute="trailing" constant="31" id="jmO-eu-hkr"/>
+                            <constraint firstItem="n0U-hT-pw7" firstAttribute="firstBaseline" secondItem="wbj-VR-TtL" secondAttribute="baseline" id="kRe-RK-1f1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundimage" destination="IFs-7i-PHW" id="hsp-Zj-C9F"/>
+                        <outlet property="changeButton" destination="wbj-VR-TtL" id="utW-qS-dW2"/>
+                        <outlet property="firstLabel" destination="oQ8-Dc-vIy" id="kM8-2G-oWb"/>
+                        <outlet property="yesButton" destination="n0U-hT-pw7" id="JxN-R3-Ka8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FTJ-Q9-itY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="-204"/>
+            <point key="canvasLocation" x="389.60000000000002" y="-204.64767616191907"/>
         </scene>
     </scenes>
 </document>
