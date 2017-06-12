@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		155AD6E31EEF1715007EA420 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD6E21EEF1715007EA420 /* testViewController.swift */; };
 		199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */; };
+		596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */; };
+		596AF36D1EEF285E003010F0 /* NewDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */; };
+		596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36E1EEF29EB003010F0 /* Utils.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
 		598288361EEB344600221079 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882D1EEB344600221079 /* Donation.storyboard */; };
 		598288371EEB344600221079 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882E1EEB344600221079 /* Info.storyboard */; };
@@ -41,6 +44,9 @@
 		155AD6E21EEF1715007EA420 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		1959C19C1EEB0B0700455576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
+		596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDonationTableViewCell.swift; sourceTree = "<group>"; };
+		596AF36E1EEF29EB003010F0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		596E52BB1EE1F7A1009D9F85 /* MiniChallenge03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596E52C01EE1F7A1009D9F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +93,11 @@
 		1959C19B1EEB0AAE00455576 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				596AF36E1EEF29EB003010F0 /* Utils.swift */,
 				1959C19C1EEB0B0700455576 /* User.swift */,
 				598288411EEB374C00221079 /* BankCollectionViewCell.swift */,
+				596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */,
+				596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */,
 				598288421EEB374C00221079 /* FIRDataObject.swift */,
 				598288431EEB374C00221079 /* Hemocentro.swift */,
 				598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */,
@@ -308,11 +317,14 @@
 			files = (
 				5982884A1EEB3A8B00221079 /* CameraViewController.swift in Sources */,
 				59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */,
+				596AF36D1EEF285E003010F0 /* NewDonationTableViewCell.swift in Sources */,
 				155AD6E31EEF1715007EA420 /* testViewController.swift in Sources */,
 				5982884B1EEB3A8B00221079 /* InfoCollectionViewController.swift in Sources */,
+				596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */,
 				5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */,
 				5982884D1EEB3A8B00221079 /* PhotosTableViewController.swift in Sources */,
 				5982884F1EEB3A8B00221079 /* User.swift in Sources */,
+				596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */,
 				598288501EEB3A8B00221079 /* BankCollectionViewCell.swift in Sources */,
 				199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */,
 				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,

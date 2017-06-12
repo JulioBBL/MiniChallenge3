@@ -10,19 +10,15 @@ import UIKit
 
 class DonationTableViewController: UITableViewController {
     
-    let donations: [Int] = [0,0,0] //[Donation]
-    var isDonationsEmpty = true
+    let donations: [Int] = [Donation]
+    var isDonationsEmpty = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //TODO get donations
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.clearsSelectionOnViewWillAppear = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +29,15 @@ class DonationTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return donations.count + 1
+        return self.donations.count + 1
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "doacao", for: indexPath)
+        var cell: UITableViewCell
 
         if indexPath.row == 0 {
             if self.isDonationsEmpty {
@@ -52,9 +46,10 @@ class DonationTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "nextDonation", for: indexPath)
             }
         } else {
-            //cell
+            cell = tableView.dequeueReusableCell(withIdentifier: "doacao", for: indexPath)
+            (cell as! DonationTableViewCell).donationNumber.text = "\(self.donations.count - indexPath.row + 1)ª"
         }
-
+        
         return cell
     }
 
