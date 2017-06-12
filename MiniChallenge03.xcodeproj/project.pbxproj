@@ -31,6 +31,7 @@
 		598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */; };
 		598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */; };
 		598288551EEB3A8B00221079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E52C01EE1F7A1009D9F85 /* ViewController.swift */; };
+		59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */; };
 		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
 		D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0126D1EE88E5500112374 /* MapKit.framework */; };
@@ -62,6 +63,7 @@
 		598288421EEB374C00221079 /* FIRDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRDataObject.swift; sourceTree = "<group>"; };
 		598288431EEB374C00221079 /* Hemocentro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hemocentro.swift; sourceTree = "<group>"; };
 		598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCollectionViewCell.swift; sourceTree = "<group>"; };
+		59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8D0126D1EE88E5500112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
@@ -158,8 +160,10 @@
 				598288221EEB342B00221079 /* CameraViewController.swift */,
 				598288231EEB342B00221079 /* InfoCollectionViewController.swift */,
 				598288241EEB342B00221079 /* MapViewController.swift */,
+				59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */,
 				598288251EEB342B00221079 /* PhotosTableViewController.swift */,
 				199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */,
+				155AD6E21EEF1715007EA420 /* testViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -200,7 +204,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = CVX58B2KAX;
+						DevelopmentTeam = 524D3B9S8F;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -304,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5982884A1EEB3A8B00221079 /* CameraViewController.swift in Sources */,
+				59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */,
+				155AD6E31EEF1715007EA420 /* testViewController.swift in Sources */,
 				5982884B1EEB3A8B00221079 /* InfoCollectionViewController.swift in Sources */,
 				5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */,
 				5982884D1EEB3A8B00221079 /* PhotosTableViewController.swift in Sources */,
@@ -422,7 +428,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVX58B2KAX;
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -437,7 +443,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVX58B2KAX;
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;

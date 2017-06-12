@@ -50,40 +50,20 @@
             </objects>
             <point key="canvasLocation" x="2808.8000000000002" y="644.52773613193403"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Donation Table View Controller-->
         <scene sceneID="Oef-zz-cOq">
             <objects>
-                <tableViewController id="hk1-Xx-AK2" sceneMemberID="viewController">
+                <tableViewController id="hk1-Xx-AK2" customClass="DonationTableViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" id="znh-Zd-kUR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyList" rowHeight="73" id="LV0-Dw-1DB">
-                                <rect key="frame" x="0.0" y="28" width="375" height="73"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LV0-Dw-1DB" id="QDv-xz-Fhr">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="não há doações registradas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1I-TW-uBP">
-                                            <rect key="frame" x="81" y="26" width="212" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="b1I-TW-uBP" firstAttribute="centerY" secondItem="QDv-xz-Fhr" secondAttribute="centerY" id="CRj-E0-zuk"/>
-                                        <constraint firstItem="b1I-TW-uBP" firstAttribute="centerX" secondItem="QDv-xz-Fhr" secondAttribute="centerX" id="tyA-TW-a8O"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="doacao" rowHeight="103" id="uRc-ff-lYY">
-                                <rect key="frame" x="0.0" y="101" width="375" height="103"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uRc-ff-lYY" id="kqk-sm-JFX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doação nº" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkR-rc-TlD">
@@ -137,6 +117,47 @@
                                         <constraint firstItem="TAm-E5-EN7" firstAttribute="centerY" secondItem="JIo-a7-b0c" secondAttribute="centerY" id="lHC-Qe-RLv"/>
                                         <constraint firstItem="JIo-a7-b0c" firstAttribute="leading" secondItem="kqk-sm-JFX" secondAttribute="leadingMargin" id="rJt-H0-am2"/>
                                         <constraint firstItem="gkR-rc-TlD" firstAttribute="leading" secondItem="kqk-sm-JFX" secondAttribute="leadingMargin" id="v0c-Yc-5gt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyList" rowHeight="73" id="LV0-Dw-1DB">
+                                <rect key="frame" x="0.0" y="131" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LV0-Dw-1DB" id="QDv-xz-Fhr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Não há doações registradas. Que tal fazer uma doação? " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1I-TW-uBP">
+                                            <rect key="frame" x="78" y="16" width="219" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="b1I-TW-uBP" firstAttribute="centerY" secondItem="QDv-xz-Fhr" secondAttribute="centerY" id="CRj-E0-zuk"/>
+                                        <constraint firstItem="b1I-TW-uBP" firstAttribute="centerX" secondItem="QDv-xz-Fhr" secondAttribute="centerX" id="tyA-TW-a8O"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nextDonation" rowHeight="73" id="vSY-9W-5T6">
+                                <rect key="frame" x="0.0" y="204" width="375" height="73"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vSY-9W-5T6" id="Vx7-Y4-rjg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você só poderá doar novamente a partir do dia: 00/00/0000" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqk-3u-wcK">
+                                            <rect key="frame" x="8" y="16" width="359" height="41"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Mqk-3u-wcK" firstAttribute="leading" secondItem="Vx7-Y4-rjg" secondAttribute="leadingMargin" id="5hU-dk-2TH"/>
+                                        <constraint firstItem="Mqk-3u-wcK" firstAttribute="centerX" secondItem="Vx7-Y4-rjg" secondAttribute="centerX" id="P0R-ag-qFb"/>
+                                        <constraint firstItem="Mqk-3u-wcK" firstAttribute="centerY" secondItem="Vx7-Y4-rjg" secondAttribute="centerY" id="jf0-fq-iiM"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
