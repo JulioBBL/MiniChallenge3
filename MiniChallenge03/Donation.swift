@@ -11,16 +11,18 @@ import Firebase
 
 public class Donation: NSObject {
 
-    let key: String?
+    var key: String?
     var date: Date
-    var location: String?
-    let ref: FIRDatabaseReference?
+    var location: String
+    var ref: FIRDatabaseReference?
     
-    init(date: Date){
+    init(key:String?, date: Date, location: String){
         
-        self.key = nil
-        self.date = Date()
+        self.key = key
+        self.date = date
+        self.location = location
         self.ref = nil
+    
         
     }
     
@@ -31,6 +33,7 @@ public class Donation: NSObject {
         key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
         date = dateFormatter.date(from: snapshotValue["date"] as! String )!
+        location = snapshotValue["date"] as! String
         ref = snapshot.ref
         
     }
@@ -39,7 +42,6 @@ public class Donation: NSObject {
         
         return [
         
-            "key": key,
             "date": date,
             "location": location
             
