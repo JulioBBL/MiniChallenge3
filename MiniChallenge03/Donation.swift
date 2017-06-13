@@ -9,44 +9,49 @@
 import Foundation
 import Firebase
 
-public class Donation: NSObject {
+public class Donation {
 
     let key: String?
     var date: Date
-    var location: String?
+    var location: String
     let ref: FIRDatabaseReference?
     
-    init(date: Date){
-        
+    init(){
         self.key = nil
         self.date = Date()
+        self.location = "Local não informado"
         self.ref = nil
-        
+    }
+    
+    init(date: Date){
+        self.key = nil
+        self.date = date
+        self.location = "Local não informado"
+        self.ref = nil
+    }
+    
+    init(date: Date, location: String){
+        self.key = nil
+        self.date = Date()
+        self.location = location
+        self.ref = nil
     }
     
     init(snapshot: FIRDataSnapshot){
-        
         let dateFormatter = DateFormatter()
     
-        key = snapshot.key
+        self.key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
-        date = dateFormatter.date(from: snapshotValue["date"] as! String )!
-        ref = snapshot.ref
-        
+        self.date = dateFormatter.date(from: snapshotValue["date"] as! String )!
+        self.location = snapshotValue["date"] as! String
+        self.ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {
-        
         return [
-        
-            "key": key,
+            "key": key ?? "0000",
             "date": date,
             "location": location
-            
         ]
-        
     }
-    
-    
-    
 }

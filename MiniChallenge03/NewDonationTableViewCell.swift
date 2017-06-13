@@ -28,7 +28,7 @@ class NewDonationTableViewCell: UITableViewCell {
         if Calendar(identifier: .gregorian).compare(date, to: Date(), toGranularity: .day) == ComparisonResult.orderedAscending {
             label.text = "Você já pode doar novamente :D"
         } else {
-            label.text = "\(self.presetText) \(Utils.dateToString(Calendar(identifier: .gregorian).date(byAdding: .day, value: 30, to: date)!))"
+            label.text = "\(self.presetText) \(Utils.dateToString(Calendar(identifier: .gregorian).date(byAdding: .day, value: 60, to: date)!))"
         }
     }
 }
