@@ -12,7 +12,7 @@ import Firebase
 
 class Hemocentro: NSObject {
     
-    let key: String?
+    var key: String?
     var nome: String
     var estado: String
     var cidade: String
@@ -22,7 +22,7 @@ class Hemocentro: NSObject {
     var latitude: String
     var longitude: String
     var telefone: String
-    let ref: FIRDatabaseReference?
+    var ref: FIRDatabaseReference?
     
     init(nome: String,
          estado: String,
@@ -65,7 +65,6 @@ class Hemocentro: NSObject {
     
     func toAnyObject() -> Any {
         return [
-            "key": key,
             "nome": nome,
             "estado": estado,
             "cidade": cidade,

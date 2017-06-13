@@ -141,7 +141,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="vCE-IN-AWr"/>
+                    <tabBarItem key="tabBarItem" title="Profile" selectedImage="profile-icon" id="vCE-IN-AWr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aptitudeOutlet" destination="q3H-0s-0wz" id="ukX-sD-XmL"/>
@@ -157,5 +157,6 @@
     </scenes>
     <resources>
         <image name="ic_settings_applications_white_48px" width="72" height="72"/>
+        <image name="profile-icon" width="20" height="20"/>
     </resources>
 </document>

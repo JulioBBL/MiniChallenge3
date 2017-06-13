@@ -40,6 +40,8 @@
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
 		D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0126D1EE88E5500112374 /* MapKit.framework */; };
 		D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */; };
+		D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A241EF07B1A00CF658A /* Gender.swift */; };
+		D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A261EF07B4A00CF658A /* BloodType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8D0126D1EE88E5500112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConnection.swift; sourceTree = "<group>"; };
+		D8E06A241EF07B1A00CF658A /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		D8E06A261EF07B4A00CF658A /* BloodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodType.swift; sourceTree = "<group>"; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
 		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,8 @@
 				598288431EEB374C00221079 /* Hemocentro.swift */,
 				598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */,
 				190746A61EEF14D700A2539D /* Donation.swift */,
+				D8E06A241EF07B1A00CF658A /* Gender.swift */,
+				D8E06A261EF07B4A00CF658A /* BloodType.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -334,9 +340,11 @@
 				596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */,
 				598288501EEB3A8B00221079 /* BankCollectionViewCell.swift in Sources */,
 				199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */,
+				D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */,
 				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
 				598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */,
+				D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */,
 				598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */,
 				D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */,
 				598288551EEB3A8B00221079 /* ViewController.swift in Sources */,

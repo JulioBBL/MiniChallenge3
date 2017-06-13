@@ -11,7 +11,7 @@ import Firebase
 
 public class Donation {
 
-    let key: String?
+    var key: String?
     var date: Date
     var location: String
     let ref: FIRDatabaseReference?
@@ -49,7 +49,7 @@ public class Donation {
     
     func toAnyObject() -> Any {
         return [
-            "key": key ?? "0000",
+        
             "date": date,
             "location": location
         ]
