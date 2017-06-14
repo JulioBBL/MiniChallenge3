@@ -223,7 +223,6 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = CVX58B2KAX;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -328,7 +327,6 @@
 			files = (
 				5982884A1EEB3A8B00221079 /* CameraViewController.swift in Sources */,
 				59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */,
-				596AF36D1EEF285E003010F0 /* NewDonationTableViewCell.swift in Sources */,
 				5982884B1EEB3A8B00221079 /* InfoCollectionViewController.swift in Sources */,
 				596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */,
 				5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */,
@@ -453,7 +451,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVX58B2KAX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -468,7 +466,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVX58B2KAX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
