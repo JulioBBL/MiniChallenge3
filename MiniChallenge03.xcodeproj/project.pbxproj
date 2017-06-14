@@ -10,7 +10,6 @@
 		190746A71EEF14D800A2539D /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190746A61EEF14D700A2539D /* Donation.swift */; };
 		199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */; };
 		596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */; };
-		596AF36D1EEF285E003010F0 /* NewDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */; };
 		596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36E1EEF29EB003010F0 /* Utils.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
 		598288361EEB344600221079 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882D1EEB344600221079 /* Donation.storyboard */; };
@@ -221,7 +220,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = W84WSQX9M7;
+						DevelopmentTeam = CVX58B2KAX;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -449,7 +448,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W84WSQX9M7;
+				DEVELOPMENT_TEAM = CVX58B2KAX;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -464,7 +463,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W84WSQX9M7;
+				DEVELOPMENT_TEAM = CVX58B2KAX;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
