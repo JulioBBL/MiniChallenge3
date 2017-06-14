@@ -29,12 +29,11 @@ class ProcessCollectionViewCell: UICollectionViewCell {
                          
                          ("6 - Coleta", "É passada uma solução antisséptica no local onde será feita a punção. A coleta de sangue é totalmente segura, sendo utilizada uma agulha estéril, de uso único e descartável, para coletar cerca de 450ml de sangue e amostras para a realização de exames obrigatórios por lei."),
                          
-                         ("7 - Lanche", "Após a doação, o doador recebe um lanche e um suco, que deverão ser consumidos na Cantina do posto de coleta.\nAlgumas orientações pós-doação:\n - manter o curativo no local por pelo menos 4 horas;\n - não ingerir bebidas alcoólicas;\n - evitar esforço físico; e\n - beber bastante líquido."),
+                         ("7 - Lanchinho :)", "Após a doação, o doador recebe um lanche e um suco, que deverão ser consumidos na Cantina do posto de coleta.\nAlgumas orientações pós-doação:\n - manter o curativo no local por pelo menos 4 horas;\n - não ingerir bebidas alcoólicas;\n - evitar esforço físico; e\n - beber bastante líquido."),
                          
                          ("8 - O caminho da bolsa até a transfusão", "O sangue doado é testado para hepatite B e C, HIV, HTLV I e II, Chagas e sífilis. Se um destes testes apresentar resultado alterado, o sangue doado não será utilizado para transfusão e o doador será convocado a retornar à Fundação Pró-Sangue para repetição dos exames.\nCaso ocorra inadequação das amostras, o doador também será convocado a repetir os exames.")]
     
     public func setPage(_ n: Int) {
-        print("\(n)/\(texts.count)")
         if n <= 0 {
             //change texts
             self.page = 0

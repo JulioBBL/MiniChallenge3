@@ -113,13 +113,14 @@ class DonationTableViewController: UITableViewController {
     //Mark: - My methods
     
     func retrieveInfo() {
-        //TODO
+        self.donations = FirebaseConnection.usuarioAtual?.donations ?? []
     }
     
     func addNewDonation(_ donation: Donation) {
         self.donations.append(donation)
         self.tableView.reloadData()
-        //TODO save new donation on the server
+        FirebaseConnection.usuarioAtual?.donations = self.donations
+        FirebaseConnection.saveUser()
     }
 
 }
