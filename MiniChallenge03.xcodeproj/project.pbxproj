@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		190746A71EEF14D800A2539D /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190746A61EEF14D700A2539D /* Donation.swift */; };
 		199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */; };
+		59206E0D1EF070A900D74229 /* DonationCreationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */; };
+		59206E111EF073C500D74229 /* Donations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59206E101EF073C500D74229 /* Donations.storyboard */; };
 		596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */; };
 		596AF36D1EEF285E003010F0 /* NewDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */; };
 		596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36E1EEF29EB003010F0 /* Utils.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
-		598288361EEB344600221079 /* Donation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882D1EEB344600221079 /* Donation.storyboard */; };
 		598288371EEB344600221079 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882E1EEB344600221079 /* Info.storyboard */; };
 		598288381EEB344600221079 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882F1EEB344600221079 /* Landing.storyboard */; };
 		598288391EEB344600221079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288301EEB344600221079 /* Main.storyboard */; };
@@ -47,6 +48,8 @@
 		190746A61EEF14D700A2539D /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		1959C19C1EEB0B0700455576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationCreationTableViewController.swift; sourceTree = "<group>"; };
+		59206E101EF073C500D74229 /* Donations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donations.storyboard; sourceTree = "<group>"; };
 		596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDonationTableViewCell.swift; sourceTree = "<group>"; };
 		596AF36E1EEF29EB003010F0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		598288231EEB342B00221079 /* InfoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoCollectionViewController.swift; path = MiniChallenge03/InfoCollectionViewController.swift; sourceTree = "<group>"; };
 		598288241EEB342B00221079 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MiniChallenge03/MapViewController.swift; sourceTree = "<group>"; };
 		598288251EEB342B00221079 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosTableViewController.swift; path = MiniChallenge03/PhotosTableViewController.swift; sourceTree = "<group>"; };
-		5982882D1EEB344600221079 /* Donation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donation.storyboard; sourceTree = "<group>"; };
 		5982882E1EEB344600221079 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
 		5982882F1EEB344600221079 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		598288301EEB344600221079 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -159,10 +161,10 @@
 		5982881E1EEB2F9000221079 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				5982882D1EEB344600221079 /* Donation.storyboard */,
 				5982882E1EEB344600221079 /* Info.storyboard */,
 				5982882F1EEB344600221079 /* Landing.storyboard */,
 				598288301EEB344600221079 /* Main.storyboard */,
+				59206E101EF073C500D74229 /* Donations.storyboard */,
 				598288311EEB344600221079 /* Map.storyboard */,
 				598288321EEB344600221079 /* Photos.storyboard */,
 				598288331EEB344600221079 /* Profile.storyboard */,
@@ -181,6 +183,7 @@
 				59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */,
 				598288251EEB342B00221079 /* PhotosTableViewController.swift */,
 				199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */,
+				59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -221,7 +224,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = W84WSQX9M7;
+						DevelopmentTeam = 524D3B9S8F;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -256,6 +259,7 @@
 			files = (
 				596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */,
 				5982883A1EEB344600221079 /* Map.storyboard in Resources */,
+				59206E111EF073C500D74229 /* Donations.storyboard in Resources */,
 				598288381EEB344600221079 /* Landing.storyboard in Resources */,
 				D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */,
 				598288391EEB344600221079 /* Main.storyboard in Resources */,
@@ -264,7 +268,6 @@
 				598288371EEB344600221079 /* Info.storyboard in Resources */,
 				598288401EEB373000221079 /* Info.plist in Resources */,
 				5982883E1EEB344600221079 /* Test.storyboard in Resources */,
-				598288361EEB344600221079 /* Donation.storyboard in Resources */,
 				5982883D1EEB344600221079 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,11 +329,13 @@
 			files = (
 				5982884A1EEB3A8B00221079 /* CameraViewController.swift in Sources */,
 				59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */,
+				596AF36D1EEF285E003010F0 /* NewDonationTableViewCell.swift in Sources */,
 				5982884B1EEB3A8B00221079 /* InfoCollectionViewController.swift in Sources */,
 				596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */,
 				5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */,
 				5982884D1EEB3A8B00221079 /* PhotosTableViewController.swift in Sources */,
 				5982884F1EEB3A8B00221079 /* User.swift in Sources */,
+				59206E0D1EF070A900D74229 /* DonationCreationTableViewController.swift in Sources */,
 				190746A71EEF14D800A2539D /* Donation.swift in Sources */,
 				596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */,
 				598288501EEB3A8B00221079 /* BankCollectionViewCell.swift in Sources */,
@@ -449,7 +454,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W84WSQX9M7;
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -464,7 +469,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W84WSQX9M7;
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
