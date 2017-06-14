@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0f1-UH-PsC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0f1-UH-PsC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +24,7 @@
                         <segue destination="cF5-EQ-7xg" kind="relationship" relationship="viewControllers" id="J1s-Qm-Hbb"/>
                         <segue destination="GWu-kt-wn3" kind="relationship" relationship="viewControllers" id="vOq-zI-LOs"/>
                         <segue destination="32U-nV-hUg" kind="relationship" relationship="viewControllers" id="x8L-U6-2fz"/>
-                        <segue destination="PgW-FM-bJB" kind="relationship" relationship="viewControllers" id="63p-zr-QZ9"/>
+                        <segue destination="xYq-uc-Iaj" kind="relationship" relationship="viewControllers" id="Jxm-oe-M1c"/>
                         <segue destination="1ke-nC-jXt" kind="relationship" relationship="viewControllers" id="x4k-mm-Hhr"/>
                     </connections>
                 </tabBarController>
@@ -40,7 +40,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jn6-9G-0ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="-85"/>
+            <point key="canvasLocation" x="1043" y="-66"/>
         </scene>
         <!--Map-->
         <scene sceneID="PXL-5P-xum">
@@ -50,7 +50,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfx-08-nxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="29"/>
+            <point key="canvasLocation" x="1043" y="34"/>
         </scene>
         <!--Info-->
         <scene sceneID="Xzb-YC-gD6">
@@ -60,17 +60,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKW-qb-7Fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040" y="292"/>
-        </scene>
-        <!--Donation-->
-        <scene sceneID="SyQ-ey-3Az">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Donation" id="PgW-FM-bJB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="AF1-Sg-yNe"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7qh-HM-ehr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1041" y="190"/>
+            <point key="canvasLocation" x="1043" y="297"/>
         </scene>
         <!--Photos-->
         <scene sceneID="Oa8-Ts-Dwg">
@@ -80,7 +70,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9b-Z9-8L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1041" y="115"/>
+            <point key="canvasLocation" x="1044" y="120"/>
+        </scene>
+        <!--Donations-->
+        <scene sceneID="0EI-Cc-4Uo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Donations" id="xYq-uc-Iaj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="wkZ-ck-sfg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qee-60-3E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="203"/>
         </scene>
     </scenes>
 </document>

@@ -29,13 +29,14 @@ class FirebaseConnection {
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if user != nil {
-            
+                self.ref.child((user?.uid)!).observe(.childAdded, with: {snapshot in
+                    
+                })
             } else {
                 // No user is signed in.
             }
         }
     }
-    
     
     
 }

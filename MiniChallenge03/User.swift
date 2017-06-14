@@ -52,8 +52,10 @@ public class User {
         gender = Gender(rawValue: snapshotValue["gender"] as! String)!
         for snap in snapshot.children{
             let snapValue = (snap as! FIRDataSnapshot).value as! [String: AnyObject]
-            donations.append(Donation(key: (snap as! FIRDataSnapshot).key, date: formatter.date(from: snapValue["date"] as! String)!,
-                                      location: snapValue["location"] as! String))
+            
+            let temp = Donation(date: formatter.date(from: snapValue["date"] as! String)!, location: snapValue["location"] as! String)
+            temp.key = ((snap as! FIRDataSnapshot).key)
+            donations.append(temp)
         }
         ref = snapshot.ref
         

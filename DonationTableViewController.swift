@@ -10,13 +10,19 @@ import UIKit
 
 class DonationTableViewController: UITableViewController {
     
-    let donations: [Int] = [Donation]
-    var isDonationsEmpty = false
+    var donations: [Donation] = []
+    var isDonationsEmpty: Bool {
+        if self.donations.count > 0 {
+            return false
+        } else {
+            return true
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //TODO get donations
+        self.retrieveInfo()
         
         self.clearsSelectionOnViewWillAppear = true
     }
@@ -37,6 +43,7 @@ class DonationTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let donationIndex = self.donations.count - indexPath.row
         var cell: UITableViewCell
 
         if indexPath.row == 0 {
@@ -44,10 +51,13 @@ class DonationTableViewController: UITableViewController {
                 cell = tableView.dequeueReusableCell(withIdentifier: "emptyList", for: indexPath)
             } else {
                 cell = tableView.dequeueReusableCell(withIdentifier: "nextDonation", for: indexPath)
+                (cell as! NewDonationTableViewCell).setDate(to: self.donations[self.donations.count - 1].date)
             }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "doacao", for: indexPath)
-            (cell as! DonationTableViewCell).donationNumber.text = "\(self.donations.count - indexPath.row + 1)ª"
+            (cell as! DonationTableViewCell).donationDate.text = Utils.dateToString(self.donations[donationIndex].date)
+            (cell as! DonationTableViewCell).donationLocale.text = self.donations[donationIndex].location
+            (cell as! DonationTableViewCell).donationNumber.text = "\(donationIndex + 1)ª"
         }
         
         return cell
@@ -88,14 +98,28 @@ class DonationTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCadastro" {
+            (segue.destination as! DonationCreationTableViewController).delegate = self
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    //Mark: - My methods
+    
+    func retrieveInfo() {
+        //TODO
+    }
+    
+    func addNewDonation(_ donation: Donation) {
+        self.donations.append(donation)
+        self.tableView.reloadData()
+        //TODO save new donation on the server
+    }
 
 }
