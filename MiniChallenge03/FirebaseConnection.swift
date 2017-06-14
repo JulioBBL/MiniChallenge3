@@ -29,13 +29,20 @@ class FirebaseConnection {
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if user != nil {
-            
+                self.ref.child("usuarios/\(user?.uid)").observe(.childAdded, with: {snapshot in
+                    FirebaseConnection.usuarioAtual = User(snapshot: snapshot)
+                })
             } else {
                 // No user is signed in.
             }
         }
+        
+        
     }
     
+    static func addUser(){
+        
+    }
     
     
 }
