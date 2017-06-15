@@ -120,7 +120,7 @@ class DonationTableViewController: UITableViewController {
         self.donations.append(donation)
         self.tableView.reloadData()
         FirebaseConnection.usuarioAtual?.donations = self.donations
-        FirebaseConnection.saveUser()
+        //FirebaseConnection.saveUser()
     }
 
 }

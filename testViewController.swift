@@ -12,7 +12,7 @@ class testViewController: UIViewController {
 
     var show1 = true
     var control = 0
-    var textos = ["label1---","label2","label3",""]
+    var textos = ["Teve resfriado nos últimos 7 dias ?","Fez tatuagem ou colocou piercing nos últimos 12 meses ?","Tomou algum tipo de vacina nas últimas 48 horas ?","Tem algum problema de hipo ou hipertensão ou Diabetes ?","Tem problema na coagulação do sangue ou algum problema cardíaco ?","Teve hepatite após os 11 anos de idade?", "Ingeriou bebida alcoólica nos últimos 3 dias ?","Já usou algum tipo de droga ilícita ?","Já realizou algum tipo de transplante de órgãos e/ou de medula ?", ""]
     
     
     @IBOutlet weak var yesButton: UIButton!

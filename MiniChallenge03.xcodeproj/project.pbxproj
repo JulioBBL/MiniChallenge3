@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155AD72D1EF1E01A007EA420 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155AD72C1EF1E01A007EA420 /* Photos.storyboard */; };
+		155AD72F1EF1E1E3007EA420 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD72E1EF1E1E3007EA420 /* CustomCameraViewController.swift */; };
+		155AD7311EF1E52C007EA420 /* showpictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD7301EF1E52C007EA420 /* showpictureViewController.swift */; };
+		155AD7331EF2D793007EA420 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD7321EF2D793007EA420 /* testViewController.swift */; };
 		190746A71EEF14D800A2539D /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190746A61EEF14D700A2539D /* Donation.swift */; };
 		199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */; };
 		59206E0D1EF070A900D74229 /* DonationCreationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */; };
@@ -18,7 +22,6 @@
 		598288381EEB344600221079 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882F1EEB344600221079 /* Landing.storyboard */; };
 		598288391EEB344600221079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288301EEB344600221079 /* Main.storyboard */; };
 		5982883A1EEB344600221079 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288311EEB344600221079 /* Map.storyboard */; };
-		5982883B1EEB344600221079 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288321EEB344600221079 /* Photos.storyboard */; };
 		5982883C1EEB344600221079 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288331EEB344600221079 /* Profile.storyboard */; };
 		5982883D1EEB344600221079 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288341EEB344600221079 /* Storyboard.storyboard */; };
 		5982883E1EEB344600221079 /* Test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288351EEB344600221079 /* Test.storyboard */; };
@@ -44,6 +47,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		155AD72C1EF1E01A007EA420 /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
+		155AD72E1EF1E1E3007EA420 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
+		155AD7301EF1E52C007EA420 /* showpictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showpictureViewController.swift; sourceTree = "<group>"; };
+		155AD7321EF2D793007EA420 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		190746A61EEF14D700A2539D /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		1959C19C1EEB0B0700455576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +71,6 @@
 		5982882F1EEB344600221079 /* Landing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		598288301EEB344600221079 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		598288311EEB344600221079 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
-		598288321EEB344600221079 /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		598288331EEB344600221079 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		598288341EEB344600221079 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		598288351EEB344600221079 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
@@ -163,9 +169,9 @@
 				5982882E1EEB344600221079 /* Info.storyboard */,
 				5982882F1EEB344600221079 /* Landing.storyboard */,
 				598288301EEB344600221079 /* Main.storyboard */,
+				155AD72C1EF1E01A007EA420 /* Photos.storyboard */,
 				59206E101EF073C500D74229 /* Donations.storyboard */,
 				598288311EEB344600221079 /* Map.storyboard */,
-				598288321EEB344600221079 /* Photos.storyboard */,
 				598288331EEB344600221079 /* Profile.storyboard */,
 				598288341EEB344600221079 /* Storyboard.storyboard */,
 				598288351EEB344600221079 /* Test.storyboard */,
@@ -176,6 +182,7 @@
 		7B985232E27F01B3726927BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				155AD7321EF2D793007EA420 /* testViewController.swift */,
 				598288221EEB342B00221079 /* CameraViewController.swift */,
 				598288231EEB342B00221079 /* InfoCollectionViewController.swift */,
 				598288241EEB342B00221079 /* MapViewController.swift */,
@@ -183,6 +190,8 @@
 				598288251EEB342B00221079 /* PhotosTableViewController.swift */,
 				199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */,
 				59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */,
+				155AD72E1EF1E1E3007EA420 /* CustomCameraViewController.swift */,
+				155AD7301EF1E52C007EA420 /* showpictureViewController.swift */,
 			);
 			name = Controller;
 			path = ..;
@@ -261,10 +270,10 @@
 				598288381EEB344600221079 /* Landing.storyboard in Resources */,
 				D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */,
 				598288391EEB344600221079 /* Main.storyboard in Resources */,
-				5982883B1EEB344600221079 /* Photos.storyboard in Resources */,
 				5982883C1EEB344600221079 /* Profile.storyboard in Resources */,
 				598288371EEB344600221079 /* Info.storyboard in Resources */,
 				598288401EEB373000221079 /* Info.plist in Resources */,
+				155AD72D1EF1E01A007EA420 /* Photos.storyboard in Resources */,
 				5982883E1EEB344600221079 /* Test.storyboard in Resources */,
 				5982883D1EEB344600221079 /* Storyboard.storyboard in Resources */,
 			);
@@ -328,6 +337,7 @@
 				5982884A1EEB3A8B00221079 /* CameraViewController.swift in Sources */,
 				59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */,
 				5982884B1EEB3A8B00221079 /* InfoCollectionViewController.swift in Sources */,
+				155AD72F1EF1E1E3007EA420 /* CustomCameraViewController.swift in Sources */,
 				596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */,
 				5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */,
 				5982884D1EEB3A8B00221079 /* PhotosTableViewController.swift in Sources */,
@@ -341,9 +351,11 @@
 				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
 				598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */,
+				155AD7331EF2D793007EA420 /* testViewController.swift in Sources */,
 				D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */,
 				598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */,
 				D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */,
+				155AD7311EF1E52C007EA420 /* showpictureViewController.swift in Sources */,
 				598288551EEB3A8B00221079 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

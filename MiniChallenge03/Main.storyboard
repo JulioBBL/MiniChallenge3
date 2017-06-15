@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0f1-UH-PsC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0f1-UH-PsC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +23,7 @@
                     <connections>
                         <segue destination="cF5-EQ-7xg" kind="relationship" relationship="viewControllers" id="J1s-Qm-Hbb"/>
                         <segue destination="GWu-kt-wn3" kind="relationship" relationship="viewControllers" id="vOq-zI-LOs"/>
-                        <segue destination="32U-nV-hUg" kind="relationship" relationship="viewControllers" id="x8L-U6-2fz"/>
+                        <segue destination="zsC-Mg-JuE" kind="relationship" relationship="viewControllers" id="Alc-uW-iKA"/>
                         <segue destination="xYq-uc-Iaj" kind="relationship" relationship="viewControllers" id="Jxm-oe-M1c"/>
                         <segue destination="1ke-nC-jXt" kind="relationship" relationship="viewControllers" id="x4k-mm-Hhr"/>
                     </connections>
@@ -62,16 +62,6 @@
             </objects>
             <point key="canvasLocation" x="1043" y="297"/>
         </scene>
-        <!--Photos-->
-        <scene sceneID="Oa8-Ts-Dwg">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Photos" id="32U-nV-hUg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hwQ-V9-83D"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e9b-Z9-8L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1044" y="120"/>
-        </scene>
         <!--Donations-->
         <scene sceneID="0EI-Cc-4Uo">
             <objects>
@@ -81,6 +71,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qee-60-3E2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1043" y="203"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="Ach-XD-dTv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photos" id="zsC-Mg-JuE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="qfQ-5E-tib"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubj-5m-YKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="115"/>
         </scene>
     </scenes>
 </document>
