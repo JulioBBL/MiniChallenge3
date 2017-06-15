@@ -18,6 +18,7 @@
 		596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */; };
 		596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36E1EEF29EB003010F0 /* Utils.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
+		59804EB41EF3240500B58E5A /* NewDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */; };
 		598288371EEB344600221079 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882E1EEB344600221079 /* Info.storyboard */; };
 		598288381EEB344600221079 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882F1EEB344600221079 /* Landing.storyboard */; };
 		598288391EEB344600221079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288301EEB344600221079 /* Main.storyboard */; };
@@ -232,6 +233,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 524D3B9S8F;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -350,6 +352,7 @@
 				D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */,
 				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
+				59804EB41EF3240500B58E5A /* NewDonationTableViewCell.swift in Sources */,
 				598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */,
 				155AD7331EF2D793007EA420 /* testViewController.swift in Sources */,
 				D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */,
@@ -463,7 +466,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -478,7 +481,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
