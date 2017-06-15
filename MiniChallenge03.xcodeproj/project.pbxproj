@@ -10,6 +10,7 @@
 		155AD72D1EF1E01A007EA420 /* Photos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155AD72C1EF1E01A007EA420 /* Photos.storyboard */; };
 		155AD72F1EF1E1E3007EA420 /* CustomCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD72E1EF1E1E3007EA420 /* CustomCameraViewController.swift */; };
 		155AD7311EF1E52C007EA420 /* showpictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD7301EF1E52C007EA420 /* showpictureViewController.swift */; };
+		155AD7331EF2D793007EA420 /* testViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD7321EF2D793007EA420 /* testViewController.swift */; };
 		190746A71EEF14D800A2539D /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190746A61EEF14D700A2539D /* Donation.swift */; };
 		199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */; };
 		59206E0D1EF070A900D74229 /* DonationCreationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */; };
@@ -50,6 +51,7 @@
 		155AD72C1EF1E01A007EA420 /* Photos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Photos.storyboard; sourceTree = "<group>"; };
 		155AD72E1EF1E1E3007EA420 /* CustomCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCameraViewController.swift; sourceTree = "<group>"; };
 		155AD7301EF1E52C007EA420 /* showpictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showpictureViewController.swift; sourceTree = "<group>"; };
+		155AD7321EF2D793007EA420 /* testViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testViewController.swift; sourceTree = "<group>"; };
 		190746A61EEF14D700A2539D /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		1959C19C1EEB0B0700455576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		7B985232E27F01B3726927BA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				155AD7321EF2D793007EA420 /* testViewController.swift */,
 				598288221EEB342B00221079 /* CameraViewController.swift */,
 				598288231EEB342B00221079 /* InfoCollectionViewController.swift */,
 				598288241EEB342B00221079 /* MapViewController.swift */,
@@ -351,6 +354,7 @@
 				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
 				598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */,
+				155AD7331EF2D793007EA420 /* testViewController.swift in Sources */,
 				D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */,
 				598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */,
 				D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */,
