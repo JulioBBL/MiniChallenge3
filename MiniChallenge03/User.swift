@@ -10,7 +10,6 @@ import Foundation
 import Firebase
 
 public class User {
-    
     var key: String?
     var name: String
     var email: String
@@ -22,11 +21,7 @@ public class User {
     var isAble: Bool?
     let ref: FIRDatabaseReference?
     
-    
-    
-    
     init(key:String?, name: String, email: String, cpf: String, bt: BloodType, weight: Double, gender: Gender){
-        
         self.key = key
         self.name = name
         self.email = email
@@ -35,11 +30,9 @@ public class User {
         self.weight = weight
         self.gender = gender
         self.ref = nil
-        
     }
     
     init(snapshot: FIRDataSnapshot){
-        
         let formatter = DateFormatter()
         
         key = snapshot.key
@@ -58,15 +51,12 @@ public class User {
             donations.append(temp)
         }
         ref = snapshot.ref
-        
     }
     
     func toAnyObject() -> Any {
-        
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "pt_BR")
         formatter.dateFormat = "dd/MM/yyyy"
-        
         
         var doacoes: [String:[String:String]] = [:]
         
@@ -80,7 +70,6 @@ public class User {
         }
         
         return [
-            
             "name": name,
             "email": email,
             "cpf": cpf,
@@ -88,15 +77,6 @@ public class User {
             "weight": weight,
             "gender": gender,
             "donations": [doacoes]
-            
         ]
-        
     }
-    
-    
-    
 }
-
-
-
-
