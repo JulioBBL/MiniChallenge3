@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Foto-->
         <scene sceneID="lFH-m9-iDC">
             <objects>
                 <viewController id="r2T-3F-aBQ" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AZG-Mw-omH"/>
+                    <tabBarItem key="tabBarItem" title="Foto" id="AZG-Mw-omH"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -53,6 +53,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fvl-mm-cGF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGR-9u-1iU">
                                 <rect key="frame" x="8" y="94" width="359" height="359"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,36 +64,54 @@
                                     <constraint firstAttribute="width" constant="359" id="gjB-Yk-J4H"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-Sr-uP7">
-                                <rect key="frame" x="274" y="552" width="67" height="30"/>
-                                <state key="normal" title="Tirar Foto"/>
-                                <connections>
-                                    <action selector="saveToCamera:" destination="0Yc-hc-afT" eventType="touchUpInside" id="Wlh-fC-pWS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-iG-dIe">
-                                <rect key="frame" x="31" y="552" width="90" height="30"/>
-                                <state key="normal" title="Virar Câmera"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-iG-dIe">
+                                <rect key="frame" x="31" y="552" width="113" height="30"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.61176470589999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Aur-Gc-SMf"/>
+                                    <constraint firstAttribute="width" constant="113" id="uYP-SL-mW3"/>
+                                </constraints>
+                                <state key="normal" title="Virar Câmera">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="changeCamera:" destination="0Yc-hc-afT" eventType="touchUpInside" id="QGY-5C-iUq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-Sr-uP7">
+                                <rect key="frame" x="230" y="552" width="113" height="30"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.61176470589999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="kXT-eX-EYE"/>
+                                    <constraint firstAttribute="height" constant="30" id="vMJ-Ov-pSO"/>
+                                </constraints>
+                                <state key="normal" title="Tirar Foto">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveToCamera:" destination="0Yc-hc-afT" eventType="touchUpInside" id="Wlh-fC-pWS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="KLG-Sr-uP7" secondAttribute="bottom" constant="36" id="2rB-tz-I0d"/>
-                            <constraint firstItem="14j-iG-dIe" firstAttribute="top" secondItem="IGR-9u-1iU" secondAttribute="bottom" constant="99" id="Bw1-JD-wpJ"/>
-                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="14j-iG-dIe" secondAttribute="bottom" constant="36" id="GPd-xe-8Kp"/>
+                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="Fvl-mm-cGF" secondAttribute="bottom" id="0DE-kG-8HB"/>
+                            <constraint firstItem="Fvl-mm-cGF" firstAttribute="top" secondItem="mCz-BB-JPn" secondAttribute="top" id="1WB-WI-Nt2"/>
+                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="leading" secondItem="14j-iG-dIe" secondAttribute="trailing" constant="86" id="6Kc-Je-afd"/>
+                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="baseline" secondItem="14j-iG-dIe" secondAttribute="baseline" id="BtZ-pY-xj6"/>
+                            <constraint firstItem="14j-iG-dIe" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leadingMargin" constant="15" id="Dmo-v7-znp"/>
                             <constraint firstItem="IGR-9u-1iU" firstAttribute="centerX" secondItem="mCz-BB-JPn" secondAttribute="centerX" id="KgR-ia-7qu"/>
-                            <constraint firstItem="14j-iG-dIe" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leadingMargin" constant="15" id="Kw9-bv-gBd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="KLG-Sr-uP7" secondAttribute="trailing" constant="18" id="ZTJ-Ft-Yfz"/>
-                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="top" secondItem="IGR-9u-1iU" secondAttribute="bottom" constant="99" id="f64-Bd-YnY"/>
+                            <constraint firstAttribute="trailing" secondItem="Fvl-mm-cGF" secondAttribute="trailing" id="O0z-Fy-dzM"/>
+                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="KLG-Sr-uP7" secondAttribute="bottom" constant="36" id="k6A-dd-cKf"/>
+                            <constraint firstItem="Fvl-mm-cGF" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leading" id="nkb-am-icH"/>
                             <constraint firstItem="IGR-9u-1iU" firstAttribute="top" secondItem="IFm-a7-CfG" secondAttribute="bottom" constant="74" id="rcd-7e-kok"/>
-                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="leading" secondItem="14j-iG-dIe" secondAttribute="trailing" constant="153" id="z3w-Rb-MbK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backGroundImage" destination="Fvl-mm-cGF" id="uD3-bU-dUa"/>
                         <outlet property="previewView" destination="IGR-9u-1iU" id="Qxj-2z-kdP"/>
+                        <outlet property="tirarFotoButton" destination="KLG-Sr-uP7" id="GrN-Fl-qLG"/>
+                        <outlet property="virarcameraButton" destination="14j-iG-dIe" id="Qpl-g9-F6I"/>
                         <segue destination="MLh-Us-h7G" kind="show" identifier="showphoto" id="9Jq-ZK-PTn"/>
                     </connections>
                 </viewController>
@@ -110,6 +131,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oX3-zN-YKa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Af9-M7-vEq">
                                 <rect key="frame" x="8" y="94" width="359" height="359"/>
                                 <constraints>
@@ -117,45 +141,54 @@
                                     <constraint firstAttribute="width" constant="359" id="rLH-3c-BN1"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4d-ei-35K">
-                                <rect key="frame" x="240" y="546" width="104" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="y5M-n9-2el"/>
-                                </constraints>
-                                <state key="normal" title="Compartilhar"/>
-                                <connections>
-                                    <action selector="shareImage:" destination="MLh-Us-h7G" eventType="touchUpInside" id="g5U-ty-goe"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnN-kb-M5J">
-                                <rect key="frame" x="66" y="555" width="45" height="30"/>
-                                <state key="normal" title="Voltar "/>
+                                <rect key="frame" x="16" y="556" width="113" height="30"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.61176470589999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ph1-fs-lhf"/>
+                                    <constraint firstAttribute="width" constant="113" id="zq8-wS-JFo"/>
+                                </constraints>
+                                <state key="normal" title="Voltar ">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="uvw-wZ-WuJ" kind="show" id="hD0-Gd-6FH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4d-ei-35K">
+                                <rect key="frame" x="246" y="556" width="113" height="30"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.61176470589999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GFT-bg-sqL"/>
+                                    <constraint firstAttribute="width" constant="113" id="X48-73-5WB"/>
+                                </constraints>
+                                <state key="normal" title="Compartilhar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareImage:" destination="MLh-Us-h7G" eventType="touchUpInside" id="g5U-ty-goe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oPp-PK-XnI" firstAttribute="top" secondItem="K4d-ei-35K" secondAttribute="bottom" constant="24" id="0I6-jk-OoI"/>
-                            <constraint firstItem="K4d-ei-35K" firstAttribute="leading" secondItem="tnN-kb-M5J" secondAttribute="trailing" constant="129" id="E7h-RA-upe"/>
-                            <constraint firstItem="oPp-PK-XnI" firstAttribute="top" secondItem="K4d-ei-35K" secondAttribute="bottom" constant="24" id="Hn5-3K-4If"/>
-                            <constraint firstItem="tnN-kb-M5J" firstAttribute="leading" secondItem="CZF-2c-Vr1" secondAttribute="leadingMargin" constant="50" id="KYg-Co-Nje"/>
-                            <constraint firstItem="tnN-kb-M5J" firstAttribute="top" secondItem="Af9-M7-vEq" secondAttribute="bottom" constant="102" id="LSg-M5-GAu"/>
-                            <constraint firstItem="K4d-ei-35K" firstAttribute="top" secondItem="Af9-M7-vEq" secondAttribute="bottom" constant="93" id="MB3-xp-bq4"/>
-                            <constraint firstItem="K4d-ei-35K" firstAttribute="baseline" secondItem="tnN-kb-M5J" secondAttribute="baseline" id="P8g-7p-kuR"/>
-                            <constraint firstItem="K4d-ei-35K" firstAttribute="top" secondItem="Af9-M7-vEq" secondAttribute="bottom" constant="93" id="cC9-WI-iSg"/>
-                            <constraint firstItem="tnN-kb-M5J" firstAttribute="leading" secondItem="CZF-2c-Vr1" secondAttribute="leadingMargin" constant="50" id="g02-pa-oQi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K4d-ei-35K" secondAttribute="trailing" constant="15" id="gMZ-e6-bg6"/>
+                            <constraint firstItem="oX3-zN-YKa" firstAttribute="top" secondItem="CZF-2c-Vr1" secondAttribute="top" id="1nQ-Fb-vGC"/>
+                            <constraint firstAttribute="trailing" secondItem="oX3-zN-YKa" secondAttribute="trailing" id="Ccb-Wy-eRl"/>
+                            <constraint firstAttribute="bottom" secondItem="oX3-zN-YKa" secondAttribute="bottom" id="H6b-n2-d57"/>
+                            <constraint firstItem="tnN-kb-M5J" firstAttribute="baseline" secondItem="K4d-ei-35K" secondAttribute="baseline" id="KVb-S3-yxl"/>
+                            <constraint firstItem="K4d-ei-35K" firstAttribute="trailing" secondItem="CZF-2c-Vr1" secondAttribute="trailingMargin" id="QVC-2w-s61"/>
+                            <constraint firstItem="tnN-kb-M5J" firstAttribute="leading" secondItem="CZF-2c-Vr1" secondAttribute="leadingMargin" id="RgE-6E-RgT"/>
+                            <constraint firstItem="oX3-zN-YKa" firstAttribute="leading" secondItem="CZF-2c-Vr1" secondAttribute="leading" id="ccK-OC-Ctv"/>
+                            <constraint firstItem="oPp-PK-XnI" firstAttribute="top" secondItem="tnN-kb-M5J" secondAttribute="bottom" constant="32" id="m3b-EN-ZMs"/>
                             <constraint firstItem="Af9-M7-vEq" firstAttribute="centerX" secondItem="CZF-2c-Vr1" secondAttribute="centerX" id="stg-9k-H1O"/>
-                            <constraint firstItem="K4d-ei-35K" firstAttribute="leading" secondItem="tnN-kb-M5J" secondAttribute="trailing" constant="129" id="tdp-1d-g2t"/>
-                            <constraint firstItem="oPp-PK-XnI" firstAttribute="top" secondItem="tnN-kb-M5J" secondAttribute="bottom" constant="33" id="ttk-us-mYJ"/>
                             <constraint firstItem="Af9-M7-vEq" firstAttribute="top" secondItem="X9X-3n-6yD" secondAttribute="bottom" constant="74" id="vYy-C8-nrO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="K4d-ei-35K" secondAttribute="trailing" constant="15" id="zlD-0W-Jqd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="oX3-zN-YKa" id="bA5-Wd-cPv"/>
+                        <outlet property="compartilharButton" destination="K4d-ei-35K" id="0IM-To-wtd"/>
                         <outlet property="showImage" destination="Af9-M7-vEq" id="KHk-wQ-WLs"/>
+                        <outlet property="voltarButton" destination="tnN-kb-M5J" id="2Pq-N4-bj4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T9D-gT-Gxm" userLabel="First Responder" sceneMemberID="firstResponder"/>

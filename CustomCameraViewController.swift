@@ -13,20 +13,27 @@ class CustomCameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
 
     @IBOutlet weak var previewView: UIView!
     
+    @IBOutlet weak var backGroundImage: UIImageView!
+    @IBOutlet weak var virarcameraButton: UIButton!
+    
+    @IBOutlet weak var tirarFotoButton: UIButton!
+    
     let captureSession = AVCaptureSession()
     let capturePhotoOutput = AVCapturePhotoOutput()
     var previewLayer: AVCaptureVideoPreviewLayer?
     var captureDevice: AVCaptureDevice?
     var photoReady: UIImage?
     var imageView: UIImageView?
-    let img = #imageLiteral(resourceName: "ic_settings_applications_48pt_2x")
+    let img = #imageLiteral(resourceName: "vaitoma")
     var cameraflag = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setDevice()
-        
+        virarcameraButton.layer.cornerRadius = 6.0
+        tirarFotoButton.layer.cornerRadius = 6.0
+        backGroundImage.image = #imageLiteral(resourceName: "backgroundCameraScreen")
     }
     
     
