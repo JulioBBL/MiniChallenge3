@@ -72,7 +72,7 @@ class FirebaseConnection {
                 if error != nil {
                     print("error signing user in")
                 } else {
-                    FirebaseConnection.ref.child("usuarios/\(user.uid)").setValue(usuario.toAnyObject(), forKey: "")
+                    FirebaseConnection.ref.child("usuarios/\(user.uid)").setValue(usuario.toAnyObject())
                 }
             }
         }
