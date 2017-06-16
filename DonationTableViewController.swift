@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class DonationTableViewController: UITableViewController {
     
@@ -113,13 +114,92 @@ class DonationTableViewController: UITableViewController {
     //Mark: - My methods
     
     func retrieveInfo() {
-        //TODO
+        self.donations = FirebaseConnection.usuarioAtual?.donations ?? []
     }
     
     func addNewDonation(_ donation: Donation) {
         self.donations.append(donation)
         self.tableView.reloadData()
-        //TODO save new donation on the server
+        FirebaseConnection.usuarioAtual?.donations = self.donations
+        //FirebaseConnection.saveUser()
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        
+        let newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)
+        self.setNotification(title: "NOME DO APP" /*TODO*/,
+            subtitle: "Você já pode doar sangue de novo",
+            body: "já fazem 3 meses que você doou sangue pela ultima vez, que tal doar novamente?",
+            badge: 1, for: newDonationDate!, withIdentifier: "newDonation")
+        
+        self.setNagNotification(title: "NOME DO APP" /*TODO*/,
+            subtitle: "Que tal doar sangue esse final de semana?",
+            body: "já faz tempo que você não doa sangue, porque não ir esse final de semana?",
+            badge: 1, withIdentifier: "donationReminder1")
+        
+    }
+    
+    func setNotification(title: String, subtitle: String, body: String, badge: Int, for date: Date, withIdentifier identifier: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = subtitle
+        content.body = body
+        content.badge = badge as NSNumber
+        
+        //        let repeatAction = UNNotificationAction(identifier:"repeat", title:"Repeat",options: [])
+        
+        //        let changeAction = UNTextInputNotificationAction(identifier: "change", title: "Change Message", options: [])
+        
+        let category = UNNotificationCategory(identifier: "actionCategory", actions: [] /*[repeatAction, changeAction]*/, intentIdentifiers: [], options: [])
+        
+        content.categoryIdentifier = "actionCategory"
+        
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        var triggerDate = DateComponents()
+        triggerDate.year = Calendar(identifier: .gregorian).component(.year, from: date)
+        triggerDate.month = Calendar(identifier: .gregorian).component(.month, from: date)
+        triggerDate.day = Calendar(identifier: .gregorian).component(.day, from: date)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
+        
+        let requestIdentifier = identifier
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+            print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+        })
+    }
+    
+    func setNagNotification(title: String, subtitle: String, body: String, badge: Int, withIdentifier identifier: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.subtitle = subtitle
+        content.body = body
+        content.badge = badge as NSNumber
+        
+        //        let repeatAction = UNNotificationAction(identifier:"repeat", title:"Repeat",options: [])
+        
+        //        let changeAction = UNTextInputNotificationAction(identifier: "change", title: "Change Message", options: [])
+        
+        let category = UNNotificationCategory(identifier: "actionCategory", actions: [] /*[repeatAction, changeAction]*/, intentIdentifiers: [], options: [])
+        
+        content.categoryIdentifier = "actionCategory"
+        
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+        
+        //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        var triggerDate = DateComponents()
+        triggerDate.weekday = 5
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
+        
+        let requestIdentifier = identifier
+        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+            print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+        })
     }
 
 }

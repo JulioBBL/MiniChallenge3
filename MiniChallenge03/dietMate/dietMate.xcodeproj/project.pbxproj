@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19FC8A1A1EF2296700460CCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8A191EF2296700460CCC /* AppDelegate.swift */; };
+		19FC8A1C1EF2296700460CCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8A1B1EF2296700460CCC /* ViewController.swift */; };
+		19FC8A1F1EF2296700460CCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8A1D1EF2296700460CCC /* Main.storyboard */; };
+		19FC8A221EF2296700460CCC /* dietMate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19FC8A201EF2296700460CCC /* dietMate.xcdatamodeld */; };
+		19FC8A241EF2296700460CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8A231EF2296700460CCC /* Assets.xcassets */; };
+		19FC8A271EF2296700460CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FC8A251EF2296700460CCC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19FC8A161EF2296700460CCC /* dietMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dietMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19FC8A191EF2296700460CCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19FC8A1B1EF2296700460CCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19FC8A1E1EF2296700460CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19FC8A211EF2296700460CCC /* dietMate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dietMate.xcdatamodel; sourceTree = "<group>"; };
+		19FC8A231EF2296700460CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19FC8A261EF2296700460CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19FC8A281EF2296700460CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19FC8A131EF2296700460CCC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19FC8A0D1EF2296700460CCC = {
+			isa = PBXGroup;
+			children = (
+				19FC8A181EF2296700460CCC /* dietMate */,
+				19FC8A171EF2296700460CCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19FC8A171EF2296700460CCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19FC8A161EF2296700460CCC /* dietMate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19FC8A181EF2296700460CCC /* dietMate */ = {
+			isa = PBXGroup;
+			children = (
+				19FC8A2E1EF22A6500460CCC /* Model */,
+				19FC8A301EF22A8100460CCC /* View */,
+				19FC8A2F1EF22A7000460CCC /* Controller */,
+				19FC8A191EF2296700460CCC /* AppDelegate.swift */,
+				19FC8A231EF2296700460CCC /* Assets.xcassets */,
+				19FC8A281EF2296700460CCC /* Info.plist */,
+				19FC8A201EF2296700460CCC /* dietMate.xcdatamodeld */,
+			);
+			path = dietMate;
+			sourceTree = "<group>";
+		};
+		19FC8A2E1EF22A6500460CCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19FC8A251EF2296700460CCC /* LaunchScreen.storyboard */,
+				19FC8A1D1EF2296700460CCC /* Main.storyboard */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19FC8A2F1EF22A7000460CCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				19FC8A1B1EF2296700460CCC /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		19FC8A301EF22A8100460CCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19FC8A151EF2296700460CCC /* dietMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19FC8A2B1EF2296700460CCC /* Build configuration list for PBXNativeTarget "dietMate" */;
+			buildPhases = (
+				19FC8A121EF2296700460CCC /* Sources */,
+				19FC8A131EF2296700460CCC /* Frameworks */,
+				19FC8A141EF2296700460CCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dietMate;
+			productName = dietMate;
+			productReference = 19FC8A161EF2296700460CCC /* dietMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19FC8A0E1EF2296700460CCC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Andre Faruolo";
+				TargetAttributes = {
+					19FC8A151EF2296700460CCC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = CVX58B2KAX;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 19FC8A111EF2296700460CCC /* Build configuration list for PBXProject "dietMate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19FC8A0D1EF2296700460CCC;
+			productRefGroup = 19FC8A171EF2296700460CCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19FC8A151EF2296700460CCC /* dietMate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19FC8A141EF2296700460CCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FC8A271EF2296700460CCC /* LaunchScreen.storyboard in Resources */,
+				19FC8A241EF2296700460CCC /* Assets.xcassets in Resources */,
+				19FC8A1F1EF2296700460CCC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19FC8A121EF2296700460CCC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FC8A1C1EF2296700460CCC /* ViewController.swift in Sources */,
+				19FC8A221EF2296700460CCC /* dietMate.xcdatamodeld in Sources */,
+				19FC8A1A1EF2296700460CCC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19FC8A1D1EF2296700460CCC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FC8A1E1EF2296700460CCC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19FC8A251EF2296700460CCC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FC8A261EF2296700460CCC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19FC8A291EF2296700460CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19FC8A2A1EF2296700460CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19FC8A2C1EF2296700460CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CVX58B2KAX;
+				INFOPLIST_FILE = dietMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.faruolo.andre.dietMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		19FC8A2D1EF2296700460CCC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CVX58B2KAX;
+				INFOPLIST_FILE = dietMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.br.faruolo.andre.dietMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19FC8A111EF2296700460CCC /* Build configuration list for PBXProject "dietMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FC8A291EF2296700460CCC /* Debug */,
+				19FC8A2A1EF2296700460CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19FC8A2B1EF2296700460CCC /* Build configuration list for PBXNativeTarget "dietMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19FC8A2C1EF2296700460CCC /* Debug */,
+				19FC8A2D1EF2296700460CCC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		19FC8A201EF2296700460CCC /* dietMate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				19FC8A211EF2296700460CCC /* dietMate.xcdatamodel */,
+			);
+			currentVersion = 19FC8A211EF2296700460CCC /* dietMate.xcdatamodel */;
+			path = dietMate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 19FC8A0E1EF2296700460CCC /* Project object */;
+}
