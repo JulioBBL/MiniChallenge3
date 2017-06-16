@@ -56,9 +56,10 @@ class FirebaseConnection {
     
     
     
-    static func signUserIn(email:String, password:String){
+    static func signUserIn(email:String, password:String, completion: @escaping () -> Void){
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
             
+            completion()
         }
     }
     
