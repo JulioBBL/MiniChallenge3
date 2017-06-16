@@ -62,6 +62,10 @@ class FirebaseConnection {
         }
     }
     
+    static func logUserOut(){
+        try! FIRAuth.auth()!.signOut()
+    }
+    
     static func saveUser(usuario: User) {
         let user = FIRAuth.auth()?.currentUser
         if let user = user {
