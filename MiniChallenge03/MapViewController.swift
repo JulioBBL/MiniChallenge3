@@ -12,10 +12,10 @@ import CoreLocation
 import Firebase
 
 class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+    
     var hemocentros: [Hemocentro] = []
     
-//    var ref = FIRDatabase.database().reference(withPath: "hemocentros")
+    //    var ref = FIRDatabase.database().reference(withPath: "hemocentros")
     
     
     
@@ -30,25 +30,54 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         map.showsUserLocation = true
         locationManager.delegate = self
         
-//        ref.child("hemocetros").observe(.childAdded, with: {snapshot in
-//            self.hemocentros.append(Hemocentro(snapshot: snapshot))
-//        })
-    
+        //        if let location = map.userLocation.location {
+        //            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 200 * 2.0, 200 * 2.0)
+        //            map.setRegion(coordinateRegion, animated: true)
+        //        }else{
+        //            print("deu erro")
+        //        }
+        
+        
+        //Zoom to user location
+        if let noLocation = locationManager.location?.coordinate {
+        let viewRegion = MKCoordinateRegionMakeWithDistance(noLocation, 500, 500)
+        map.setRegion(viewRegion, animated: false)
+        }
+        
+        FirebaseConnection.getHemocentros {snapshot in
+            for hemo in snapshot.children{
+                self.addPin(hemocentro: Hemocentro(snapshot: hemo as! FIRDataSnapshot))
+             
+            }
+        }
         
     }
-
     
-    func addPin(title: String, subTitle: String, location: CLLocation){
-        let position :CLLocation = location
-        
+    
+    func addPin(hemocentro: Hemocentro){
+        let position :CLLocation = CLLocation(latitude: CLLocationDegrees(hemocentro.latitude)!, longitude: CLLocationDegrees(hemocentro.longitude)!)
         let ann = MKPointAnnotation()
         ann.coordinate = position.coordinate
-        ann.title = title
-        ann.subtitle = subTitle
+        ann.title = hemocentro.nome
+        ann.subtitle = hemocentro.endereco
         
         map.addAnnotation(ann)
     }
     
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 50 * 2.0, 50 * 2.0)
+        map.setRegion(coordinateRegion, animated: false)
+        
+    }
     
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        if let location = mapView.userLocation.location {
+            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 200 * 2.0, 200 * 2.0)
+            map.setRegion(coordinateRegion, animated: true)
+        }else{
+            print("deu erro")
+        }
+    }
     
 }
