@@ -72,7 +72,7 @@ class InfoCollectionViewController: UICollectionViewController, UICollectionView
         case 3:
             return CGSize(width: largura - 16, height: 108)
         default:
-            return CGSize(width: largura - 16, height: 500)
+            return CGSize(width: largura - 16, height: 668)
         }
     }
 }
