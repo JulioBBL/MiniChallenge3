@@ -16,9 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         FIRApp.configure()
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        if !UserDefaults.standard.bool(forKey: "already") {
+            UserDefaults.standard.set(true, forKey: "already")
+            // vc pra primeira vez somente
+            let vc = UIStoryboard.init(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "tutorial")
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return true
+        }
+        
+        // vc pra sempre
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        
         return true
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -11,6 +11,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Test View Controller-->
         <scene sceneID="VYP-pW-alO">
@@ -35,6 +40,7 @@
                                     <constraint firstAttribute="width" constant="117" id="qTt-o4-dcC"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="117" id="rVD-3j-nYz"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <state key="normal" title="Sim">
                                     <color key="titleColor" red="0.99204939599999997" green="0.99221879239999999" blue="0.9920386672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -44,7 +50,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já teve anemia, doença de Chagas, malária, câncer, ou algum tipo de DST ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-Dc-vIy">
                                 <rect key="frame" x="25" y="45" width="303" height="239"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="39"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -55,6 +61,7 @@
                                     <constraint firstAttribute="width" constant="120" id="42y-Y6-vtW"/>
                                     <constraint firstAttribute="height" constant="39" id="nBn-JF-Bgy"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <state key="normal" title="Não">
                                     <color key="titleColor" red="0.99204939599999997" green="0.99221879239999999" blue="0.9920386672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Foto-->
         <scene sceneID="lFH-m9-iDC">
@@ -65,12 +70,13 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-iG-dIe">
-                                <rect key="frame" x="31" y="552" width="113" height="30"/>
+                                <rect key="frame" x="31" y="552.5" width="113" height="30"/>
                                 <color key="backgroundColor" red="0.28235294119999998" green="0.61176470589999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Aur-Gc-SMf"/>
                                     <constraint firstAttribute="width" constant="113" id="uYP-SL-mW3"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <state key="normal" title="Virar Câmera">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -85,6 +91,7 @@
                                     <constraint firstAttribute="width" constant="113" id="kXT-eX-EYE"/>
                                     <constraint firstAttribute="height" constant="30" id="vMJ-Ov-pSO"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <state key="normal" title="Tirar Foto">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -148,6 +155,7 @@
                                     <constraint firstAttribute="height" constant="30" id="ph1-fs-lhf"/>
                                     <constraint firstAttribute="width" constant="113" id="zq8-wS-JFo"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <state key="normal" title="Voltar ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -162,6 +170,7 @@
                                     <constraint firstAttribute="height" constant="30" id="GFT-bg-sqL"/>
                                     <constraint firstAttribute="width" constant="113" id="X48-73-5WB"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <state key="normal" title="Compartilhar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
