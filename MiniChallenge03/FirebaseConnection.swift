@@ -23,13 +23,17 @@ class FirebaseConnection {
     
     
     private init(){
-        FirebaseConnection.ref.child("hemocetros").observe(.childAdded, with: {snapshot in
-            FirebaseConnection.hemocentros.append(Hemocentro(snapshot: snapshot))
-        })
+//        FirebaseConnection.ref.child("hemocentros").observe(.value, with: {snapshot in
+//            for hemo in snapshot.children{
+//                FirebaseConnection.hemocentros.append(Hemocentro(snapshot: hemo as! FIRDataSnapshot))
+//                
+//            }
+//            print("passou")
+//        })
         
         FIRAuth.auth()?.addStateDidChangeListener { auth, user in
             if let uid = user?.uid {
-                FirebaseConnection.ref.child("usuarios/\(uid)").observe(.childAdded, with: {snapshot in
+                FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
                     FirebaseConnection.usuarioAtual = User(snapshot: snapshot)
                 })
             } else {
@@ -40,13 +44,19 @@ class FirebaseConnection {
         
     }
     
+    static func getHemocentros(completion: @escaping (FIRDataSnapshot) -> Void) {
+        FirebaseConnection.ref.child("hemocentros").observe(.value, with: {snapshot in
+            completion(snapshot)
+        })
+    }
+    
     static func addUser(user: User, password: String){
         FIRAuth.auth()?.createUser(withEmail: user.email, password: password) { (user, error) in
             if error != nil{
                 print("error adding new user")
             }else{
                 if let uid = user?.uid{
-                    FirebaseConnection.ref.child("usuarios/\(uid)").observe(.childAdded, with: {snapshot in
+                    FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
                         FirebaseConnection.usuarioAtual = User(snapshot: snapshot)
                     })
                 }

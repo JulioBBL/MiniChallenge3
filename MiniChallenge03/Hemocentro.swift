@@ -55,7 +55,7 @@ class Hemocentro: NSObject {
         estado = snapshotValue["estado"] as! String
         cidade = snapshotValue["cidade"] as! String
         bairro = snapshotValue["bairro"] as! String
-        endereco = snapshotValue["endereco"] as! String
+        endereco = snapshotValue["endereço"] as! String
         cep = snapshotValue["cep"] as! String
         latitude = snapshotValue["latitude"] as! String
         longitude = snapshotValue["longitude"] as! String
@@ -69,7 +69,7 @@ class Hemocentro: NSObject {
             "estado": estado,
             "cidade": cidade,
             "bairro": bairro,
-            "endereco": endereco,
+            "endereço": endereco,
             "cep": cep,
             "latitude": latitude,
             "longitude": longitude,
