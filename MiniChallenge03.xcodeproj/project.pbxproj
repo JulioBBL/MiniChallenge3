@@ -22,6 +22,7 @@
 		595A49951EF412D900679C8D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595A49941EF412D900679C8D /* Login.storyboard */; };
 		595A49971EF42B1500679C8D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A49961EF42B1500679C8D /* LoginViewController.swift */; };
 		595A49991EF4B8EB00679C8D /* DonatesTo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595A49981EF4B8EB00679C8D /* DonatesTo.storyboard */; };
+		595A499B1EF5B2E400679C8D /* WhoDonatesToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595A499A1EF5B2E400679C8D /* WhoDonatesToViewController.swift */; };
 		596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */; };
 		596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36E1EEF29EB003010F0 /* Utils.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 		595A49941EF412D900679C8D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		595A49961EF42B1500679C8D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		595A49981EF4B8EB00679C8D /* DonatesTo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DonatesTo.storyboard; sourceTree = "<group>"; };
+		595A499A1EF5B2E400679C8D /* WhoDonatesToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoDonatesToViewController.swift; sourceTree = "<group>"; };
 		596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDonationTableViewCell.swift; sourceTree = "<group>"; };
 		596AF36E1EEF29EB003010F0 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				598288231EEB342B00221079 /* InfoCollectionViewController.swift */,
 				598288241EEB342B00221079 /* MapViewController.swift */,
 				59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */,
+				595A499A1EF5B2E400679C8D /* WhoDonatesToViewController.swift */,
 				598288251EEB342B00221079 /* PhotosTableViewController.swift */,
 				199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */,
 				59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */,
@@ -418,6 +421,7 @@
 				596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */,
 				5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */,
 				5982884D1EEB3A8B00221079 /* PhotosTableViewController.swift in Sources */,
+				595A499B1EF5B2E400679C8D /* WhoDonatesToViewController.swift in Sources */,
 				5982884F1EEB3A8B00221079 /* User.swift in Sources */,
 				59206E0D1EF070A900D74229 /* DonationCreationTableViewController.swift in Sources */,
 				190746A71EEF14D800A2539D /* Donation.swift in Sources */,
