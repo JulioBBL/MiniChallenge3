@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         // vc pra sempre
-        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
+        let vc = UIStoryboard.init(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Main")
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
         
