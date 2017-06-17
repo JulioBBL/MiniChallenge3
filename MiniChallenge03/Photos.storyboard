@@ -18,7 +18,7 @@
         <!--Foto-->
         <scene sceneID="lFH-m9-iDC">
             <objects>
-                <viewController id="r2T-3F-aBQ" sceneMemberID="viewController">
+                <viewController id="r2T-3F-aBQ" customClass="ChooseOverlayViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JYq-1H-WSJ"/>
                         <viewControllerLayoutGuide type="bottom" id="duS-Dd-fKp"/>
@@ -27,24 +27,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7e-VB-i3H">
-                                <rect key="frame" x="150" y="488" width="75" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Ir para foto"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundCameraScreen" translatesAutoresizingMaskIntoConstraints="NO" id="SYy-JF-VBV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAy-mN-dpK">
+                                <rect key="frame" x="84" y="107" width="207" height="207"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="filtro1"/>
                                 <connections>
-                                    <segue destination="0Yc-hc-afT" kind="show" id="59f-6G-zA3"/>
+                                    <action selector="choicefilter1:" destination="r2T-3F-aBQ" eventType="touchUpInside" id="UiW-sC-fxq"/>
+                                    <segue destination="0Yc-hc-afT" kind="show" id="A20-gs-F73"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o filtro " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l16-dx-U4P">
+                                <rect key="frame" x="103" y="52" width="168" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="SAz-OM-Yi7"/>
+                                    <constraint firstAttribute="height" constant="47" id="zMb-lW-Bfv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-IP-Qhs">
+                                <rect key="frame" x="84" y="363" width="207" height="207"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="Njv-YH-S2H"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="filtro1"/>
+                                <connections>
+                                    <action selector="choicefilter2:" destination="r2T-3F-aBQ" eventType="touchUpInside" id="EaM-y3-pmw"/>
+                                    <segue destination="0Yc-hc-afT" kind="show" id="mpr-0I-kX5"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYy-JF-VBV" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leading" id="1IG-wW-dln"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="eqJ-IP-Qhs" secondAttribute="centerX" id="3Uq-bH-3pi"/>
+                            <constraint firstAttribute="trailing" secondItem="SYy-JF-VBV" secondAttribute="trailing" id="BOh-nl-jYE"/>
+                            <constraint firstItem="SYy-JF-VBV" firstAttribute="top" secondItem="R4F-Ox-Uuz" secondAttribute="top" id="JGY-ld-csU"/>
+                            <constraint firstItem="duS-Dd-fKp" firstAttribute="top" secondItem="SYy-JF-VBV" secondAttribute="bottom" id="Ksk-Yw-76s"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="R4F-Ox-Uuz" secondAttribute="centerX" id="LKx-Xh-vQw"/>
+                            <constraint firstItem="SYy-JF-VBV" firstAttribute="bottom" secondItem="duS-Dd-fKp" secondAttribute="top" id="Out-ld-O2e"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="SYy-JF-VBV" secondAttribute="centerX" id="QPB-Ig-zBO"/>
+                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="top" secondItem="oAy-mN-dpK" secondAttribute="bottom" constant="49" id="fbQ-TK-VcH"/>
+                            <constraint firstItem="SYy-JF-VBV" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leading" id="fyP-qo-ImP"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="oAy-mN-dpK" secondAttribute="centerX" id="iT1-fB-9Yn"/>
+                            <constraint firstItem="SYy-JF-VBV" firstAttribute="top" secondItem="R4F-Ox-Uuz" secondAttribute="top" id="jkx-gn-ECU"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="top" secondItem="JYq-1H-WSJ" secondAttribute="bottom" constant="32" id="lhh-J3-hEr"/>
+                            <constraint firstItem="oAy-mN-dpK" firstAttribute="top" secondItem="l16-dx-U4P" secondAttribute="bottom" constant="8" id="mAT-Es-C3j"/>
+                            <constraint firstItem="duS-Dd-fKp" firstAttribute="top" secondItem="eqJ-IP-Qhs" secondAttribute="bottom" constant="48" id="pBo-gA-JSj"/>
+                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="leading" secondItem="oAy-mN-dpK" secondAttribute="leading" id="sZX-YA-Eg6"/>
+                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leadingMargin" constant="68" id="vQr-Gp-xPf"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Foto" id="AZG-Mw-omH"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="filter1" destination="oAy-mN-dpK" id="XEW-Xu-roW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0t-hZ-AMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="204"/>
+            <point key="canvasLocation" x="1776.8" y="203.74812593703149"/>
         </scene>
         <!--Custom Camera View Controller-->
         <scene sceneID="hgC-RE-718">
@@ -213,4 +261,11 @@
             <point key="canvasLocation" x="3378" y="649"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundCameraScreen" width="1080" height="1920"/>
+        <image name="filtro1" width="520" height="520"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mpr-0I-kX5"/>
+    </inferredMetricsTieBreakers>
 </document>

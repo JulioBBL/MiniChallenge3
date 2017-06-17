@@ -24,7 +24,7 @@ class CustomCameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
     var captureDevice: AVCaptureDevice?
     var photoReady: UIImage?
     var imageView: UIImageView?
-    let img = #imageLiteral(resourceName: "vaitoma")
+    var img: UIImage? = nil
     var cameraflag = true
 
     override func viewDidLoad() {
@@ -121,7 +121,7 @@ class CustomCameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
             let imagedata = UIImage(data: dataImage)
             
             
-            photoReady = textToImage(overlay: img, inImage: imagedata! )
+            photoReady = textToImage(overlay: img!, inImage: imagedata! )
             performSegue(withIdentifier: "showphoto", sender: self)
             
         }
