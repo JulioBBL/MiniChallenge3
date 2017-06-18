@@ -18,7 +18,7 @@ class showpictureViewController: UIViewController {
     @IBOutlet weak var compartilharButton: UIButton!
     
     
-    @IBOutlet weak var backgroundImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class showpictureViewController: UIViewController {
         showImage.image = image
         voltarButton.layer.cornerRadius = 6.0
         compartilharButton.layer.cornerRadius = 6.0
-        backgroundImage.image = #imageLiteral(resourceName: "backgroundCameraScreen")
+        
     }
     
     @IBAction func didPressBack(_ sender: Any) {
