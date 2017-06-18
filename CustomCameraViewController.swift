@@ -13,7 +13,7 @@ class CustomCameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
 
     @IBOutlet weak var previewView: UIView!
     
-    @IBOutlet weak var backGroundImage: UIImageView!
+   
     @IBOutlet weak var virarcameraButton: UIButton!
     
     @IBOutlet weak var tirarFotoButton: UIButton!
@@ -33,7 +33,7 @@ class CustomCameraViewController: UIViewController, AVCapturePhotoCaptureDelegat
         setDevice()
         virarcameraButton.layer.cornerRadius = 6.0
         tirarFotoButton.layer.cornerRadius = 6.0
-        backGroundImage.image = #imageLiteral(resourceName: "backgroundCameraScreen")
+        
     }
     
     
