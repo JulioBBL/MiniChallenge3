@@ -48,6 +48,7 @@
 		598288551EEB3A8B00221079 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E52C01EE1F7A1009D9F85 /* ViewController.swift */; };
 		59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */; };
 		59B0757E1EF6EDA900CA5E22 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B0757D1EF6EDA900CA5E22 /* Info.storyboard */; };
+		59B075821EF6F4E600CA5E22 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B075811EF6F4E600CA5E22 /* RegisterTableViewController.swift */; };
 		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
 		D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0126D1EE88E5500112374 /* MapKit.framework */; };
@@ -120,6 +121,7 @@
 		598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCollectionViewCell.swift; sourceTree = "<group>"; };
 		59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
 		59B0757D1EF6EDA900CA5E22 /* Info.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		59B075811EF6F4E600CA5E22 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8D0126D1EE88E5500112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConnection.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				598288221EEB342B00221079 /* CameraViewController.swift */,
 				598288231EEB342B00221079 /* InfoCollectionViewController.swift */,
 				598288241EEB342B00221079 /* MapViewController.swift */,
+				59B075811EF6F4E600CA5E22 /* RegisterTableViewController.swift */,
 				59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */,
 				595A499A1EF5B2E400679C8D /* WhoDonatesToViewController.swift */,
 				598288251EEB342B00221079 /* PhotosTableViewController.swift */,
@@ -438,6 +441,7 @@
 				D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */,
 				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
+				59B075821EF6F4E600CA5E22 /* RegisterTableViewController.swift in Sources */,
 				59804EB41EF3240500B58E5A /* NewDonationTableViewCell.swift in Sources */,
 				598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */,
 				155AD7331EF2D793007EA420 /* testViewController.swift in Sources */,
