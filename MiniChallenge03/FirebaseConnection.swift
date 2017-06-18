@@ -40,8 +40,6 @@ class FirebaseConnection {
                 // No user is signed in.
             }
         }
-        
-        
     }
     
     static func getHemocentros(completion: @escaping (FIRDataSnapshot) -> Void) {
@@ -64,12 +62,9 @@ class FirebaseConnection {
         }
     }
     
-    
-    
-    static func signUserIn(email:String, password:String, completion: @escaping () -> Void){
+    static func signUserIn(email:String, password:String, completion: @escaping (FIRUser?, Error?) -> Void){
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
-            
-            completion()
+            completion(user, error)
         }
     }
     

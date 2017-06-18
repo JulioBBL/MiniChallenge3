@@ -34,8 +34,6 @@ class WhoDonatesToViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tabBarController?.tabBar.isHidden = true
 
         self.donorsLabel.text = self.donor.rawValue
         

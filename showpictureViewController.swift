@@ -29,8 +29,9 @@ class showpictureViewController: UIViewController {
         backgroundImage.image = #imageLiteral(resourceName: "backgroundCameraScreen")
     }
     
-    
-    
+    @IBAction func didPressBack(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
     
     @IBAction func shareImage(_ sender: Any) {
         let imageToShare = [ image! ]
