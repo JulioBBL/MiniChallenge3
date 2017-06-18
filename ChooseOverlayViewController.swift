@@ -45,7 +45,7 @@ class ChooseOverlayViewController: UIViewController {
         }
         else{
         // mudar para o filtro 2
-        image = #imageLiteral(resourceName: "ic_settings_applications_48pt_2x")
+        image = #imageLiteral(resourceName: "filtro2")
         }
         if let aux = segue.destination as? CustomCameraViewController{
         aux.img = image
