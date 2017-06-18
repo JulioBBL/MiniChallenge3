@@ -52,7 +52,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="207" id="Njv-YH-S2H"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="filtro1"/>
+                                <state key="normal" backgroundImage="filtro2"/>
                                 <connections>
                                     <action selector="choicefilter2:" destination="r2T-3F-aBQ" eventType="touchUpInside" id="EaM-y3-pmw"/>
                                     <segue destination="0Yc-hc-afT" kind="show" id="mpr-0I-kX5"/>
@@ -107,26 +107,11 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-iG-dIe">
-                                <rect key="frame" x="246" y="498.5" width="113" height="30"/>
-                                <color key="backgroundColor" red="0.28235294119999998" green="0.61176470589999998" blue="0.68235294120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Aur-Gc-SMf"/>
-                                    <constraint firstAttribute="width" constant="113" id="uYP-SL-mW3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                <state key="normal" title="Virar Câmera">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeCamera:" destination="0Yc-hc-afT" eventType="touchUpInside" id="QGY-5C-iUq"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-Sr-uP7">
-                                <rect key="frame" x="164" y="489" width="52" height="52"/>
+                                <rect key="frame" x="151" y="474" width="72" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="kXT-eX-EYE"/>
-                                    <constraint firstAttribute="height" constant="52" id="vMJ-Ov-pSO"/>
+                                    <constraint firstAttribute="width" constant="72" id="kXT-eX-EYE"/>
+                                    <constraint firstAttribute="height" constant="72" id="vMJ-Ov-pSO"/>
                                 </constraints>
                                 <state key="normal" image="buttonCamera">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,14 +128,29 @@
                                     <constraint firstAttribute="width" constant="375" id="gjB-Yk-J4H"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-iG-dIe">
+                                <rect key="frame" x="315" y="495" width="30" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Aur-Gc-SMf"/>
+                                    <constraint firstAttribute="width" constant="30" id="uYP-SL-mW3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                                <state key="normal" backgroundImage="ic_switch_camera_black_24px">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeCamera:" destination="0Yc-hc-afT" eventType="touchUpInside" id="QGY-5C-iUq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="leading" secondItem="14j-iG-dIe" secondAttribute="trailing" constant="-195" id="6Kc-Je-afd"/>
-                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="baseline" secondItem="14j-iG-dIe" secondAttribute="baseline" constant="22.5" id="BtZ-pY-xj6"/>
-                            <constraint firstItem="14j-iG-dIe" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leadingMargin" constant="230" id="Dmo-v7-znp"/>
+                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="leading" secondItem="14j-iG-dIe" secondAttribute="trailing" constant="-194" id="6Kc-Je-afd"/>
+                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="baseline" secondItem="14j-iG-dIe" secondAttribute="baseline" constant="55.5" id="BtZ-pY-xj6"/>
+                            <constraint firstItem="14j-iG-dIe" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leadingMargin" constant="299" id="Dmo-v7-znp"/>
                             <constraint firstItem="IGR-9u-1iU" firstAttribute="centerX" secondItem="mCz-BB-JPn" secondAttribute="centerX" id="KgR-ia-7qu"/>
-                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="KLG-Sr-uP7" secondAttribute="bottom" constant="13" id="k6A-dd-cKf"/>
+                            <constraint firstItem="14j-iG-dIe" firstAttribute="centerY" secondItem="KLG-Sr-uP7" secondAttribute="centerY" constant="-1" id="jCk-Pk-RdU"/>
+                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="KLG-Sr-uP7" secondAttribute="bottom" constant="8" id="k6A-dd-cKf"/>
                             <constraint firstItem="IGR-9u-1iU" firstAttribute="top" secondItem="IFm-a7-CfG" secondAttribute="bottom" id="rcd-7e-kok"/>
                         </constraints>
                     </view>
@@ -246,7 +246,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.50980392159999999" green="0.12941176469999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.6588235294" green="0.062745098040000002" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                         </textAttributes>
@@ -263,7 +263,9 @@
     </scenes>
     <resources>
         <image name="buttonCamera" width="366" height="366"/>
-        <image name="filtro1" width="520" height="520"/>
+        <image name="filtro1" width="518" height="519"/>
+        <image name="filtro2" width="475" height="475"/>
+        <image name="ic_switch_camera_black_24px" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mpr-0I-kX5"/>
