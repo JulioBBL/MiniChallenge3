@@ -15,7 +15,7 @@ class FirebaseConnection {
     
     static let ref = FIRDatabase.database().reference()
     
-    static var hemocentros: [Hemocentro] = []
+    //    static var hemocentros: [Hemocentro] = []
     static var usuarioAtual: User?
     //    var doacoes: [Donation] = []
     //    var usuarios: [User] = []
