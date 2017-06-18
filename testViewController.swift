@@ -30,6 +30,7 @@ class testViewController: UIViewController {
         changeButton.layer.cornerRadius = 6.0
         yesButton.layer.cornerRadius = 6.0
         backgroundimage.image = UIImage.init(named: "backgroundtest")
+        backgroundimage.isHidden = true
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Main")
         

@@ -49,9 +49,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Já teve anemia, doença de Chagas, malária, câncer, ou algum tipo de DST ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-Dc-vIy">
-                                <rect key="frame" x="25" y="45" width="303" height="239"/>
+                                <rect key="frame" x="25" y="45" width="303" height="390"/>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="39"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.66644871230000002" green="0.040745683009999999" blue="0.1799685657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbj-VR-TtL">
@@ -76,7 +76,7 @@
                             <constraint firstItem="IFs-7i-PHW" firstAttribute="leading" secondItem="zj4-Yi-tf9" secondAttribute="leading" id="3Zj-po-0Z7"/>
                             <constraint firstItem="lwy-ap-Laq" firstAttribute="top" secondItem="wbj-VR-TtL" secondAttribute="bottom" constant="53" id="6fi-af-1de"/>
                             <constraint firstAttribute="trailing" secondItem="IFs-7i-PHW" secondAttribute="trailing" id="9nY-v4-SfS"/>
-                            <constraint firstItem="wbj-VR-TtL" firstAttribute="top" secondItem="oQ8-Dc-vIy" secondAttribute="bottom" constant="291" id="AgI-tc-MRy"/>
+                            <constraint firstItem="wbj-VR-TtL" firstAttribute="top" secondItem="oQ8-Dc-vIy" secondAttribute="bottom" constant="140" id="AgI-tc-MRy"/>
                             <constraint firstItem="lwy-ap-Laq" firstAttribute="top" secondItem="IFs-7i-PHW" secondAttribute="bottom" id="HbT-0N-Wrw"/>
                             <constraint firstItem="oQ8-Dc-vIy" firstAttribute="top" secondItem="hTw-kM-apt" secondAttribute="bottom" constant="25" id="PDH-sL-nxy"/>
                             <constraint firstItem="n0U-hT-pw7" firstAttribute="top" secondItem="wbj-VR-TtL" secondAttribute="top" id="SvV-0v-cJJ"/>

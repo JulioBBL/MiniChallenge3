@@ -27,6 +27,7 @@ class InfoCollectionViewController: UICollectionViewController, UICollectionView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier?.contains("toDonatesTo"))! {
             (segue.destination as! WhoDonatesToViewController).donor = BloodType(rawValue: ((sender as! UIButton).titleLabel?.text)!)!
+            segue.destination.hidesBottomBarWhenPushed = true
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
