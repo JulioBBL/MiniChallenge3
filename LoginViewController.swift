@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -18,6 +18,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailField.delegate = self
+        passwordField.delegate = self
+        loginButton.layer.cornerRadius = 6.0
+        registerButton.layer.cornerRadius = 6.0
         
         let juam = User(key: nil, name: "John", email: "john@doe.com", cpf: "00000000000", bt: .abNegative, weight: 100, gender: .male)
         FirebaseConnection.addUser(user: juam, password: "12345678")
@@ -60,4 +65,16 @@ class LoginViewController: UIViewController {
             self.activity.startAnimating()
 //        }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+
 }
