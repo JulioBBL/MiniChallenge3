@@ -33,7 +33,6 @@ public class User {
     }
     
     init(snapshot: FIRDataSnapshot){
-        let formatter = DateFormatter()
         
         key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
@@ -43,32 +42,27 @@ public class User {
         bt = BloodType(rawValue: snapshotValue["bt"] as! String)!
         weight = snapshotValue["weight"] as! Double
         gender = Gender(rawValue: snapshotValue["gender"] as! String)!
+        
+        var tempDon: [Donation] = []
         for snap in snapshot.childSnapshot(forPath: "donations").children{
-            if let snapValue = (snap as! FIRDataSnapshot).value as? [String: AnyObject]{
-                
-                let temp = Donation(date: formatter.date(from: snapValue["date"] as! String)!, location: snapValue["location"] as! String)
-                temp.key = ((snap as! FIRDataSnapshot).key)
-                donations.append(temp)
-            }
+            tempDon.append(Donation(snapshot: snap as! FIRDataSnapshot))
         }
+        
         ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "pt_BR")
-        formatter.dateFormat = "dd/MM/yyyy"
         
-        var doacoes: [String:[String:String]] = [:]
+        
+        var doacoes: [String: Any] = [:]
         
         var i = 0
         for donation in donations{
-            doacoes[String(i)] = [
-                "date":formatter.string(from: donation.date),
-                "location":donation.location
-            ]
+            doacoes[String(i)] = donation.toAnyObject()
             i += 1
         }
+        
+        
         
         return [
             "name": name,
@@ -77,7 +71,7 @@ public class User {
             "bt": bt.rawValue,
             "weight": weight,
             "gender": gender.rawValue,
-            "donations": [doacoes]
+            "donations": doacoes
         ]
     }
 }

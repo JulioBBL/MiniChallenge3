@@ -14,15 +14,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var weightOutlet: UILabel!
     @IBOutlet weak var genderOutlet: UILabel!
     @IBOutlet weak var lastDonationOutlet: UILabel!
-    @IBOutlet weak var aptitudeOutlet: UILabel!
+//    @IBOutlet weak var aptitudeOutlet: UILabel!
+    @IBOutlet weak var nameOutlet: UILabel!
+    @IBOutlet weak var emailOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         FirebaseConnection.usuarioAtual(completion: { user in
             
+            self.nameOutlet.text = user.name
+            self.emailOutlet.text = user.email
+            
             self.bloodTypeOutlet.text = user.bt.rawValue
-//            self.weightOutlet.text =  "\(user.weight)"
+            self.weightOutlet.text =  "\(user.weight)"
             self.genderOutlet.text = user.gender.rawValue
             if user.donations.count > 0 {
                 self.lastDonationOutlet.text = Utils.dateToString((user.donations[(user.donations.count)].date))

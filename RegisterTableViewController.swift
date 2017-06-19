@@ -63,7 +63,12 @@ class RegisterTableViewController: UITableViewController, UIPickerViewDelegate, 
                             let temp = User(key: nil, name: nome.text!, email: email.text!, cpf: cpf.text!, bt: BloodType(tipoSanguineo.selectedRow(inComponent: 0))!, weight: Double(peso.text!)!, gender: Gender(genero.selectedSegmentIndex))
                             FirebaseConnection.addUser(user: temp, password: senha1.text!)
                             
-                            self.navigationController?.popToRootViewController(animated: true)
+                            FirebaseConnection.signUserIn(email: temp.email, password: senha1.text!, completion: {user, error in
+                                if error == nil{
+                                    self.performSegue(withIdentifier: "segue", sender: self)
+                                }
+                            })
+                            
                         }
                     }
                 }

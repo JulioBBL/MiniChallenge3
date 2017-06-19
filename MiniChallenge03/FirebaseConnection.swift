@@ -59,7 +59,7 @@ class FirebaseConnection {
     static func usuarioAtual(completion: @escaping (User) -> Void) {
         let user = FIRAuth.auth()?.currentUser
         if let uid = user?.uid{
-            FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
+            FirebaseConnection.ref.child("usuarios/\(uid)").observeSingleEvent(of: .value, with: {snapshot in
                 completion(User(snapshot: snapshot))
             })
         }
@@ -107,21 +107,14 @@ class FirebaseConnection {
         try! FIRAuth.auth()!.signOut()
     }
     
-    static func saveUser(usuario: User) {
+    static func saveUser(usuario: User, completion: @escaping () -> Void) {
         let user = FIRAuth.auth()?.currentUser
-        if let user = user {
-            let changeRequest = user.profileChangeRequest()
-            
-            changeRequest.displayName = usuario.name
-            changeRequest.commitChanges { error in
-                if error != nil {
-                    print("error signing user in")
-                } else {
-                    FirebaseConnection.ref.child("usuarios/\(user.uid)").setValue(usuario.toAnyObject())
-                }
-            }
+        if let uid = user?.uid{
+            FirebaseConnection.ref.child("usuarios/\(uid)").setValue(usuario.toAnyObject())
         }
+        completion()
     }
+    
     
     static func deleteUser() {
         let user = FIRAuth.auth()?.currentUser

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PSK-O7-hcE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PSK-O7-hcE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,9 +28,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAy-mN-dpK">
-                                <rect key="frame" x="84" y="103" width="207" height="207"/>
+                                <rect key="frame" x="190" y="189" width="166" height="171"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" backgroundImage="filtro1"/>
+                                <state key="normal" backgroundImage="filtro3"/>
                                 <connections>
                                     <action selector="choicefilter1:" destination="r2T-3F-aBQ" eventType="touchUpInside" id="UiW-sC-fxq"/>
                                     <segue destination="0Yc-hc-afT" kind="show" id="A20-gs-F73"/>
@@ -39,49 +39,49 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha o filtro " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l16-dx-U4P">
                                 <rect key="frame" x="103" y="32" width="168" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="168" id="SAz-OM-Yi7"/>
-                                    <constraint firstAttribute="height" constant="47" id="zMb-lW-Bfv"/>
+                                    <constraint firstAttribute="height" constant="47" id="ec7-j8-SqG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-IP-Qhs">
-                                <rect key="frame" x="84" y="331" width="207" height="207"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="207" id="Njv-YH-S2H"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="filtro2"/>
-                                <connections>
-                                    <action selector="choicefilter2:" destination="r2T-3F-aBQ" eventType="touchUpInside" id="EaM-y3-pmw"/>
-                                    <segue destination="0Yc-hc-afT" kind="show" id="mpr-0I-kX5"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escolha um dos nossos filtros e tire uma foto" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl3-U1-35m">
                                 <rect key="frame" x="44" y="15" width="286" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="WMi-Oc-q3l"/>
-                                    <constraint firstAttribute="width" constant="286" id="aeR-OF-ISg"/>
+                                    <constraint firstAttribute="height" constant="58" id="9eh-th-Qpy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
                                 <color key="textColor" red="0.66644871230000002" green="0.040745683009999999" blue="0.1799685657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqJ-IP-Qhs">
+                                <rect key="frame" x="16" y="189" width="166" height="171"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="171" id="A4P-zt-Yh5"/>
+                                    <constraint firstAttribute="width" constant="166" id="dNw-nE-RhE"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="filtro4"/>
+                                <connections>
+                                    <action selector="choicefilter2:" destination="r2T-3F-aBQ" eventType="touchUpInside" id="EaM-y3-pmw"/>
+                                    <segue destination="0Yc-hc-afT" kind="show" id="mpr-0I-kX5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="eqJ-IP-Qhs" secondAttribute="centerX" id="3Uq-bH-3pi"/>
-                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="R4F-Ox-Uuz" secondAttribute="centerX" id="LKx-Xh-vQw"/>
-                            <constraint firstItem="yl3-U1-35m" firstAttribute="centerX" secondItem="l16-dx-U4P" secondAttribute="centerX" id="Z02-Mc-fw0"/>
-                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="top" secondItem="oAy-mN-dpK" secondAttribute="bottom" constant="21" id="fbQ-TK-VcH"/>
-                            <constraint firstItem="yl3-U1-35m" firstAttribute="top" secondItem="JYq-1H-WSJ" secondAttribute="bottom" constant="15" id="fmG-hS-h5F"/>
-                            <constraint firstItem="l16-dx-U4P" firstAttribute="centerX" secondItem="oAy-mN-dpK" secondAttribute="centerX" id="iT1-fB-9Yn"/>
-                            <constraint firstItem="l16-dx-U4P" firstAttribute="top" secondItem="JYq-1H-WSJ" secondAttribute="bottom" constant="32" id="lhh-J3-hEr"/>
-                            <constraint firstItem="oAy-mN-dpK" firstAttribute="top" secondItem="l16-dx-U4P" secondAttribute="bottom" constant="24" id="mAT-Es-C3j"/>
-                            <constraint firstItem="duS-Dd-fKp" firstAttribute="top" secondItem="eqJ-IP-Qhs" secondAttribute="bottom" constant="16" id="pBo-gA-JSj"/>
-                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="leading" secondItem="oAy-mN-dpK" secondAttribute="leading" id="sZX-YA-Eg6"/>
-                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leadingMargin" constant="68" id="vQr-Gp-xPf"/>
+                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="bottom" secondItem="oAy-mN-dpK" secondAttribute="bottom" id="0Pm-7H-r6p"/>
+                            <constraint firstItem="yl3-U1-35m" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leadingMargin" constant="28" id="7Ja-yR-qdc"/>
+                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leadingMargin" id="PpZ-X0-VQl"/>
+                            <constraint firstItem="eqJ-IP-Qhs" firstAttribute="top" secondItem="oAy-mN-dpK" secondAttribute="top" id="RiS-Mm-GaA"/>
+                            <constraint firstItem="yl3-U1-35m" firstAttribute="centerX" secondItem="R4F-Ox-Uuz" secondAttribute="centerX" id="T7J-AB-yL3"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="top" secondItem="JYq-1H-WSJ" secondAttribute="bottom" constant="32" id="W8t-14-LLM"/>
+                            <constraint firstItem="yl3-U1-35m" firstAttribute="top" secondItem="JYq-1H-WSJ" secondAttribute="bottom" constant="15" id="X7e-ry-sjd"/>
+                            <constraint firstItem="l16-dx-U4P" firstAttribute="leading" secondItem="R4F-Ox-Uuz" secondAttribute="leadingMargin" constant="87" id="Y0r-ge-0np"/>
+                            <constraint firstItem="duS-Dd-fKp" firstAttribute="top" secondItem="eqJ-IP-Qhs" secondAttribute="bottom" constant="194" id="jxd-00-70W"/>
+                            <constraint firstItem="yl3-U1-35m" firstAttribute="centerX" secondItem="l16-dx-U4P" secondAttribute="centerX" id="mGu-3Y-to7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oAy-mN-dpK" secondAttribute="trailing" constant="3" id="mav-Vk-aoe"/>
+                            <constraint firstItem="oAy-mN-dpK" firstAttribute="leading" secondItem="eqJ-IP-Qhs" secondAttribute="trailing" constant="8" symbolic="YES" id="xoh-Pm-a1R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Câmera" id="Mz6-nv-R4h"/>
@@ -89,6 +89,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="filter1" destination="oAy-mN-dpK" id="XEW-Xu-roW"/>
+                        <outlet property="filter2" destination="eqJ-IP-Qhs" id="OBo-Yl-mzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0t-hZ-AMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,8 +111,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-Sr-uP7">
                                 <rect key="frame" x="151" y="474" width="72" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="72" id="kXT-eX-EYE"/>
-                                    <constraint firstAttribute="height" constant="72" id="vMJ-Ov-pSO"/>
+                                    <constraint firstAttribute="height" constant="72" id="dFL-I0-ckP"/>
                                 </constraints>
                                 <state key="normal" image="buttonCamera">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -122,20 +122,16 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGR-9u-1iU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="375" id="PH6-es-3Lh"/>
-                                    <constraint firstAttribute="width" constant="375" id="gjB-Yk-J4H"/>
-                                </constraints>
+                                <color key="backgroundColor" red="0.72549019607843135" green="0.14117647058823529" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14j-iG-dIe">
                                 <rect key="frame" x="315" y="495" width="30" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="Aur-Gc-SMf"/>
-                                    <constraint firstAttribute="width" constant="30" id="uYP-SL-mW3"/>
+                                    <constraint firstAttribute="width" constant="30" id="HFD-zt-bFb"/>
+                                    <constraint firstAttribute="height" constant="28" id="My1-qJ-Pv9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
-                                <state key="normal" backgroundImage="ic_switch_camera_black_24px">
+                                <state key="normal" backgroundImage="icons8-Switch Camera-50">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -143,15 +139,17 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.98626050600994453" green="0.98514858278600459" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="leading" secondItem="14j-iG-dIe" secondAttribute="trailing" constant="-194" id="6Kc-Je-afd"/>
-                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="baseline" secondItem="14j-iG-dIe" secondAttribute="baseline" constant="55.5" id="BtZ-pY-xj6"/>
-                            <constraint firstItem="14j-iG-dIe" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leadingMargin" constant="299" id="Dmo-v7-znp"/>
-                            <constraint firstItem="IGR-9u-1iU" firstAttribute="centerX" secondItem="mCz-BB-JPn" secondAttribute="centerX" id="KgR-ia-7qu"/>
-                            <constraint firstItem="14j-iG-dIe" firstAttribute="centerY" secondItem="KLG-Sr-uP7" secondAttribute="centerY" constant="-1" id="jCk-Pk-RdU"/>
-                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="KLG-Sr-uP7" secondAttribute="bottom" constant="8" id="k6A-dd-cKf"/>
-                            <constraint firstItem="IGR-9u-1iU" firstAttribute="top" secondItem="IFm-a7-CfG" secondAttribute="bottom" id="rcd-7e-kok"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="14j-iG-dIe" secondAttribute="trailing" constant="14" id="3Kf-eA-cnD"/>
+                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="14j-iG-dIe" secondAttribute="bottom" constant="31" id="4na-QJ-KBI"/>
+                            <constraint firstItem="14j-iG-dIe" firstAttribute="leading" secondItem="KLG-Sr-uP7" secondAttribute="trailing" constant="92" id="8vZ-rK-4CU"/>
+                            <constraint firstItem="IGR-9u-1iU" firstAttribute="top" secondItem="IFm-a7-CfG" secondAttribute="bottom" id="DCg-ao-JK9"/>
+                            <constraint firstItem="YMI-db-aiz" firstAttribute="top" secondItem="KLG-Sr-uP7" secondAttribute="bottom" constant="8" symbolic="YES" id="Mdh-8V-LT1"/>
+                            <constraint firstAttribute="trailing" secondItem="IGR-9u-1iU" secondAttribute="trailing" id="T7n-l7-WcN"/>
+                            <constraint firstItem="KLG-Sr-uP7" firstAttribute="top" secondItem="IGR-9u-1iU" secondAttribute="bottom" constant="99" id="htZ-hP-Nuc"/>
+                            <constraint firstItem="IGR-9u-1iU" firstAttribute="centerX" secondItem="KLG-Sr-uP7" secondAttribute="centerX" id="t8H-IN-9op"/>
+                            <constraint firstItem="IGR-9u-1iU" firstAttribute="leading" secondItem="mCz-BB-JPn" secondAttribute="leading" id="tNV-en-VIJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Câmera" id="aoI-65-ei1"/>
@@ -265,9 +263,9 @@
         <image name="buttonCamera" width="366" height="366"/>
         <image name="camera" width="21" height="19"/>
         <image name="camera_selected" width="21" height="19"/>
-        <image name="filtro1" width="518" height="519"/>
-        <image name="filtro2" width="475" height="475"/>
-        <image name="ic_switch_camera_black_24px" width="16" height="16"/>
+        <image name="filtro3" width="600" height="600"/>
+        <image name="filtro4" width="600" height="600"/>
+        <image name="icons8-Switch Camera-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mpr-0I-kX5"/>

@@ -9,19 +9,25 @@
 import UIKit
 
 class ChooseOverlayViewController: UIViewController {
-
+    
     var choice = true
     var image:UIImage?
     
     @IBOutlet weak var filter1: UIButton!
+    @IBOutlet weak var filter2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        
+        func viewDidLoad() {
+            super.viewDidLoad()
+            
+            filter1.layer.borderColor = UIColor(colorLiteralRed: 185, green: 36, blue: 64, alpha: 1) as! CGColor
+            filter2.layer.borderColor = UIColor(colorLiteralRed: 185, green: 36, blue: 64, alpha: 1) as! CGColor
+        }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,8 +38,8 @@ class ChooseOverlayViewController: UIViewController {
         print(choice)
         
     }
-
-
+    
+    
     @IBAction func choicefilter2(_ sender: Any) {
         choice = false
         print(choice)
@@ -41,18 +47,20 @@ class ChooseOverlayViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if choice == true{
-        image = #imageLiteral(resourceName: "filtro1")
+            image = #imageLiteral(resourceName: "filtro1")
+            
         }
         else{
-        // mudar para o filtro 2
-        image = #imageLiteral(resourceName: "filtro2")
+            // mudar para o filtro 2
+            
+            image = #imageLiteral(resourceName: "filtro2")
         }
         if let aux = segue.destination as? CustomCameraViewController{
-        aux.img = image
-        
+            aux.img = image
+            
         }
-    
-    
+        
+        
     }
     
     

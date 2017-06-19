@@ -38,19 +38,23 @@ public class Donation {
     }
     
     init(snapshot: FIRDataSnapshot){
-        let dateFormatter = DateFormatter()
+//        let dateFormatter = DateFormatter()
     
         self.key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
-        self.date = dateFormatter.date(from: snapshotValue["date"] as! String )!
-        self.location = snapshotValue["date"] as! String
+        self.date = Utils.dateToString(snapshotValue["date"] as! String)
+        self.location = snapshotValue["location"] as! String
         self.ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "pt_BR")
+        formatter.dateFormat = "dd/MM/yyyy"
+        
         return [
         
-            "date": date,
+            "date": formatter.string(from: date),
             "location": location
         ]
     }
