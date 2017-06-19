@@ -38,6 +38,7 @@ class DonationTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        
     }
     
     // MARK: - Table view data source
@@ -124,6 +125,7 @@ class DonationTableViewController: UITableViewController {
     func retrieveInfo() {
         FirebaseConnection.usuarioAtual(completion: { user in
             self.donations = user.donations
+            self.tableView.reloadData()
         })
     }
     
