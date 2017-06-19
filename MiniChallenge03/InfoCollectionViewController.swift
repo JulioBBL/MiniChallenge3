@@ -10,6 +10,9 @@ import UIKit
 
 class InfoCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

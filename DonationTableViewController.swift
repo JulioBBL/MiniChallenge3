@@ -26,6 +26,14 @@ class DonationTableViewController: UITableViewController {
         self.retrieveInfo()
         
         self.clearsSelectionOnViewWillAppear = true
+        
+
+        
+        FirebaseConnection.usuarioAtual(completion: { user in
+            self.donations = user.donations
+
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,6 +117,7 @@ class DonationTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCadastro" {
             (segue.destination as! DonationCreationTableViewController).delegate = self
+            segue.destination.hidesBottomBarWhenPushed = true
         }
         
         // Get the new view controller using segue.destinationViewController.
@@ -118,15 +127,20 @@ class DonationTableViewController: UITableViewController {
     //Mark: - My methods
     
     func retrieveInfo() {
-        self.donations = FirebaseConnection.usuarioAtual?.donations ?? []
+        FirebaseConnection.usuarioAtual(completion: { user in
+            self.donations = user.donations
+        })
     }
     
     func addNewDonation(_ donation: Donation) {
         self.donations.append(donation)
+//        self.sortDonations()
         self.tableView.reloadData()
-        FirebaseConnection.usuarioAtual?.donations = self.donations
-        //FirebaseConnection.saveUser()
-        
+        FirebaseConnection.usuarioAtual(completion: { user in
+            let usuario = user
+            usuario.donations = self.donations
+            FirebaseConnection.saveUser(usuario: usuario)
+        })
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
         let newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)
@@ -171,7 +185,9 @@ class DonationTableViewController: UITableViewController {
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
-            print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+            if let _ = error {
+                print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+            }
         })
     }
     
@@ -202,8 +218,22 @@ class DonationTableViewController: UITableViewController {
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
-            print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+            if let _ = error {
+                print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+            }
         })
     }
 
+//    func sortDonations() {
+//        let calendar = Calendar(identifier: .gregorian)
+//        for i in 1..<self.donations.count {
+//            print(i)
+//            print("  - \(calendar.compare(self.donations[i-1].date, to: self.donations[i].date, toGranularity: .day).rawValue)")
+//            if calendar.compare(self.donations[i-1].date, to: self.donations[i].date, toGranularity: .day) == .orderedDescending {
+//                let aux = self.donations[i]
+//                self.donations[i] = self.donations[i-1]
+//                self.donations[i-1] = aux
+//            }
+//        }
+//    }
 }

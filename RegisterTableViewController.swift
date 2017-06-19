@@ -8,16 +8,21 @@
 
 import UIKit
 
-class RegisterTableViewController: UITableViewController {
+class RegisterTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var nome: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var senha1: UITextField!
+    @IBOutlet weak var senha2: UITextField!
+    @IBOutlet weak var cpf: UITextField!
+    @IBOutlet weak var tipoSanguineo: UIPickerView!
+    @IBOutlet weak var peso: UITextField!
+    @IBOutlet weak var genero: UISegmentedControl!
+    
+    var bloodPicker = ["Não sei", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,5 +39,35 @@ class RegisterTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Picker View
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.bloodPicker.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.bloodPicker[row]
+    }
+    
 
+    @IBAction func didPressDoneButton(_ sender: Any) {
+        if nome.text != "" {
+            if (email.text?.contains("@"))! && (email.text?.contains("."))! {
+                if senha1.text == senha2.text {
+                    if peso.text != "" {
+                        if cpf.text != "" {
+                            let temp = User(key: nil, name: nome.text!, email: email.text!, cpf: cpf.text!, bt: BloodType(tipoSanguineo.selectedRow(inComponent: 0))!, weight: Double(peso.text!)!, gender: Gender(genero.selectedSegmentIndex))
+                            FirebaseConnection.addUser(user: temp, password: senha1.text!)
+                            
+                            self.navigationController?.popToRootViewController(animated: true)
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

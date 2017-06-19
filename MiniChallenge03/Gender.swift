@@ -9,8 +9,13 @@
 import Foundation
 
 enum Gender: String{
-    
     case male = "Masculino"
     case female = "Feminino"
     
+    init(_ value: Int) {
+        switch value {
+        case 0: self = .male
+        default: self = .female
+        }
+    }
 }

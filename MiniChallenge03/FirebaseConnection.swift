@@ -16,29 +16,52 @@ class FirebaseConnection {
     static let ref = FIRDatabase.database().reference()
     
     //    static var hemocentros: [Hemocentro] = []
-    static var usuarioAtual: User?
+    //    static var usuarioAtual: User?{
+    //        get{
+    //            return self.getCurrentUserInfo()
+    //        }
+    //    }
     //    var doacoes: [Donation] = []
     //    var usuarios: [User] = []
     
+    //    static func process(completion: @escaping() -> Void) -> User{
+    //        let user = FIRAuth.auth()?.currentUser
+    //        let usuario: User?
+    //        if let uid = user?.uid {
+    //            FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
+    //
+    //            })
+    //        } else {
+    //            // No user is signed in.
+    //        }
+    //    }
     
     
-    private init(){
-//        FirebaseConnection.ref.child("hemocentros").observe(.value, with: {snapshot in
-//            for hemo in snapshot.children{
-//                FirebaseConnection.hemocentros.append(Hemocentro(snapshot: hemo as! FIRDataSnapshot))
-//                
-//            }
-//            print("passou")
-//        })
-        
-        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
-            if let uid = user?.uid {
-                FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
-                    FirebaseConnection.usuarioAtual = User(snapshot: snapshot)
-                })
-            } else {
-                // No user is signed in.
-            }
+    //        FIRAuth.auth()?.currentUser
+    
+    //    static func assyncFunc(completion: @escaping (String) -> User) -> User{
+    //
+    //
+    //        return
+    //    }
+    //
+    //    static func getCurrentUserInfo() -> User{
+    //        let user = FIRAuth.auth()?.currentUser
+    //        if let uid = user?.uid{
+    //            return assyncFunc(completion: { uid in
+    //                    FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
+    //                        return User(snapshot: snapshot)
+    //                    })
+    //            })
+    //        }
+    //    }
+    
+    static func usuarioAtual(completion: @escaping (User) -> Void) {
+        let user = FIRAuth.auth()?.currentUser
+        if let uid = user?.uid{
+            FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
+                completion(User(snapshot: snapshot))
+            })
         }
     }
     
@@ -55,7 +78,9 @@ class FirebaseConnection {
                 print(error.debugDescription)
             }else{
                 if let uid = usuario?.uid{
-                        FirebaseConnection.ref.child("usuarios/\(uid)").setValue(user.toAnyObject())
+                    FirebaseConnection.ref.child("usuarios/\(uid)").setValue(user.toAnyObject())
+                }else{
+                    print("deu erro com os dados do usuario")
                 }
             }
         }
@@ -63,6 +88,17 @@ class FirebaseConnection {
     
     static func signUserIn(email:String, password:String, completion: @escaping (FIRUser?, Error?) -> Void){
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { (user, error) in
+            if error != nil{
+                print("error login as \(email)")
+                print(error.debugDescription)
+            }else{
+                //                if let uid = user?.uid{
+                //                    FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
+                //                        let usuario = User(snapshot: snapshot)
+                //                        FirebaseConnection.usuarioAtual = usuario
+                //                    })
+                //                }
+            }
             completion(user, error)
         }
     }
