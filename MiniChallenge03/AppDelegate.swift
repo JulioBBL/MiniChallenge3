@@ -19,6 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
+        
+        let tabBarItemAppearence = UITabBar.appearance()
+       
+        tabBarItemAppearence.unselectedItemTintColor = UIColor(red: 72/255.0, green: 156/255.0, blue: 174/255.0, alpha: 1.0)
+        
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         

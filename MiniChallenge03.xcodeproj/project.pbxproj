@@ -55,6 +55,7 @@
 		D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */; };
 		D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A241EF07B1A00CF658A /* Gender.swift */; };
 		D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A261EF07B4A00CF658A /* BloodType.swift */; };
+		D8E06A351EF75AC600CF658A /* HemoPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A341EF75AC600CF658A /* HemoPin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,7 @@
 		D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConnection.swift; sourceTree = "<group>"; };
 		D8E06A241EF07B1A00CF658A /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D8E06A261EF07B4A00CF658A /* BloodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodType.swift; sourceTree = "<group>"; };
+		D8E06A341EF75AC600CF658A /* HemoPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemoPin.swift; sourceTree = "<group>"; };
 		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
 		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
 		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 		1959C19B1EEB0AAE00455576 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D8E06A341EF75AC600CF658A /* HemoPin.swift */,
 				596AF36E1EEF29EB003010F0 /* Utils.swift */,
 				1959C19C1EEB0B0700455576 /* User.swift */,
 				598288411EEB374C00221079 /* BankCollectionViewCell.swift */,
@@ -313,7 +316,7 @@
 				TargetAttributes = {
 					596E52BA1EE1F7A1009D9F85 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = CVX58B2KAX;
+						DevelopmentTeam = R8QSMBZSJR;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E06A351EF75AC600CF658A /* HemoPin.swift in Sources */,
 				5982884A1EEB3A8B00221079 /* CameraViewController.swift in Sources */,
 				59AA9C8F1EEF137F004D7436 /* DonationTableViewController.swift in Sources */,
 				5982884B1EEB3A8B00221079 /* InfoCollectionViewController.swift in Sources */,
@@ -556,7 +560,7 @@
 			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVX58B2KAX;
+				DEVELOPMENT_TEAM = R8QSMBZSJR;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;
@@ -571,7 +575,7 @@
 			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CVX58B2KAX;
+				DEVELOPMENT_TEAM = R8QSMBZSJR;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.br.mackmobile.brazil.julio.MiniChallenge03;

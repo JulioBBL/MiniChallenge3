@@ -239,7 +239,7 @@
         <scene sceneID="3XJ-Vj-fPa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PSK-O7-hcE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Foto" id="AZG-Mw-omH"/>
+                    <tabBarItem key="tabBarItem" title="Foto" image="camera" selectedImage="camera_selected" id="AZG-Mw-omH"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="eUe-lg-hN9">
@@ -263,6 +263,8 @@
     </scenes>
     <resources>
         <image name="buttonCamera" width="366" height="366"/>
+        <image name="camera" width="21" height="19"/>
+        <image name="camera_selected" width="21" height="19"/>
         <image name="filtro1" width="518" height="519"/>
         <image name="filtro2" width="475" height="475"/>
         <image name="ic_switch_camera_black_24px" width="16" height="16"/>
