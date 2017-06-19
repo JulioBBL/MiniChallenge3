@@ -109,6 +109,7 @@ class DonationTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCadastro" {
             (segue.destination as! DonationCreationTableViewController).delegate = self
+            segue.destination.hidesBottomBarWhenPushed = true
         }
         
         // Get the new view controller using segue.destinationViewController.
@@ -125,7 +126,7 @@ class DonationTableViewController: UITableViewController {
         self.donations.append(donation)
         self.tableView.reloadData()
         FirebaseConnection.usuarioAtual?.donations = self.donations
-        //FirebaseConnection.saveUser()
+        FirebaseConnection.saveUser(usuario: FirebaseConnection.usuarioAtual!)
         
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
@@ -171,7 +172,9 @@ class DonationTableViewController: UITableViewController {
         let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
-            print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+            if let _ = error {
+                print("error \"\(String(describing: error))\" occured while trying to schedule a notification with identifier: \(identifier)")
+            }
         })
     }
     

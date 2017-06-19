@@ -24,8 +24,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.cornerRadius = 6.0
         registerButton.layer.cornerRadius = 6.0
         
-        let juam = User(key: nil, name: "John", email: "john@doe.com", cpf: "00000000000", bt: .abNegative, weight: 100, gender: .male)
-        FirebaseConnection.addUser(user: juam, password: "12345678")
+//        let juaum = User(key: nil, name: "John", email: "10@10.com", cpf: "00000000000", bt: .abNegative, weight: 100, gender: .male)
+//        FirebaseConnection.addUser(user: juaum, password: "12345678")
 
         // Do any additional setup after loading the view.
     }
@@ -48,22 +48,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func didPressLoginButton(_ sender: Any) {
         //TODO
-//        if self.emailField.text != "" && self.passwordField.text != "" {
+        if self.emailField.text != "" && self.passwordField.text != "" {
             FirebaseConnection.signUserIn(email: self.emailField.text!, password: self.passwordField.text!, completion: {user, error in
-//                if let _ = error {
-//                    //não foi possível logar usuário
-//                    self.loginButton.isHidden = false
-//                    self.loginButton.isEnabled = true
-//                    self.activity.stopAnimating()
-//                } else {
+                if let _ = error {
+                    //não foi possível logar usuário
+                    self.loginButton.isHidden = false
+                    self.loginButton.isEnabled = true
+                    self.activity.stopAnimating()
+                } else {
                     self.performSegue(withIdentifier: "enter", sender: nil)
                     self.activity.stopAnimating()
-//                }
+                }
             })
             self.loginButton.isHidden = true
             self.loginButton.isEnabled = false
             self.activity.startAnimating()
-//        }
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

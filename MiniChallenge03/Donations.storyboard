@@ -236,7 +236,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XIW-yG-Dga" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Doações" image="blooddrop" selectedImage="blooddrop_selected" id="2dI-fh-egH"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yVY-1w-7Rf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="yVY-1w-7Rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
