@@ -235,7 +235,7 @@
         <scene sceneID="1X9-VD-wKf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XIW-yG-Dga" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Doações" id="2dI-fh-egH"/>
+                    <tabBarItem key="tabBarItem" title="Doações" image="blooddrop" selectedImage="blooddrop_selected" id="2dI-fh-egH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="yVY-1w-7Rf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -256,4 +256,8 @@
             <point key="canvasLocation" x="2029.5999999999999" y="201.94902548725639"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blooddrop" width="18" height="24"/>
+        <image name="blooddrop_selected" width="18" height="24"/>
+    </resources>
 </document>

@@ -47,9 +47,9 @@
         <scene sceneID="UoW-ML-hEh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z5p-tB-cPe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="iWW-Cx-qtQ"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map_selected" id="iWW-Cx-qtQ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="P7E-eS-OMi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="P7E-eS-OMi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,4 +68,8 @@
             <point key="canvasLocation" x="1805.5999999999999" y="-127.28635682158921"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map" width="19" height="19"/>
+        <image name="map_selected" width="19" height="19"/>
+    </resources>
 </document>
