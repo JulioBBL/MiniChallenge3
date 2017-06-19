@@ -23,7 +23,9 @@ class ChooseOverlayViewController: UIViewController {
             super.viewDidLoad()
             
             filter1.layer.borderColor = UIColor(colorLiteralRed: 185, green: 36, blue: 64, alpha: 1) as! CGColor
+            filter1.layer.borderWidth = CGFloat(3)
             filter2.layer.borderColor = UIColor(colorLiteralRed: 185, green: 36, blue: 64, alpha: 1) as! CGColor
+            filter2.layer.borderWidth = CGFloat(3)
         }
         
     }

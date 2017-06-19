@@ -12,7 +12,7 @@ import Firebase
 class FirebaseConnection {
     static let sharedInstance = FirebaseConnection()
     
-    
+    static var user: User?
     static let ref = FIRDatabase.database().reference()
     
     //    static var hemocentros: [Hemocentro] = []
