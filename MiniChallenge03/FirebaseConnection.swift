@@ -56,6 +56,8 @@ class FirebaseConnection {
             }else{
                 if let uid = usuario?.uid{
                         FirebaseConnection.ref.child("usuarios/\(uid)").setValue(user.toAnyObject())
+                }else{
+                    print("deu erro com os dados do usuario")
                 }
             }
         }

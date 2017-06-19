@@ -73,9 +73,9 @@ public class User {
             "name": name,
             "email": email,
             "cpf": cpf,
-            "bt": bt,
+            "bt": bt.rawValue,
             "weight": weight,
-            "gender": gender,
+            "gender": gender.rawValue,
             "donations": [doacoes]
         ]
     }
