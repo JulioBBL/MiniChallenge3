@@ -19,6 +19,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(self.navigationController ?? "naum tem")
+        
         emailField.delegate = self
         passwordField.delegate = self
         loginButton.layer.cornerRadius = 6.0
@@ -47,23 +49,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     */
 
     @IBAction func didPressLoginButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "enter", sender: nil)
-//        if self.emailField.text != "" && self.passwordField.text != "" {
-//            FirebaseConnection.signUserIn(email: self.emailField.text!, password: self.passwordField.text!, completion: {user, error in
-//                if let _ = error {
-//                    //não foi possível logar usuário
-//                    self.loginButton.isHidden = false
-//                    self.loginButton.isEnabled = true
-//                    self.activity.stopAnimating()
-//                } else {
-//                    self.performSegue(withIdentifier: "enter", sender: nil)
-//                    self.activity.stopAnimating()
-//                }
-//            })
-//            self.loginButton.isHidden = true
-//            self.loginButton.isEnabled = false
-//            self.activity.startAnimating()
-//        }
+//        self.performSegue(withIdentifier: "enter", sender: nil)
+        if self.emailField.text != "" && self.passwordField.text != "" {
+            FirebaseConnection.signUserIn(email: self.emailField.text!, password: self.passwordField.text!, completion: {user, error in
+                if let _ = error {
+                    //não foi possível logar usuário
+                    self.loginButton.isHidden = false
+                    self.loginButton.isEnabled = true
+                    self.activity.stopAnimating()
+                } else {
+                    self.performSegue(withIdentifier: "enter", sender: nil)
+                    self.activity.stopAnimating()
+                }
+            })
+            self.loginButton.isHidden = true
+            self.loginButton.isEnabled = false
+            self.activity.startAnimating()
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
