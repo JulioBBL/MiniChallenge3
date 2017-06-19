@@ -26,6 +26,14 @@ class DonationTableViewController: UITableViewController {
         self.retrieveInfo()
         
         self.clearsSelectionOnViewWillAppear = true
+        
+
+        
+        FirebaseConnection.usuarioAtual(completion: { user in
+            self.donations = user.donations
+
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,15 +127,19 @@ class DonationTableViewController: UITableViewController {
     //Mark: - My methods
     
     func retrieveInfo() {
-        self.donations = FirebaseConnection.usuarioAtual?.donations ?? []
+        FirebaseConnection.usuarioAtual(completion: { user in
+            self.donations = user.donations
+        })
     }
     
     func addNewDonation(_ donation: Donation) {
         self.donations.append(donation)
         self.tableView.reloadData()
-        FirebaseConnection.usuarioAtual?.donations = self.donations
-        FirebaseConnection.saveUser(usuario: FirebaseConnection.usuarioAtual!)
-        
+        FirebaseConnection.usuarioAtual(completion: { user in
+            let usuario = user
+            usuario.donations = self.donations
+            FirebaseConnection.saveUser(usuario: usuario)
+        })
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
         let newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)

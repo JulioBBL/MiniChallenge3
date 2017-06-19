@@ -41,7 +41,7 @@ public class User {
         email = snapshotValue["email"] as! String
         cpf = snapshotValue["cpf"] as! String
         bt = BloodType(rawValue: snapshotValue["bt"] as! String)!
-        weight = (snapshotValue["weight"] as? Double)!
+        weight = snapshotValue["weight"] as! Double
         gender = Gender(rawValue: snapshotValue["gender"] as! String)!
         for snap in snapshot.childSnapshot(forPath: "donations").children{
             if let snapValue = (snap as! FIRDataSnapshot).value as? [String: AnyObject]{
