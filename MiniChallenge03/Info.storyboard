@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kva-fh-7f0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kva-fh-7f0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -356,7 +356,7 @@ O atendente confere com o doador se estão corretos os dados, como endereço, te
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TKH-ht-zwx">
                                             <rect key="frame" x="8" y="149" width="284" height="71"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Fr-C2-aXr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dezin" translatesAutoresizingMaskIntoConstraints="NO" id="0Fr-C2-aXr">
                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="0Fr-C2-aXr" secondAttribute="height" multiplier="1:1" id="e2J-ch-uy1"/>
@@ -389,7 +389,7 @@ O atendente confere com o doador se estão corretos os dados, como endereço, te
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GpP-iZ-pvz">
                                             <rect key="frame" x="8" y="228" width="284" height="71"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xuZ-wA-WwT">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brunin" translatesAutoresizingMaskIntoConstraints="NO" id="xuZ-wA-WwT">
                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="xuZ-wA-WwT" secondAttribute="height" multiplier="1:1" id="rfD-2S-lMS"/>
@@ -422,7 +422,7 @@ O atendente confere com o doador se estão corretos os dados, como endereço, te
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jz0-47-38t">
                                             <rect key="frame" x="8" y="307" width="284" height="71"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qac-21-8Cm">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="julio" translatesAutoresizingMaskIntoConstraints="NO" id="Qac-21-8Cm">
                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Qac-21-8Cm" secondAttribute="height" multiplier="1:1" id="7HZ-kb-5Kj"/>
@@ -455,7 +455,7 @@ O atendente confere com o doador se estão corretos os dados, como endereço, te
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFo-bS-Cnm">
                                             <rect key="frame" x="8" y="386" width="284" height="71"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nOh-5e-fDv">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ricardin" translatesAutoresizingMaskIntoConstraints="NO" id="nOh-5e-fDv">
                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="nOh-5e-fDv" secondAttribute="height" multiplier="1:1" id="s32-Uu-T1T"/>
@@ -488,7 +488,7 @@ O atendente confere com o doador se estão corretos os dados, como endereço, te
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shA-wa-SyO">
                                             <rect key="frame" x="8" y="509" width="284" height="71"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-4V-upi">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moova" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-4V-upi">
                                                     <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="c0D-4V-upi" secondAttribute="height" multiplier="1:1" id="qsn-on-i4Q"/>
@@ -626,8 +626,13 @@ O atendente confere com o doador se estão corretos os dados, como endereço, te
         </scene>
     </scenes>
     <resources>
+        <image name="brunin" width="575" height="550"/>
+        <image name="dezin" width="100" height="100"/>
         <image name="info" width="21" height="21"/>
         <image name="info_selected" width="21" height="21"/>
+        <image name="julio" width="1536" height="1536"/>
+        <image name="moova" width="844" height="844"/>
+        <image name="ricardin" width="720" height="720"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Hr-kr-lPx"/>
