@@ -33,6 +33,8 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         map.delegate = self
         
         
+        FirebaseConnection.addUser(user: User.init(key: "", name: "lol", email: "lol123@lol.com", cpf: "123", bt: .abNegative, weight: 20, gender: .female), password: "senha123")
+        
         //        if let location = map.userLocation.location {
         //            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 200 * 2.0, 200 * 2.0)
         //            map.setRegion(coordinateRegion, animated: true)

@@ -49,17 +49,13 @@ class FirebaseConnection {
     }
     
     static func addUser(user: User, password: String){
-        FIRAuth.auth()?.createUser(withEmail: user.email, password: password) { (user, error) in
+        FIRAuth.auth()?.createUser(withEmail: user.email, password: password) { (usuario, error) in
             if error != nil{
                 print("error adding new user")
                 print(error.debugDescription)
             }else{
-                if let uid = user?.uid{
-                    FirebaseConnection.ref.child("usuarios/\(uid)").observe(.value, with: {snapshot in
-                        let usuario = User(snapshot: snapshot)
-                        FirebaseConnection.usuarioAtual = usuario
-                        FirebaseConnection.ref.child("usuarios/\(uid)").setValue(usuario.toAnyObject())
-                    })
+                if let uid = usuario?.uid{
+                        FirebaseConnection.ref.child("usuarios/\(uid)").setValue(user.toAnyObject())
                 }
             }
         }
