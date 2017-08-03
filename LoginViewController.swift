@@ -8,37 +8,38 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
     @IBOutlet weak var scrollView: UIScrollView!
-
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
+    @IBOutlet weak var pickerGenre: UIPickerView!
+    @IBOutlet weak var pickerBlood: UIPickerView!
+    
     var activeField: UITextField?
+    
+    var bloodPicker = ["Não sei", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+    
+    var genrePicker = ["Masculino", "Feminino"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(self.navigationController ?? "naum tem")
         
-        emailField.delegate = self
-        passwordField.delegate = self
-        loginButton.layer.cornerRadius = 6.0
-        registerButton.layer.cornerRadius = 6.0
+        self.pickerBlood.delegate = self
+        self.pickerGenre.delegate = self
         
+        
+        loginButton.layer.cornerRadius = 6.0
         registerForKeyboardNotifications()
-//        let juaum = User(key: nil, name: "John", email: "10@10.com", cpf: "00000000000", bt: .abNegative, weight: 100, gender: .male)
+
+        
+        //        let juaum = User(key: nil, name: "John", email: "10@10.com", cpf: "00000000000", bt: .abNegative, weight: 100, gender: .male)
 //        FirebaseConnection.addUser(user: juaum, password: "12345678")
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,37 +47,58 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
-
-    @IBAction func didPressLoginButton(_ sender: Any) {
-//        self.performSegue(withIdentifier: "enter", sender: nil)
-        if self.emailField.text != "" && self.passwordField.text != "" {
-            FirebaseConnection.signUserIn(email: self.emailField.text!, password: self.passwordField.text!, completion: {user, error in
-                if let _ = error {
-                    //não foi possível logar usuário
-                    self.loginButton.isHidden = false
-                    self.loginButton.isEnabled = true
-                    self.activity.stopAnimating()
-                } else {
-                    self.performSegue(withIdentifier: "enter", sender: nil)
-                    self.activity.stopAnimating()
-                }
-            })
-            self.loginButton.isHidden = true
-            self.loginButton.isEnabled = false
-            self.activity.startAnimating()
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        switch pickerView.tag {
+        case 0:
+        return self.bloodPicker.count
+        case 1:
+            return genrePicker.count
+        default:
+            return 1
         }
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        switch pickerView.tag {
+        case 0:
+        return self.bloodPicker[row]
+        case 1:
+            return self.genrePicker[row]
+        default:
+            return ""
+        }
+
+    }
+
+
+    @IBAction func didPressLoginButton(_ sender: Any) {
+
+   //     if self.emailField.text != "" && self.passwordField.text != "" {
+    //        FirebaseConnection.signUserIn(email: self.emailField.text!, password: self.passwordField.text!, completion: {user, error in
+//                if let _ = error {
+//                    //não foi possível logar usuário
+//                    self.loginButton.isHidden = false
+//                    self.loginButton.isEnabled = true
+//                    self.activity.stopAnimating()
+//                } else {
+//                    self.performSegue(withIdentifier: "enter", sender: nil)
+//                    self.activity.stopAnimating()
+//                }
+//            })
+//            self.loginButton.isHidden = true
+//            self.loginButton.isEnabled = false
+//            self.activity.startAnimating()
+//        }
+    }
+    
+       func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
         
@@ -137,6 +159,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField){
         activeField = nil
     }
+ 
     
 
 }
