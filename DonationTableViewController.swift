@@ -38,6 +38,7 @@ class DonationTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        
     }
     
     // MARK: - Table view data source
@@ -124,6 +125,7 @@ class DonationTableViewController: UITableViewController {
     func retrieveInfo() {
         FirebaseConnection.usuarioAtual(completion: { user in
             self.donations = user.donations
+            self.tableView.reloadData()
         })
     }
     
@@ -141,11 +143,19 @@ class DonationTableViewController: UITableViewController {
         })
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
-        let newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)
+        var newDonationDate = Date()
+        
+        FirebaseConnection.usuarioAtual(completion: { (user) in
+            if user.gender == .male {
+                newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)!
+            } else {
+                newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 120, to: donation.date)!
+            }
+        })
         self.setNotification(title: "Irmão de Sangue" /*TODO*/,
             subtitle: "Você já pode doar sangue de novo",
             body: "já fazem 3 meses que você doou sangue pela ultima vez, que tal doar novamente?",
-            badge: 1, for: newDonationDate!, withIdentifier: "newDonation")
+            badge: 1, for: newDonationDate, withIdentifier: "newDonation")
         
         self.setNagNotification(title: "Irmão de Sangue" /*TODO*/,
             subtitle: "Que tal doar sangue esse final de semana?",

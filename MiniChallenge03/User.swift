@@ -44,9 +44,16 @@ public class User {
         gender = Gender(rawValue: snapshotValue["gender"] as! String)!
         
         var tempDon: [Donation] = []
-        for snap in snapshot.childSnapshot(forPath: "donations").children{
-            tempDon.append(Donation(snapshot: snap as! FIRDataSnapshot))
+        
+        let snapMesmo = snapshot.childSnapshot(forPath: "donations")
+        
+        for snap in snapMesmo.children {
+            
+            if let snap2 = (snap as? FIRDataSnapshot) {
+                tempDon.append(Donation(snapshot: snap2))
+            }
         }
+        self.donations.append(contentsOf: tempDon)
         
         ref = snapshot.ref
     }
