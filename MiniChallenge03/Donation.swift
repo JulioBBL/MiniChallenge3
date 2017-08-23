@@ -7,55 +7,40 @@
 //
 
 import Foundation
-import Firebase
+import CloudKit
 
 public class Donation {
 
-    var key: String?
+    var id: CKRecordID = CKRecordID(recordName: "")
     var date: Date
     var location: String
-    let ref: FIRDatabaseReference?
     
     init(){
-        self.key = nil
         self.date = Date()
         self.location = "Local não informado"
-        self.ref = nil
     }
     
     init(date: Date){
-        self.key = nil
         self.date = date
         self.location = "Local não informado"
-        self.ref = nil
     }
     
     init(date: Date, location: String){
-        self.key = nil
         self.date = Date()
         self.location = location
-        self.ref = nil
     }
     
-    init(snapshot: FIRDataSnapshot){
-//        let dateFormatter = DateFormatter()
-    
-        self.key = snapshot.key
-        let snapshotValue = snapshot.value as! [String: AnyObject]
-        self.date = Utils.dateToString(snapshotValue["date"] as! String)
-        self.location = snapshotValue["location"] as! String
-        self.ref = snapshot.ref
+    init(record: CKRecord){
+        self.id = record.recordID
+        self.date = record.value(forKey: "date") as! Date
+        self.location = record.value(forKey: "location") as! String
     }
     
-    func toAnyObject() -> Any {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "pt_BR")
-        formatter.dateFormat = "dd/MM/yyyy"
+    func toCKRecord() -> CKRecord {
+        let record = CKRecord(recordType: "Donation")
+        record.setValue(self.date, forKey: "date")
+        record.setValue(self.location, forKey: "location")
         
-        return [
-        
-            "date": formatter.string(from: date),
-            "location": location
-        ]
+        return record
     }
 }

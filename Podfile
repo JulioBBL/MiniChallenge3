@@ -7,9 +7,4 @@ target 'MiniChallenge03' do
 
   # Pods for MiniChallenge03
 
-  pod 'Firebase'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'
-  pod 'Firebase/Storage'
 end

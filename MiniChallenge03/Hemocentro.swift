@@ -8,11 +8,11 @@
 
 import Foundation
 import CoreLocation
-import Firebase
+import CloudKit
 
 class Hemocentro: NSObject {
     
-    var key: String?
+    var id: CKRecordID
     var nome: String
     var estado: String
     var cidade: String
@@ -22,7 +22,6 @@ class Hemocentro: NSObject {
     var latitude: String
     var longitude: String
     var telefone: String
-    var ref: FIRDatabaseReference?
     
     init(nome: String,
          estado: String,
@@ -34,7 +33,7 @@ class Hemocentro: NSObject {
          longitude: String,
          telefone: String) {
         
-        self.key = nil
+        self.id = CKRecordID(recordName: "")
         self.nome = nome
         self.estado = estado
         self.cidade = cidade
@@ -44,38 +43,18 @@ class Hemocentro: NSObject {
         self.latitude = latitude
         self.longitude = longitude
         self.telefone = telefone
-        self.ref = nil
-        
     }
     
-    init(snapshot: FIRDataSnapshot) {
-        key = snapshot.key
-        let snapshotValue = snapshot.value as! [String: AnyObject]
-        nome = snapshotValue["nome"] as! String
-        estado = snapshotValue["estado"] as! String
-        cidade = snapshotValue["cidade"] as! String
-        bairro = snapshotValue["bairro"] as! String
-        endereco = snapshotValue["endereço"] as! String
-        cep = snapshotValue["cep"] as! String
-        latitude = snapshotValue["latitude"] as! String
-        longitude = snapshotValue["longitude"] as! String
-        telefone = snapshotValue["telefone"] as! String
-        ref = snapshot.ref
+    init(record: CKRecord) {
+        id = record.recordID
+        self.nome = record.value(forKey: "nome") as! String
+        self.estado = record.value(forKey: "estado") as! String
+        self.cidade = record.value(forKey: "cidade") as! String
+        self.bairro = record.value(forKey: "bairro") as! String
+        self.endereco = record.value(forKey: "endereco") as! String
+        self.cep = record.value(forKey: "cep") as! String
+        self.latitude = record.value(forKey: "latitude") as! String
+        self.longitude = record.value(forKey: "longitude") as! String
+        self.telefone = record.value(forKey: "telefone") as! String
     }
-    
-    func toAnyObject() -> Any {
-        return [
-            "nome": nome,
-            "estado": estado,
-            "cidade": cidade,
-            "bairro": bairro,
-            "endereço": endereco,
-            "cep": cep,
-            "latitude": latitude,
-            "longitude": longitude,
-            "telefone": telefone
-        ]
-    }
-    
-    
 }

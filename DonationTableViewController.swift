@@ -123,7 +123,7 @@ class DonationTableViewController: UITableViewController {
     //Mark: - My methods
     
     func retrieveInfo() {
-        FirebaseConnection.usuarioAtual(completion: { user in
+        DatabaseConnection.sharedInstance.usuarioAtual(completion: { (user, error) in
             self.donations = user.donations
             self.tableView.reloadData()
         })
@@ -131,21 +131,13 @@ class DonationTableViewController: UITableViewController {
     
     func addNewDonation(_ donation: Donation) {
         self.donations.append(donation)
-        //        self.sortDonations()
         self.tableView.reloadData()
-        print("lol")
-        FirebaseConnection.usuarioAtual(completion: { user in
-            let usuario = user
-            usuario.donations = self.donations
-            print("salvo")
-            FirebaseConnection.saveUser(usuario: usuario, completion: {})
-            
-        })
+        DatabaseConnection.sharedInstance.save(donation: donation)
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
         var newDonationDate = Date()
         
-        FirebaseConnection.usuarioAtual(completion: { (user) in
+        DatabaseConnection.sharedInstance.usuarioAtual(completion: { (user, error) in
             if user.gender == .male {
                 newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)!
             } else {

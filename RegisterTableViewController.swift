@@ -55,24 +55,24 @@ class RegisterTableViewController: UITableViewController, UIPickerViewDelegate, 
     
 
     @IBAction func didPressDoneButton(_ sender: Any) {
-        if nome.text != "" {
-            if (email.text?.contains("@"))! && (email.text?.contains("."))! {
-                if senha1.text == senha2.text {
-                    if peso.text != "" {
-                        if cpf.text != "" {
-                            let temp = User(key: nil, name: nome.text!, email: email.text!, cpf: cpf.text!, bt: BloodType(tipoSanguineo.selectedRow(inComponent: 0))!, weight: Double(peso.text!)!, gender: Gender(genero.selectedSegmentIndex))
-                            FirebaseConnection.addUser(user: temp, password: senha1.text!)
-                            
-                            FirebaseConnection.signUserIn(email: temp.email, password: senha1.text!, completion: {user, error in
-                                if error == nil{
-                                    self.performSegue(withIdentifier: "segue", sender: self)
-                                }
-                            })
-                            
-                        }
-                    }
-                }
-            }
-        }
+//        if nome.text != "" {
+//            if (email.text?.contains("@"))! && (email.text?.contains("."))! {
+//                if senha1.text == senha2.text {
+//                    if peso.text != "" {
+//                        if cpf.text != "" {
+//                            let temp = User(key: nil, name: nome.text!, email: email.text!, bt: BloodType(tipoSanguineo.selectedRow(inComponent: 0))!, weight: Double(peso.text!)!, gender: Gender(genero.selectedSegmentIndex))
+//                            DatabaseConnection.addUser(user: temp, password: senha1.text!)
+//                            
+//                            DatabaseConnection.signUserIn(email: temp.email, password: senha1.text!, completion: {user, error in
+//                                if error == nil{
+//                                    self.performSegue(withIdentifier: "segue", sender: self)
+//                                }
+//                            })
+//                            
+//                        }
+//                    }
+//                }
+//            }
+//        }
     }
 }

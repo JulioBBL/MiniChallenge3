@@ -4,7 +4,4 @@
    <FileRef
       location = "group:MiniChallenge03.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
 </Workspace>

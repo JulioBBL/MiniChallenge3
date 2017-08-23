@@ -7,78 +7,35 @@
 //
 
 import Foundation
-import Firebase
+import CloudKit
 
 public class User {
-    var key: String?
-    var name: String
-    var email: String
-    var cpf: String
+    var key: CKRecordID
     var bt: BloodType
     var weight: Double
     var gender: Gender
     var donations: [Donation] = []
-    var isAble: Bool?
-    let ref: FIRDatabaseReference?
     
-    init(key:String?, name: String, email: String, cpf: String, bt: BloodType, weight: Double, gender: Gender){
+    init(key:CKRecordID, bt: BloodType, weight: Double, gender: Gender){
         self.key = key
-        self.name = name
-        self.email = email
-        self.cpf = cpf
         self.bt = bt
         self.weight = weight
         self.gender = gender
-        self.ref = nil
     }
     
-    init(snapshot: FIRDataSnapshot){
-        
-        key = snapshot.key
-        let snapshotValue = snapshot.value as! [String: AnyObject]
-        name = snapshotValue["name"] as! String
-        email = snapshotValue["email"] as! String
-        cpf = snapshotValue["cpf"] as! String
-        bt = BloodType(rawValue: snapshotValue["bt"] as! String)!
-        weight = snapshotValue["weight"] as! Double
-        gender = Gender(rawValue: snapshotValue["gender"] as! String)!
-        
-        var tempDon: [Donation] = []
-        
-        let snapMesmo = snapshot.childSnapshot(forPath: "donations")
-        
-        for snap in snapMesmo.children {
-            
-            if let snap2 = (snap as? FIRDataSnapshot) {
-                tempDon.append(Donation(snapshot: snap2))
-            }
-        }
-        self.donations.append(contentsOf: tempDon)
-        
-        ref = snapshot.ref
+    init(record: CKRecord){
+        key = record.recordID
+        self.bt = BloodType(record.value(forKey: "bloodType") as! Int)!
+        self.weight = record.value(forKey: "weight") as! Double
+        self.gender = Gender(record.value(forKey: "gender") as! Int)
     }
     
-    func toAnyObject() -> Any {
+    func toCKRecord() -> CKRecord {
+        let record = CKRecord(recordType: "Users")
+        record.setValue(self.bt, forKey: "bloodType")
+        record.setValue(self.gender, forKey: "gender")
+        record.setValue(self.weight, forKey: "weight")
         
-        
-        var doacoes: [String: Any] = [:]
-        
-        var i = 0
-        for donation in donations{
-            doacoes[String(i)] = donation.toAnyObject()
-            i += 1
-        }
-        
-        
-        
-        return [
-            "name": name,
-            "email": email,
-            "cpf": cpf,
-            "bt": bt.rawValue,
-            "weight": weight,
-            "gender": gender.rawValue,
-            "donations": doacoes
-        ]
+        return record
     }
 }

@@ -18,6 +18,7 @@
 		155AD7531EF5C795007EA420 /* ChooseOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD7521EF5C795007EA420 /* ChooseOverlayViewController.swift */; };
 		190746A71EEF14D800A2539D /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190746A61EEF14D700A2539D /* Donation.swift */; };
 		199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */; };
+		590B6B3F1F4B7DEC0086476F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590B6B3E1F4B7DEC0086476F /* CloudKit.framework */; };
 		59206E0D1EF070A900D74229 /* DonationCreationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */; };
 		59206E111EF073C500D74229 /* Donations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59206E101EF073C500D74229 /* Donations.storyboard */; };
 		595A49951EF412D900679C8D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 595A49941EF412D900679C8D /* Login.storyboard */; };
@@ -40,8 +41,6 @@
 		5982884C1EEB3A8B00221079 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288241EEB342B00221079 /* MapViewController.swift */; };
 		5982884D1EEB3A8B00221079 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288251EEB342B00221079 /* PhotosTableViewController.swift */; };
 		5982884F1EEB3A8B00221079 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1959C19C1EEB0B0700455576 /* User.swift */; };
-		598288501EEB3A8B00221079 /* BankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288411EEB374C00221079 /* BankCollectionViewCell.swift */; };
-		598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288421EEB374C00221079 /* FIRDataObject.swift */; };
 		598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288431EEB374C00221079 /* Hemocentro.swift */; };
 		598288531EEB3A8B00221079 /* ProcessCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */; };
 		598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */; };
@@ -50,10 +49,9 @@
 		59B0757E1EF6EDA900CA5E22 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B0757D1EF6EDA900CA5E22 /* Info.storyboard */; };
 		59B075821EF6F4E600CA5E22 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B075811EF6F4E600CA5E22 /* RegisterTableViewController.swift */; };
 		59B55DCC1EF82C9100589309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B55DCB1EF82C9100589309 /* LaunchScreen.storyboard */; };
-		AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */; };
 		D8D0124D1EE86B9500112374 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */; };
 		D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D0126D1EE88E5500112374 /* MapKit.framework */; };
-		D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */; };
+		D8E06A231EEF107E00CF658A /* DatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A221EEF107E00CF658A /* DatabaseConnection.swift */; };
 		D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A241EF07B1A00CF658A /* Gender.swift */; };
 		D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A261EF07B4A00CF658A /* BloodType.swift */; };
 		D8E06A351EF75AC600CF658A /* HemoPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E06A341EF75AC600CF658A /* HemoPin.swift */; };
@@ -93,6 +91,8 @@
 		190746A61EEF14D700A2539D /* Donation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		1959C19C1EEB0B0700455576 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		199C12151EEC4B1E00CF0611 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		590B6B3C1F4B7DD80086476F /* MiniChallenge03.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MiniChallenge03.entitlements; sourceTree = "<group>"; };
+		590B6B3E1F4B7DEC0086476F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		59206E0C1EF070A900D74229 /* DonationCreationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationCreationTableViewController.swift; sourceTree = "<group>"; };
 		59206E101EF073C500D74229 /* Donations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donations.storyboard; sourceTree = "<group>"; };
 		595A49941EF412D900679C8D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -117,8 +117,6 @@
 		598288341EEB344600221079 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		598288351EEB344600221079 /* Test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Test.storyboard; sourceTree = "<group>"; };
 		5982883F1EEB373000221079 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		598288411EEB374C00221079 /* BankCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCollectionViewCell.swift; sourceTree = "<group>"; };
-		598288421EEB374C00221079 /* FIRDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRDataObject.swift; sourceTree = "<group>"; };
 		598288431EEB374C00221079 /* Hemocentro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hemocentro.swift; sourceTree = "<group>"; };
 		598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessCollectionViewCell.swift; sourceTree = "<group>"; };
 		59AA9C8E1EEF137F004D7436 /* DonationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonationTableViewController.swift; sourceTree = "<group>"; };
@@ -127,13 +125,10 @@
 		59B55DCB1EF82C9100589309 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8D0124C1EE86B9500112374 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8D0126D1EE88E5500112374 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseConnection.swift; sourceTree = "<group>"; };
+		D8E06A221EEF107E00CF658A /* DatabaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseConnection.swift; sourceTree = "<group>"; };
 		D8E06A241EF07B1A00CF658A /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D8E06A261EF07B4A00CF658A /* BloodType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodType.swift; sourceTree = "<group>"; };
 		D8E06A341EF75AC600CF658A /* HemoPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemoPin.swift; sourceTree = "<group>"; };
-		EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.release.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.release.xcconfig"; sourceTree = "<group>"; };
-		F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniChallenge03.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03.debug.xcconfig"; sourceTree = "<group>"; };
-		FA1FCF4829502C7328890DF6 /* Pods_MiniChallenge03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniChallenge03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D0126E1EE88E5500112374 /* MapKit.framework in Frameworks */,
-				AAFDD07E744DEAE46CEB712B /* Pods_MiniChallenge03.framework in Frameworks */,
+				590B6B3F1F4B7DEC0086476F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +178,8 @@
 				D8E06A341EF75AC600CF658A /* HemoPin.swift */,
 				596AF36E1EEF29EB003010F0 /* Utils.swift */,
 				1959C19C1EEB0B0700455576 /* User.swift */,
-				598288411EEB374C00221079 /* BankCollectionViewCell.swift */,
 				596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */,
 				596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */,
-				598288421EEB374C00221079 /* FIRDataObject.swift */,
 				598288431EEB374C00221079 /* Hemocentro.swift */,
 				598288441EEB374C00221079 /* ProcessCollectionViewCell.swift */,
 				190746A61EEF14D700A2539D /* Donation.swift */,
@@ -196,13 +189,12 @@
 			name = Entities;
 			sourceTree = "<group>";
 		};
-		581F31A0554A278CD98DA651 /* Pods */ = {
+		590B6B3D1F4B7DEC0086476F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */,
-				EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */,
+				590B6B3E1F4B7DEC0086476F /* CloudKit.framework */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		596E52B21EE1F7A1009D9F85 = {
@@ -212,7 +204,7 @@
 				596E52C51EE1F7A1009D9F85 /* Assets.xcassets */,
 				596E52BD1EE1F7A1009D9F85 /* MiniChallenge03 */,
 				596E52BC1EE1F7A1009D9F85 /* Products */,
-				581F31A0554A278CD98DA651 /* Pods */,
+				590B6B3D1F4B7DEC0086476F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +219,7 @@
 		596E52BD1EE1F7A1009D9F85 /* MiniChallenge03 */ = {
 			isa = PBXGroup;
 			children = (
+				590B6B3C1F4B7DD80086476F /* MiniChallenge03.entitlements */,
 				155AD73C1EF4A666007EA420 /* Fonte */,
 				5982881E1EEB2F9000221079 /* Storyboard */,
 				7B985232E27F01B3726927BA /* Controller */,
@@ -234,7 +227,7 @@
 				596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */,
 				596E52C01EE1F7A1009D9F85 /* ViewController.swift */,
 				5982883F1EEB373000221079 /* Info.plist */,
-				D8E06A221EEF107E00CF658A /* FirebaseConnection.swift */,
+				D8E06A221EEF107E00CF658A /* DatabaseConnection.swift */,
 			);
 			path = MiniChallenge03;
 			sourceTree = "<group>";
@@ -291,12 +284,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 596E52CD1EE1F7A1009D9F85 /* Build configuration list for PBXNativeTarget "MiniChallenge03" */;
 			buildPhases = (
-				CF424478EBA56FB7CA41D638 /* [CP] Check Pods Manifest.lock */,
 				596E52B71EE1F7A1009D9F85 /* Sources */,
 				596E52B81EE1F7A1009D9F85 /* Frameworks */,
 				596E52B91EE1F7A1009D9F85 /* Resources */,
-				BEED338A72AC235FD732267B /* [CP] Embed Pods Frameworks */,
-				2257CF45E5C4EC7A7FDB1F7F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +313,12 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -373,54 +369,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		2257CF45E5C4EC7A7FDB1F7F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BEED338A72AC235FD732267B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MiniChallenge03/Pods-MiniChallenge03-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF424478EBA56FB7CA41D638 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		596E52B71EE1F7A1009D9F85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -442,12 +390,10 @@
 				190746A71EEF14D800A2539D /* Donation.swift in Sources */,
 				596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */,
 				155AD7371EF481E0007EA420 /* HomeViewController.swift in Sources */,
-				598288501EEB3A8B00221079 /* BankCollectionViewCell.swift in Sources */,
 				199C12161EEC4B1E00CF0611 /* ProfileViewController.swift in Sources */,
 				155AD7391EF483F0007EA420 /* TutorialPageViewController.swift in Sources */,
 				595A49971EF42B1500679C8D /* LoginViewController.swift in Sources */,
 				D8E06A271EF07B4A00CF658A /* BloodType.swift in Sources */,
-				598288511EEB3A8B00221079 /* FIRDataObject.swift in Sources */,
 				598288521EEB3A8B00221079 /* Hemocentro.swift in Sources */,
 				59B075821EF6F4E600CA5E22 /* RegisterTableViewController.swift in Sources */,
 				59804EB41EF3240500B58E5A /* NewDonationTableViewCell.swift in Sources */,
@@ -455,7 +401,7 @@
 				155AD7331EF2D793007EA420 /* testViewController.swift in Sources */,
 				D8E06A251EF07B1A00CF658A /* Gender.swift in Sources */,
 				598288541EEB3A8B00221079 /* AppDelegate.swift in Sources */,
-				D8E06A231EEF107E00CF658A /* FirebaseConnection.swift in Sources */,
+				D8E06A231EEF107E00CF658A /* DatabaseConnection.swift in Sources */,
 				155AD7311EF1E52C007EA420 /* showpictureViewController.swift in Sources */,
 				598288551EEB3A8B00221079 /* ViewController.swift in Sources */,
 			);
@@ -561,9 +507,9 @@
 		};
 		596E52CE1EE1F7A1009D9F85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5B4D5C44B037065F9862B2F /* Pods-MiniChallenge03.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MiniChallenge03/MiniChallenge03.entitlements;
 				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -576,9 +522,9 @@
 		};
 		596E52CF1EE1F7A1009D9F85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF07ED32864332EF6827DCF9 /* Pods-MiniChallenge03.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MiniChallenge03/MiniChallenge03.entitlements;
 				DEVELOPMENT_TEAM = 524D3B9S8F;
 				INFOPLIST_FILE = MiniChallenge03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

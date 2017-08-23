@@ -28,13 +28,13 @@ class NewDonationTableViewCell: UITableViewCell {
         if Calendar(identifier: .gregorian).compare(date, to: Date(), toGranularity: .day) == ComparisonResult.orderedAscending {
             label.text = "Você já pode doar novamente :D"
         } else {
-            FirebaseConnection.usuarioAtual(completion: { (user) in
+            if let user = DatabaseConnection.sharedInstance.user {
                 if user.gender == .male {
                     self.label.text = "\(self.presetText) \(Utils.dateToString(Calendar(identifier: .gregorian).date(byAdding: .day, value: 60, to: date)!))"
                 } else {
                     self.label.text = "\(self.presetText) \(Utils.dateToString(Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: date)!))"
                 }
-            })
+            }
         }
     }
 }
