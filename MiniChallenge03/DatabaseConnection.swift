@@ -76,6 +76,8 @@ class DatabaseConnection {
     }
     
     func save(donation record: Donation) {
-        self.publicDB.privateDB.save(record.toCKRecord())
+        self.privateDB.save(record.toCKRecord()) { (record, error) in
+            print("foi fião")
+        }
     }
 }
