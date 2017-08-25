@@ -30,7 +30,7 @@ class DatabaseConnection {
             completion(user, nil)
         } else {
             let predicate = NSPredicate(value: true)
-            let query = CKQuery(recordType: "Users", predicate: predicate)
+            let query = CKQuery(recordType: "UserExtra", predicate: predicate)
             
             self.privateDB.perform(query, inZoneWith: nil, completionHandler: { (records, error) in
                 if let record = records?.first {
@@ -38,9 +38,6 @@ class DatabaseConnection {
                     completion(self.user!, error)
                 }
             })
-        }
-        self.getDonations { (doacoes) in
-            self.user?.donations = doacoes
         }
     }
     
@@ -66,7 +63,7 @@ class DatabaseConnection {
         self.privateDB.perform(query, inZoneWith: nil) { (records, error) in
             var doacoes: [Donation] = []
             
-            if error != nil  && records != nil && (records?.count)! > 0 {
+            if error == nil  && records != nil && (records?.count)! > 0 {
                 for record in records! {
                     doacoes.append(Donation(record: record))
                 }
@@ -75,9 +72,17 @@ class DatabaseConnection {
         }
     }
     
-    func save(donation record: Donation) {
+    func save(donation record: Donation, completion: @escaping (Error?) -> Void) {
         self.privateDB.save(record.toCKRecord()) { (record, error) in
             print("foi fião")
+            completion(error)
+        }
+    }
+    
+    func save(user: User, completion: @escaping (Error?) -> Void) {
+        self.privateDB.save(user.toCKRecord()) { (record, error) in
+            print("foi o cracudo")
+            completion(error)
         }
     }
 }

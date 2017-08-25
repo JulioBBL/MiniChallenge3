@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u0P-Br-ATW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="W2C-Y8-xxA">
+            <objects>
+                <viewController storyboardIdentifier="tela" id="u0P-Br-ATW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbt-2q-Adx"/>
+                        <viewControllerLayoutGuide type="bottom" id="8d1-hN-eit"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U92-sQ-7nd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="você precisa estar logado no icloud" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-Mw-83U">
+                                <rect key="frame" x="24" y="28" width="327" height="631"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NPU-Mw-83U" firstAttribute="leading" secondItem="U92-sQ-7nd" secondAttribute="leadingMargin" constant="8" id="Iaq-ab-uMI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NPU-Mw-83U" secondAttribute="trailing" constant="8" id="MxE-T6-qEf"/>
+                            <constraint firstItem="8d1-hN-eit" firstAttribute="top" secondItem="NPU-Mw-83U" secondAttribute="bottom" constant="8" symbolic="YES" id="NMR-Xd-Red"/>
+                            <constraint firstItem="NPU-Mw-83U" firstAttribute="top" secondItem="fbt-2q-Adx" secondAttribute="bottom" constant="8" symbolic="YES" id="rHw-pC-Yvn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TK8-Vn-nXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="159"/>
+        </scene>
+    </scenes>
+</document>

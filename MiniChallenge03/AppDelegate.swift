@@ -14,10 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let tabBarItemAppearence = UITabBar.appearance()
+        
+        if (FileManager.default.ubiquityIdentityToken == nil) {
+            //VAI PRA CASA DO CARVALHO
+            let vc = UIStoryboard.init(name: "notLogged", bundle: nil).instantiateViewController(withIdentifier: "tela")
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return true
+        }
+        
        
         tabBarItemAppearence.unselectedItemTintColor = UIColor(red: 72/255.0, green: 156/255.0, blue: 174/255.0, alpha: 1.0)
         
@@ -27,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if !UserDefaults.standard.bool(forKey: "already") {
             UserDefaults.standard.set(true, forKey: "already")
+            
             // vc pra primeira vez somente
             let vc = UIStoryboard.init(name: "Welcome", bundle: nil).instantiateViewController(withIdentifier: "tutorial")
             self.window?.rootViewController = vc

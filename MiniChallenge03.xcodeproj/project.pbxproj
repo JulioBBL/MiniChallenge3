@@ -28,6 +28,7 @@
 		596AF36B1EEF229E003010F0 /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36A1EEF229E003010F0 /* DonationTableViewCell.swift */; };
 		596AF36F1EEF29EB003010F0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36E1EEF29EB003010F0 /* Utils.swift */; };
 		596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 596E52C51EE1F7A1009D9F85 /* Assets.xcassets */; };
+		5971EF881F4F975900379318 /* notLogged.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5971EF871F4F975900379318 /* notLogged.storyboard */; };
 		59804EB41EF3240500B58E5A /* NewDonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596AF36C1EEF285E003010F0 /* NewDonationTableViewCell.swift */; };
 		598288381EEB344600221079 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5982882F1EEB344600221079 /* Landing.storyboard */; };
 		598288391EEB344600221079 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598288301EEB344600221079 /* Main.storyboard */; };
@@ -106,6 +107,7 @@
 		596E52BE1EE1F7A1009D9F85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		596E52C01EE1F7A1009D9F85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		596E52C51EE1F7A1009D9F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = MiniChallenge03/Assets.xcassets; sourceTree = "<group>"; };
+		5971EF871F4F975900379318 /* notLogged.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = notLogged.storyboard; sourceTree = "<group>"; };
 		598288221EEB342B00221079 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraViewController.swift; path = MiniChallenge03/CameraViewController.swift; sourceTree = "<group>"; };
 		598288231EEB342B00221079 /* InfoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoCollectionViewController.swift; path = MiniChallenge03/InfoCollectionViewController.swift; sourceTree = "<group>"; };
 		598288241EEB342B00221079 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = MiniChallenge03/MapViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				5982882F1EEB344600221079 /* Landing.storyboard */,
+				5971EF871F4F975900379318 /* notLogged.storyboard */,
 				598288301EEB344600221079 /* Main.storyboard */,
 				59B0757D1EF6EDA900CA5E22 /* Info.storyboard */,
 				155AD72C1EF1E01A007EA420 /* Photos.storyboard */,
@@ -350,6 +353,7 @@
 			files = (
 				596E52C61EE1F7A1009D9F85 /* Assets.xcassets in Resources */,
 				5982883A1EEB344600221079 /* Map.storyboard in Resources */,
+				5971EF881F4F975900379318 /* notLogged.storyboard in Resources */,
 				595A49991EF4B8EB00679C8D /* DonatesTo.storyboard in Resources */,
 				59B0757E1EF6EDA900CA5E22 /* Info.storyboard in Resources */,
 				59206E111EF073C500D74229 /* Donations.storyboard in Resources */,

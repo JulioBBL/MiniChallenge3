@@ -10,30 +10,27 @@ import Foundation
 import CloudKit
 
 public class User {
-    var key: CKRecordID
     var bt: BloodType
     var weight: Double
     var gender: Gender
     var donations: [Donation] = []
     
-    init(key:CKRecordID, bt: BloodType, weight: Double, gender: Gender){
-        self.key = key
+    init(bt: BloodType, weight: Double, gender: Gender){
         self.bt = bt
         self.weight = weight
         self.gender = gender
     }
     
     init(record: CKRecord){
-        key = record.recordID
-        self.bt = BloodType(record.value(forKey: "bloodType") as! Int)!
+        self.bt = BloodType(rawValue: record.value(forKey: "bloodType") as! String)!
         self.weight = record.value(forKey: "weight") as! Double
-        self.gender = Gender(record.value(forKey: "gender") as! Int)
+        self.gender = Gender(rawValue: record.value(forKey: "gender") as! String)!
     }
     
     func toCKRecord() -> CKRecord {
-        let record = CKRecord(recordType: "Users")
-        record.setValue(self.bt, forKey: "bloodType")
-        record.setValue(self.gender, forKey: "gender")
+        let record = CKRecord(recordType: "UserExtra")
+        record.setValue(self.bt.rawValue, forKey: "bloodType")
+        record.setValue(self.gender.rawValue, forKey: "gender")
         record.setValue(self.weight, forKey: "weight")
         
         return record

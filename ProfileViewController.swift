@@ -20,11 +20,11 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let user = DatabaseConnection.sharedInstance.user {
+        DatabaseConnection.sharedInstance.usuarioAtual(completion: { (user, error) in
             self.bloodTypeOutlet.text = user.bt.rawValue
             self.weightOutlet.text =  "\(user.weight)"
             self.genderOutlet.text = user.gender.rawValue
-        }
+        })
     }
     
     override func didReceiveMemoryWarning() {

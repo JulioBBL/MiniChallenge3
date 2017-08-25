@@ -11,7 +11,6 @@ import CloudKit
 
 public class Donation {
 
-    var id: CKRecordID = CKRecordID(recordName: "")
     var date: Date
     var location: String
     
@@ -31,7 +30,6 @@ public class Donation {
     }
     
     init(record: CKRecord){
-        self.id = record.recordID
         self.date = record.value(forKey: "date") as! Date
         self.location = record.value(forKey: "location") as! String
     }

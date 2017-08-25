@@ -123,8 +123,8 @@ class DonationTableViewController: UITableViewController {
     //Mark: - My methods
     
     func retrieveInfo() {
-        DatabaseConnection.sharedInstance.usuarioAtual(completion: { (user, error) in
-            self.donations = user.donations
+        DatabaseConnection.sharedInstance.getDonations(completion: { (donations) in
+            self.donations = donations
             self.tableView.reloadData()
         })
     }
@@ -132,7 +132,9 @@ class DonationTableViewController: UITableViewController {
     func addNewDonation(_ donation: Donation) {
         self.donations.append(donation)
         self.tableView.reloadData()
-        DatabaseConnection.sharedInstance.save(donation: donation)
+        DatabaseConnection.sharedInstance.save(donation: donation) { (error) in
+            print(error)
+        }
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         
         var newDonationDate = Date()

@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import CloudKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var wheightTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var activity: UIActivityIndicatorView!
+   
+    
     
     @IBOutlet weak var pickerGenre: UIPickerView!
-    @IBOutlet weak var pickerBlood: UIPickerView!
     
-    var activeField: UITextField?
+    @IBOutlet weak var pickerBlood: UIPickerView!
+    var bloodChosen: String = "Não sei"
+    var genderChosen: String = "Masculino"
+    
+   
+    
+    //var activeField: UITextField?
     
     var bloodPicker = ["Não sei", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
     
@@ -27,13 +35,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         super.viewDidLoad()
         
         print(self.navigationController ?? "naum tem")
-        
+        wheightTextField.text = ""
         self.pickerBlood.delegate = self
         self.pickerGenre.delegate = self
+        self.wheightTextField.delegate = self
+        //wheightTextField.becomeFirstResponder()
         
         
         loginButton.layer.cornerRadius = 6.0
-        registerForKeyboardNotifications()
+      //  registerForKeyboardNotifications()
 
         
         //        let juaum = User(key: nil, name: "John", email: "10@10.com", cpf: "00000000000", bt: .abNegative, weight: 100, gender: .male)
@@ -42,9 +52,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        deregisterFromKeyboardNotifications()
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//      //  deregisterFromKeyboardNotifications()
+//    }
     
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -74,11 +84,38 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         default:
             return ""
         }
-
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView.tag {
+        case 0:
+            bloodChosen = bloodPicker[row]
+        case 1:
+            genderChosen = genrePicker[row]
+        default:
+            break
+        }
     }
 
 
+    
     @IBAction func didPressLoginButton(_ sender: Any) {
+        let u = User.init(bt: BloodType(rawValue: bloodChosen)!, weight: Double(wheightTextField.text!)!, gender: Gender(rawValue: genderChosen)!)
+        DatabaseConnection.sharedInstance.save(user: u) { (error) in
+            print(error)
+            if error == nil {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "toMain", sender: self)
+                }
+            }
+        }
+        
+    }
+    
+    
+    
+    //@IBAction func didPressLoginButton(_ sender: Any) {
 
    //     if self.emailField.text != "" && self.passwordField.text != "" {
     //        FirebaseConnection.signUserIn(email: self.emailField.text!, password: self.passwordField.text!, completion: {user, error in
@@ -96,69 +133,69 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
 //            self.loginButton.isEnabled = false
 //            self.activity.startAnimating()
 //        }
-    }
-    
+//    }
+//    
        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
         
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         
     }
     
     
-    func registerForKeyboardNotifications(){
-        //Adding notifies on keyboard appearing
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func deregisterFromKeyboardNotifications(){
-        //Removing notifies on keyboard appearing
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func keyboardWasShown(notification: NSNotification){
-        //Need to calculate keyboard exact size due to Apple suggestions
-        self.scrollView.isScrollEnabled = true
-        var info = notification.userInfo!
-        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
-        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
-        
-        self.scrollView.contentInset = contentInsets
-        self.scrollView.scrollIndicatorInsets = contentInsets
-        
-        var aRect : CGRect = self.view.frame
-        aRect.size.height -= keyboardSize!.height
-        if let activeField = self.activeField {
-            if (!aRect.contains(activeField.frame.origin)){
-                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
-            }
-        }
-    }
-    
-    func keyboardWillBeHidden(notification: NSNotification){
-        //Once keyboard disappears, restore original positions
-        var info = notification.userInfo!
-        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
-        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
-        self.scrollView.contentInset = contentInsets
-        self.scrollView.scrollIndicatorInsets = contentInsets
-        self.view.endEditing(true)
-        self.scrollView.isScrollEnabled = false
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField){
-        activeField = textField
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField){
-        activeField = nil
-    }
+//    func registerForKeyboardNotifications(){
+//        //Adding notifies on keyboard appearing
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//    }
+//    
+//    func deregisterFromKeyboardNotifications(){
+//        //Removing notifies on keyboard appearing
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//    }
+//    
+//    func keyboardWasShown(notification: NSNotification){
+//        //Need to calculate keyboard exact size due to Apple suggestions
+//        self.scrollView.isScrollEnabled = true
+//        var info = notification.userInfo!
+//        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+//        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+//        
+//        self.scrollView.contentInset = contentInsets
+//        self.scrollView.scrollIndicatorInsets = contentInsets
+//        
+//        var aRect : CGRect = self.view.frame
+//        aRect.size.height -= keyboardSize!.height
+//        if let activeField = self.activeField {
+//            if (!aRect.contains(activeField.frame.origin)){
+//                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
+//            }
+//        }
+//    }
+//    
+//    func keyboardWillBeHidden(notification: NSNotification){
+//        //Once keyboard disappears, restore original positions
+//        var info = notification.userInfo!
+//        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+//        let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+//        self.scrollView.contentInset = contentInsets
+//        self.scrollView.scrollIndicatorInsets = contentInsets
+//        self.view.endEditing(true)
+//        self.scrollView.isScrollEnabled = false
+//    }
+//    
+//    func textFieldDidBeginEditing(_ textField: UITextField){
+//        activeField = textField
+//    }
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField){
+//        activeField = nil
+//    }
  
     
 
