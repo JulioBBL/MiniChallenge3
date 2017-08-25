@@ -12,7 +12,6 @@ import CloudKit
 
 class Hemocentro: NSObject {
     
-    var id: CKRecordID
     var nome: String
     var estado: String
     var cidade: String
@@ -33,7 +32,6 @@ class Hemocentro: NSObject {
          longitude: String,
          telefone: String) {
         
-        self.id = CKRecordID(recordName: "")
         self.nome = nome
         self.estado = estado
         self.cidade = cidade
@@ -46,7 +44,6 @@ class Hemocentro: NSObject {
     }
     
     init(record: CKRecord) {
-        id = record.recordID
         self.nome = record.value(forKey: "nome") as! String
         self.estado = record.value(forKey: "estado") as! String
         self.cidade = record.value(forKey: "cidade") as! String
