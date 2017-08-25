@@ -18,8 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabBarItemAppearence = UITabBar.appearance()
         
+        if let alredyLogged = UserDefaults.standard.value(forKey: "alreadyLogged"){
+        // se ja deu as informacoes restantes
+            print(alredyLogged)
+            
+            let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Main")
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return true
+        
+            
+        }
+        
         if (FileManager.default.ubiquityIdentityToken == nil) {
-            //VAI PRA CASA DO CARVALHO
             let vc = UIStoryboard.init(name: "notLogged", bundle: nil).instantiateViewController(withIdentifier: "tela")
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()

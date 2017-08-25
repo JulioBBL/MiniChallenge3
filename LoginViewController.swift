@@ -14,9 +14,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
     
     @IBOutlet weak var wheightTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-   
-    
-    
     @IBOutlet weak var pickerGenre: UIPickerView!
     
     @IBOutlet weak var pickerBlood: UIPickerView!
@@ -39,6 +36,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
         self.pickerBlood.delegate = self
         self.pickerGenre.delegate = self
         self.wheightTextField.delegate = self
+        self.loginButton.layer.cornerRadius = 6.0
         //wheightTextField.becomeFirstResponder()
         
         
@@ -106,6 +104,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
             print(error)
             if error == nil {
                 DispatchQueue.main.async {
+                    
+                    
+                    UserDefaults.standard.set(true, forKey: "alreadyLogged")
                     self.performSegue(withIdentifier: "toMain", sender: self)
                 }
             }
