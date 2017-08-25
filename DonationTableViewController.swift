@@ -142,19 +142,30 @@ class DonationTableViewController: UITableViewController {
         DatabaseConnection.sharedInstance.usuarioAtual(completion: { (user, error) in
             if user.gender == .male {
                 newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 90, to: donation.date)!
+                
+                self.setNotification(title: "Irmão de Sangue" /*TODO*/,
+                    subtitle: "Você já pode doar sangue de novo",
+                    body: "já fazem 3 meses que você doou sangue pela ultima vez, que tal doar novamente?",
+                    badge: 1, for: newDonationDate, withIdentifier: "newDonation")
+                
+                self.setNagNotification(title: "Irmão de Sangue" /*TODO*/,
+                    subtitle: "Que tal doar sangue esse final de semana?",
+                    body: "já faz tempo que você não doa sangue, porque não ir esse final de semana?",
+                    badge: 1, withIdentifier: "donationReminder1")
             } else {
                 newDonationDate = Calendar(identifier: .gregorian).date(byAdding: .day, value: 120, to: donation.date)!
+                
+                self.setNotification(title: "Irmão de Sangue" /*TODO*/,
+                    subtitle: "Você já pode doar sangue de novo",
+                    body: "já fazem 4 meses que você doou sangue pela ultima vez, que tal doar novamente?",
+                    badge: 1, for: newDonationDate, withIdentifier: "newDonation")
+                
+                self.setNagNotification(title: "Irmão de Sangue" /*TODO*/,
+                    subtitle: "Que tal doar sangue esse final de semana?",
+                    body: "já faz tempo que você não doa sangue, porque não ir esse final de semana?",
+                    badge: 1, withIdentifier: "donationReminder1")
             }
         })
-        self.setNotification(title: "Irmão de Sangue" /*TODO*/,
-            subtitle: "Você já pode doar sangue de novo",
-            body: "já fazem 3 meses que você doou sangue pela ultima vez, que tal doar novamente?",
-            badge: 1, for: newDonationDate, withIdentifier: "newDonation")
-        
-        self.setNagNotification(title: "Irmão de Sangue" /*TODO*/,
-            subtitle: "Que tal doar sangue esse final de semana?",
-            body: "já faz tempo que você não doa sangue, porque não ir esse final de semana?",
-            badge: 1, withIdentifier: "donationReminder1")
         
     }
     

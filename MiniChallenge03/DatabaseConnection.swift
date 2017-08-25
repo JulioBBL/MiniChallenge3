@@ -46,7 +46,7 @@ class DatabaseConnection {
         let query = CKQuery(recordType: "Hemocentro", predicate: predicate)
         
         self.publicDB.perform(query, inZoneWith: nil) { (records, error) in
-            if error != nil && records != nil && (records?.count)! > 0 {
+            if error == nil && records != nil && (records?.count)! > 0 {
                 var hemocentros: [Hemocentro] = []
                 for record in records! {
                     hemocentros.append(Hemocentro(record: record))

@@ -33,6 +33,7 @@ class MapViewController: ViewController, MKMapViewDelegate, CLLocationManagerDel
         DatabaseConnection.sharedInstance.getHemocentros(completion: { (hemocentros) in
             for hemo in hemocentros {
                 self.addPin(hemocentro: hemo)
+//                map.setRegion(viewRegion, animated: true)
             }
         })
     }
