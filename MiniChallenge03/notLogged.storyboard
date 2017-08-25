@@ -1,46 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="u0P-Br-ATW">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Not Logged View Controller-->
         <scene sceneID="W2C-Y8-xxA">
             <objects>
-                <viewController storyboardIdentifier="tela" id="u0P-Br-ATW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tela" id="u0P-Br-ATW" customClass="NotLoggedViewController" customModule="MiniChallenge03" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fbt-2q-Adx"/>
                         <viewControllerLayoutGuide type="bottom" id="8d1-hN-eit"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="U92-sQ-7nd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="você precisa estar logado no icloud" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-Mw-83U">
-                                <rect key="frame" x="24" y="28" width="327" height="631"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você não está logado no iCloud :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNV-Z3-Nct">
+                                <rect key="frame" x="0.0" y="100" width="414" height="59"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                                <color key="textColor" red="0.72549019609999998" green="0.14117647059999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4It-wz-zxi">
+                                <rect key="frame" x="103.66666666666669" y="575.66666666666663" width="207" height="58.666666666666742"/>
+                                <color key="backgroundColor" red="0.28291350599999998" green="0.6113507748" blue="0.68314176800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="17"/>
+                                <color key="tintColor" red="0.98626050600000004" green="0.98514858279999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Clique aqui para logar">
+                                    <color key="titleColor" red="0.99215686270000003" green="0.99215686270000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressButton:" destination="u0P-Br-ATW" eventType="touchUpInside" id="CPn-tK-qkh"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filtro2" translatesAutoresizingMaskIntoConstraints="NO" id="jd9-iY-LqB">
+                                <rect key="frame" x="103.66666666666669" y="206.33333333333331" width="207" height="294.66666666666663"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NPU-Mw-83U" firstAttribute="leading" secondItem="U92-sQ-7nd" secondAttribute="leadingMargin" constant="8" id="Iaq-ab-uMI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NPU-Mw-83U" secondAttribute="trailing" constant="8" id="MxE-T6-qEf"/>
-                            <constraint firstItem="8d1-hN-eit" firstAttribute="top" secondItem="NPU-Mw-83U" secondAttribute="bottom" constant="8" symbolic="YES" id="NMR-Xd-Red"/>
-                            <constraint firstItem="NPU-Mw-83U" firstAttribute="top" secondItem="fbt-2q-Adx" secondAttribute="bottom" constant="8" symbolic="YES" id="rHw-pC-Yvn"/>
+                            <constraint firstItem="jd9-iY-LqB" firstAttribute="centerX" secondItem="U92-sQ-7nd" secondAttribute="centerX" id="Fti-gp-VQ5"/>
+                            <constraint firstItem="4It-wz-zxi" firstAttribute="height" secondItem="U92-sQ-7nd" secondAttribute="height" multiplier="0.08" id="WIz-I2-uAQ"/>
+                            <constraint firstItem="4It-wz-zxi" firstAttribute="centerX" secondItem="U92-sQ-7nd" secondAttribute="centerX" id="X6H-3O-fFC"/>
+                            <constraint firstItem="sNV-Z3-Nct" firstAttribute="centerX" secondItem="U92-sQ-7nd" secondAttribute="centerX" id="XFN-zd-12e"/>
+                            <constraint firstItem="4It-wz-zxi" firstAttribute="width" secondItem="U92-sQ-7nd" secondAttribute="width" multiplier="0.5" id="a7H-iy-CPN"/>
+                            <constraint firstItem="jd9-iY-LqB" firstAttribute="width" secondItem="U92-sQ-7nd" secondAttribute="width" multiplier="0.5" id="d40-4V-NIa"/>
+                            <constraint firstItem="jd9-iY-LqB" firstAttribute="top" secondItem="sNV-Z3-Nct" secondAttribute="bottom" multiplier="1.3" id="hSx-zb-HwA"/>
+                            <constraint firstItem="jd9-iY-LqB" firstAttribute="height" secondItem="U92-sQ-7nd" secondAttribute="height" multiplier="0.4" id="hu4-a1-1Y0"/>
+                            <constraint firstItem="sNV-Z3-Nct" firstAttribute="height" secondItem="U92-sQ-7nd" secondAttribute="height" multiplier="0.08" id="jvI-G9-9Eb"/>
+                            <constraint firstItem="sNV-Z3-Nct" firstAttribute="width" secondItem="U92-sQ-7nd" secondAttribute="width" id="uHj-Gj-BXE"/>
+                            <constraint firstItem="sNV-Z3-Nct" firstAttribute="top" secondItem="fbt-2q-Adx" secondAttribute="bottom" multiplier="5" id="unU-5a-hQ6"/>
+                            <constraint firstItem="4It-wz-zxi" firstAttribute="top" secondItem="jd9-iY-LqB" secondAttribute="bottom" multiplier="1.15" id="yn4-x9-C5C"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="4It-wz-zxi" id="xYz-s9-7l5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TK8-Vn-nXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="159"/>
+            <point key="canvasLocation" x="196" y="158.77061469265368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="filtro2" width="475" height="475"/>
+    </resources>
 </document>
