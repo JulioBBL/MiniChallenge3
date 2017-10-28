@@ -106,16 +106,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIPickerViewDe
                 print(error)
                 if error == nil {
                     DispatchQueue.main.async {
-                        
-                        
                         UserDefaults.standard.set(true, forKey: "alreadyLogged")
                         
                         alert.dismiss(animated: true, completion: {
                             self.performSegue(withIdentifier: "toMain", sender: self)
                         })
-                        
-                        
                     }
+                } else {
+                    alert.dismiss(animated: true, completion: {
+                        self.performSegue(withIdentifier: "toMain", sender: self)
+                        let alert = UIAlertController(title: "Ops..", message: "Ocorreu um erro ao criar a conta", preferredStyle: .alert)
+                        self.present(alert, animated: true, completion: nil)
+                        
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                            alert.dismiss(animated: true, completion: nil)
+                        }))
+                    })
                 }
             }
             
